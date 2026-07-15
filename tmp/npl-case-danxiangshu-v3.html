@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NPL 案例库 | 单向树旗舰店 - 新品上新大场</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px 16px;
+        }
+        
+        /* 顶部标题区 */
+        .header {
+            background: white;
+            padding: 28px 24px;
+            border-radius: 16px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #FF2442 0%, #ff6b81 100%);
+        }
+        
+        .merchant-name {
+            font-size: 26px;
+            font-weight: 800;
+            color: #1a1a1a;
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
+        }
+        
+        @media (min-width: 768px) {
+            .merchant-name {
+                font-size: 32px;
+            }
+        }
+        
+        .case-meta {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 16px;
+            font-size: 13px;
+            color: #666;
+            flex-wrap: wrap;
+        }
+        
+        .meta-tag {
+            padding: 4px 10px;
+            background: #f0f0f0;
+            border-radius: 12px;
+        }
+        
+        .core-strategy {
+            font-size: 15px;
+            color: #FF2442;
+            font-weight: 600;
+            padding: 14px 16px;
+            background: linear-gradient(135deg, #fff5f7 0%, #ffe8ec 100%);
+            border-left: 5px solid #FF2442;
+            border-radius: 8px;
+            line-height: 1.7;
+        }
+        
+        @media (min-width: 768px) {
+            .core-strategy {
+                font-size: 17px;
+                padding: 16px 20px;
+            }
+        }
+        
+        /* 经营成果卡片 */
+        .results-section {
+            background: white;
+            padding: 24px;
+            border-radius: 16px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+        
+        @media (min-width: 768px) {
+            .results-section {
+                padding: 32px;
+            }
+        }
+        
+        .section-title {
+            font-size: 20px;
+            font-weight: 800;
+            color: #1a1a1a;
+            margin-bottom: 18px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #f0f0f0;
+            display: flex;
+            align-items: center;
+        }
+        
+        @media (min-width: 768px) {
+            .section-title {
+                font-size: 22px;
+                margin-bottom: 20px;
+            }
+        }
+        
+        .section-title::before {
+            content: '';
+            width: 6px;
+            height: 22px;
+            background: #FF2442;
+            border-radius: 3px;
+            margin-right: 12px;
+        }
+        
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 14px;
+            margin-bottom: 20px;
+        }
+        
+        @media (min-width: 768px) {
+            .metrics-grid {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 20px;
+            }
+        }
+        
+        .metric-card {
+            background: linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%);
+            padding: 18px 14px;
+            border-radius: 12px;
+            text-align: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 2px solid transparent;
+        }
+        
+        @media (min-width: 768px) {
+            .metric-card {
+                padding: 24px;
+            }
+        }
+        
+        .metric-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(255,36,66,0.15);
+            border-color: #FF2442;
+        }
+        
+        .metric-value {
+            font-size: 28px;
+            font-weight: 800;
+            color: #FF2442;
+            margin-bottom: 6px;
+            line-height: 1.2;
+        }
+        
+        @media (min-width: 768px) {
+            .metric-value {
+                font-size: 36px;
+                margin-bottom: 8px;
+            }
+        }
+        
+        .metric-label {
+            font-size: 13px;
+            color: #666;
+            font-weight: 500;
+        }
+        
+        @media (min-width: 768px) {
+            .metric-label {
+                font-size: 15px;
+            }
+        }
+        
+        .growth-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #FF2442 0%, #ff4d6a 100%);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 14px;
+            font-size: 12px;
+            font-weight: 700;
+            margin-top: 10px;
+            box-shadow: 0 2px 8px rgba(255,36,66,0.3);
+        }
+        
+        @media (min-width: 768px) {
+            .growth-badge {
+                padding: 6px 16px;
+                font-size: 14px;
+                margin-top: 12px;
+            }
+        }
+        
+        .insight-box {
+            margin-top: 20px;
+            padding: 16px 18px;
+            background: linear-gradient(135deg, #fff9e6 0%, #fff3cc 100%);
+            border-radius: 12px;
+            font-size: 14px;
+            color: #555;
+            line-height: 1.8;
+            border-left: 4px solid #ffc107;
+        }
+        
+        @media (min-width: 768px) {
+            .insight-box {
+                padding: 20px 24px;
+                font-size: 15px;
+                margin-top: 24px;
+            }
+        }
+        
+        .insight-box strong {
+            color: #FF2442;
+        }
+        
+        /* N/P/L 三场域卡片 - 纵向排列 */
+        .npl-section {
+            background: white;
+            padding: 24px;
+            border-radius: 16px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+        
+        @media (min-width: 768px) {
+            .npl-section {
+                padding: 32px;
+            }
+        }
+        
+        .npl-card {
+            background: linear-gradient(135deg, #fafafa 0%, #f8f8f8 100%);
+            padding: 22px 20px;
+            border-radius: 12px;
+            border-top: 5px solid #FF2442;
+            margin-bottom: 20px;
+            transition: transform 0.2s;
+        }
+        
+        @media (min-width: 768px) {
+            .npl-card {
+                padding: 24px;
+                margin-bottom: 24px;
+            }
+        }
+        
+        .npl-card:last-child {
+            margin-bottom: 0;
+        }
+        
+        .npl-card:hover {
+            transform: translateY(-2px);
+        }
+        
+        .npl-title {
+            font-size: 19px;
+            font-weight: 800;
+            color: #1a1a1a;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+        }
+        
+        @media (min-width: 768px) {
+            .npl-title {
+                font-size: 20px;
+                margin-bottom: 16px;
+            }
+        }
+        
+        .npl-icon {
+            width: 34px;
+            height: 34px;
+            background: linear-gradient(135deg, #FF2442 0%, #ff4d6a 100%);
+            color: white;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            margin-right: 10px;
+            font-size: 17px;
+            box-shadow: 0 2px 8px rgba(255,36,66,0.3);
+            flex-shrink: 0;
+        }
+        
+        @media (min-width: 768px) {
+            .npl-icon {
+                width: 36px;
+                height: 36px;
+                font-size: 18px;
+            }
+        }
+        
+        .npl-content {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.9;
+        }
+        
+        @media (min-width: 768px) {
+            .npl-content {
+                font-size: 15px;
+            }
+        }
+        
+        .npl-content ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .npl-content li {
+            padding: 9px 0;
+            padding-left: 22px;
+            position: relative;
+            border-bottom: 1px dashed #e8e8e8;
+        }
+        
+        @media (min-width: 768px) {
+            .npl-content li {
+                padding: 10px 0;
+                padding-left: 24px;
+            }
+        }
+        
+        .npl-content li:last-child {
+            border-bottom: none;
+        }
+        
+        .npl-content li:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #FF2442;
+            font-weight: 800;
+            font-size: 15px;
+        }
+        
+        .highlight-text {
+            color: #FF2442;
+            font-weight: 700;
+            background: linear-gradient(120deg, #fff5f7 0%, transparent 100%);
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+        
+        /* 笔记图片展示区 - 放大版 */
+        .note-gallery {
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+        }
+        
+        @media (min-width: 600px) {
+            .note-gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (min-width: 900px) {
+            .note-gallery {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        .note-item {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+            transition: transform 0.2s, box-shadow 0.2s;
+            background: white;
+            cursor: pointer;
+            text-decoration: none;
+            display: block;
+            color: inherit;
+        }
+        
+        .note-item:hover {
+            transform: scale(1.03);
+            box-shadow: 0 6px 20px rgba(255,36,66,0.25);
+        }
+        
+        .note-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            aspect-ratio: 4/3;
+            object-fit: cover;
+        }
+        
+        .note-caption {
+            padding: 10px 12px;
+            background: white;
+            font-size: 13px;
+            color: #333;
+            font-weight: 600;
+            text-align: center;
+            border-top: 2px solid #f0f0f0;
+        }
+        
+        @media (min-width: 768px) {
+            .note-caption {
+                padding: 12px 14px;
+                font-size: 14px;
+            }
+        }
+        
+        /* 历史案例回溯栏 */
+        .history-bar {
+            background: white;
+            padding: 20px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+        
+        @media (min-width: 768px) {
+            .history-bar {
+                padding: 24px;
+            }
+        }
+        
+        .history-title {
+            font-size: 17px;
+            font-weight: 800;
+            color: #1a1a1a;
+            margin-bottom: 10px;
+        }
+        
+        @media (min-width: 768px) {
+            .history-title {
+                font-size: 18px;
+                margin-bottom: 12px;
+            }
+        }
+        
+        .history-note {
+            font-size: 13px;
+            color: #999;
+            font-style: italic;
+        }
+        
+        @media (min-width: 768px) {
+            .history-note {
+                font-size: 14px;
+            }
+        }
+        
+        .footer-note {
+            text-align: center;
+            padding: 20px 16px;
+            color: #999;
+            font-size: 12px;
+            line-height: 1.8;
+        }
+        
+        @media (min-width: 768px) {
+            .footer-note {
+                padding: 24px;
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 顶部标题区 -->
+        <div class="header">
+            <div class="merchant-name">单向树旗舰店</div>
+            <div class="case-meta">
+                <span class="meta-tag">📅 大场日期：2026.07.04</span>
+                <span class="meta-tag">🎯 类型：新品上新店播大场</span>
+            </div>
+            <div class="core-strategy">
+                💡 核心策略：12篇预告笔记精准蓄水 → 预约用户撬动全场近半成交 → 高中低客单梯度货盘分层引爆
+            </div>
+        </div>
+        
+        <!-- 经营成果 -->
+        <div class="results-section">
+            <div class="section-title">经营成果（大场前后对比）</div>
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-value">45%+</div>
+                    <div class="metric-label">预约用户贡献 GMV 占比</div>
+                    <span class="growth-badge">CVR 高出非预约 3.6倍</span>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">4000+</div>
+                    <div class="metric-label">预约人数</div>
+                    <span class="growth-badge">进房率 47%+</span>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">500+</div>
+                    <div class="metric-label">GPM（千次观看成交额）</div>
+                    <span class="growth-badge">店播 YoY +233%</span>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">3万+</div>
+                    <div class="metric-label">总观看人数</div>
+                    <span class="growth-badge">人均停留 3分30秒+</span>
+                </div>
+            </div>
+            
+            <div class="insight-box">
+                💡 <strong>关键洞察：</strong>预约用户客单价比非预约高出 47%，老粉丝贡献金额占比超 90%，新粉丝 CVR 高达 42%+（但基数偏小）。近期大促期间店播 DGMV 同比增长 233%+，商笔曝光同比增长 157%+。
+            </div>
+        </div>
+        
+        <!-- N/P/L 三场域动作 - 纵向排列 -->
+        <div class="npl-section">
+            <div class="section-title">NPL 三场域协同打法</div>
+            
+            <!-- N 场域 -->
+            <div class="npl-card">
+                <div class="npl-title">
+                    <span class="npl-icon">N</span>
+                    笔记（Note）
+                </div>
+                <div class="npl-content">
+                    <ul>
+                        <li><strong>高频预告蓄水：</strong>大场前 15–30 天系统性发布 <span class="highlight-text">10+ 篇</span>预告视频笔记，累计曝光 <span class="highlight-text">15万+ 次</span></li>
+                        <li><strong>内容类型多元：</strong>涵盖用户痛点讲解、原产地溯源、三伏天养生场景植入等，精准触达艾灸垂直人群心智</li>
+                        <li><strong>预约转化高效：</strong>视频笔记渠道贡献预约人数 <span class="highlight-text">2000+ 人</span>，占预约总量近 70%</li>
+                        <li><strong>商笔联动加持：</strong>近期商笔发布 <span class="highlight-text">200+ 篇</span>，曝光量同比增长 <span class="highlight-text">150%+</span></li>
+                    </ul>
+                </div>
+                
+                <!-- 笔记配图 - 可点击跳转 -->
+                <div class="note-gallery">
+                    <a href="https://docs.xiaohongshu.com/doc/b6eb412041d72e2f7dee373ff73cee60" target="_blank" class="note-item">
+                        <img src="https://xhs-doc.xhscdn.com/104004dg322922cocms0c7djp3g?redoc-w=2122&redoc-h=1494" alt="针对用户痛点进行视频讲解">
+                        <div class="note-caption">针对用户痛点进行视频讲解</div>
+                    </a>
+                    <a href="https://docs.xiaohongshu.com/doc/b6eb412041d72e2f7dee373ff73cee60" target="_blank" class="note-item">
+                        <img src="https://xhs-doc.xhscdn.com/104004dg322923us1n0033t23u0?redoc-w=1988&redoc-h=1312" alt="原产地溯源">
+                        <div class="note-caption">原产地溯源</div>
+                    </a>
+                    <a href="https://docs.xiaohongshu.com/doc/b6eb412041d72e2f7dee373ff73cee60" target="_blank" class="note-item">
+                        <img src="https://xhs-doc.xhscdn.com/104004dg322924pap7411vdo5pk?redoc-w=1978&redoc-h=1290" alt="三伏天打卡养生">
+                        <div class="note-caption">三伏天打卡养生，植入艾灸用法</div>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- P 场域 -->
+            <div class="npl-card">
+                <div class="npl-title">
+                    <span class="npl-icon">P</span>
+                    私域（Private）
+                </div>
+                <div class="npl-content">
+                    <ul>
+                        <li><strong>群聊预告辅助：</strong>通过群聊卡片推送直播预告，贡献预约人数 <span class="highlight-text">80+ 人</span>，虽占比不高但转化精准</li>
+                        <li><strong>老粉深度运营：</strong>老粉丝观看人数 <span class="highlight-text">2万+ 人</span>，支付转化率 <span class="highlight-text">9%+</span>，贡献全场 <span class="highlight-text">90%+</span> 成交金额</li>
+                        <li><strong>新粉高效转化：</strong>新粉丝 CVR 高达 <span class="highlight-text">42%+</span>，客单价 <span class="highlight-text">300+ 元</span>，但观看基数仅 <span class="highlight-text">300+ 人</span>，仍有扩量空间</li>
+                        <li><strong>赠品策略提客单：</strong>通过艾灸 3 罐装、蜂蜜 2 罐装等组合赠品，拉高平均客单价至 <span class="highlight-text">350+ 元</span></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- L 场域 -->
+            <div class="npl-card">
+                <div class="npl-title">
+                    <span class="npl-icon">L</span>
+                    直播（Live）
+                </div>
+                <div class="npl-content">
+                    <ul>
+                        <li><strong>货盘梯度清晰：</strong>高客单石白蕲艾柱（¥128，占比 <span class="highlight-text">37%+</span>）拉 DGMV，中客单轻悦蜜新品（¥116）打夏日场景，低客单御灸键（¥65）走量拉订单数</li>
+                        <li><strong>商卡覆盖极高：</strong>商卡曝光率达 <span class="highlight-text">93%+</span>，点击转化率 <span class="highlight-text">38%+</span>，加购→支付漏斗流畅</li>
+                        <li><strong>新品首发引爆：</strong>轻悦蜜蜂蜜柠檬冲饮作为新品首秀，单场贡献近 <span class="highlight-text">10万元</span> GMV</li>
+                        <li><strong>店播频次密集：</strong>近期大促期间店播场次 <span class="highlight-text">25 场+</span>，总时长 <span class="highlight-text">300 小时+</span>，GPM 同比增长 <span class="highlight-text">20%+</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 历史案例回溯栏 -->
+        <div class="history-bar">
+            <div class="history-title">📚 往期案例回顾</div>
+            <div class="history-note">下期将在此处展示上一期案例链接，方便商家学习回溯</div>
+        </div>
+        
+        <div class="footer-note">
+            NPL 案例库 · 每周更新 · 数据来源：小红书电商内部复盘文档<br>
+            本案例仅供内部交流学习，未经授权不可对外传播
+        </div>
+    </div>
+</body>
+</html>
