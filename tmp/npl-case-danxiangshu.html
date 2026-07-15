@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NPL 案例库 | 单向树旗舰店 - 新品上新大场</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* 顶部标题区 */
+        .header {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        
+        .merchant-name {
+            font-size: 28px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 12px;
+        }
+        
+        .core-strategy {
+            font-size: 16px;
+            color: #FF2442;
+            font-weight: 600;
+            padding: 12px 16px;
+            background: #fff5f7;
+            border-left: 4px solid #FF2442;
+            border-radius: 4px;
+        }
+        
+        /* 经营成果卡片 */
+        .results-section {
+            background: white;
+            padding: 24px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        
+        .section-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+        }
+        
+        .metric-card {
+            background: #fafafa;
+            padding: 16px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .metric-value {
+            font-size: 32px;
+            font-weight: 700;
+            color: #FF2442;
+            margin-bottom: 4px;
+        }
+        
+        .metric-label {
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .growth-badge {
+            display: inline-block;
+            background: #FF2442;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-top: 8px;
+        }
+        
+        /* N/P/L 三场域卡片 */
+        .npl-section {
+            background: white;
+            padding: 24px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        
+        .npl-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+        
+        @media (max-width: 768px) {
+            .npl-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .npl-card {
+            background: #fafafa;
+            padding: 20px;
+            border-radius: 8px;
+            border-top: 4px solid #FF2442;
+        }
+        
+        .npl-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .npl-icon {
+            width: 32px;
+            height: 32px;
+            background: #FF2442;
+            color: white;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            margin-right: 8px;
+            font-size: 16px;
+        }
+        
+        .npl-content {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.8;
+        }
+        
+        .npl-content ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .npl-content li {
+            padding: 8px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .npl-content li:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #FF2442;
+            font-weight: 700;
+        }
+        
+        .highlight-text {
+            color: #FF2442;
+            font-weight: 600;
+        }
+        
+        /* 历史案例回溯栏 */
+        .history-bar {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        
+        .history-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 12px;
+        }
+        
+        .history-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        
+        .history-link {
+            display: inline-block;
+            padding: 8px 16px;
+            background: #f5f5f5;
+            color: #333;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 14px;
+            transition: all 0.2s;
+        }
+        
+        .history-link:hover {
+            background: #FF2442;
+            color: white;
+        }
+        
+        .footer-note {
+            text-align: center;
+            padding: 20px;
+            color: #999;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 顶部标题区 -->
+        <div class="header">
+            <div class="merchant-name">单向树旗舰店</div>
+            <div class="core-strategy">
+                📌 核心策略：12篇预告笔记精准蓄水 → 预约用户撬动全场近半成交 → 高中低客单梯度货盘分层引爆
+            </div>
+        </div>
+        
+        <!-- 经营成果 -->
+        <div class="results-section">
+            <div class="section-title">📊 经营成果（大场前后对比）</div>
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-value">45%+</div>
+                    <div class="metric-label">预约用户贡献 GMV 占比</div>
+                    <span class="growth-badge">CVR 高出非预约 3.6倍</span>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">4000+</div>
+                    <div class="metric-label">预约人数</div>
+                    <span class="growth-badge">进房率 47%+</span>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">500+</div>
+                    <div class="metric-label">GPM（千次观看成交额）</div>
+                    <span class="growth-badge">店播 YoY +233%</span>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">3万+</div>
+                    <div class="metric-label">总观看人数</div>
+                    <span class="growth-badge">人均停留 3分30秒+</span>
+                </div>
+            </div>
+            
+            <div style="margin-top: 20px; padding: 16px; background: #fff9e6; border-radius: 8px; font-size: 14px; color: #666;">
+                💡 <strong>关键洞察：</strong>预约用户客单价比非预约高出 47%，老粉丝贡献金额占比超 90%，新粉丝 CVR 高达 42%+（但基数偏小）。近期大促期间店播 DGMV 同比增长 233%+，商笔曝光同比增长 157%+。
+            </div>
+        </div>
+        
+        <!-- N/P/L 三场域动作 -->
+        <div class="npl-section">
+            <div class="section-title">🎯 NPL 三场域协同打法</div>
+            <div class="npl-grid">
+                <!-- N 场域 -->
+                <div class="npl-card">
+                    <div class="npl-title">
+                        <span class="npl-icon">N</span>
+                        笔记（Note）
+                    </div>
+                    <div class="npl-content">
+                        <ul>
+                            <li><strong>高频预告蓄水：</strong>大场前 15–30 天系统性发布 <span class="highlight-text">10+ 篇</span>预告视频笔记，累计曝光 <span class="highlight-text">15万+ 次</span></li>
+                            <li><strong>内容类型多元：</strong>涵盖用户痛点讲解、原产地溯源、三伏天养生场景植入等，精准触达艾灸垂直人群心智</li>
+                            <li><strong>预约转化高效：</strong>视频笔记渠道贡献预约人数 <span class="highlight-text">2000+ 人</span>，占预约总量近 70%</li>
+                            <li><strong>商笔联动加持：</strong>近期商笔发布 <span class="highlight-text">200+ 篇</span>，曝光量同比增长 <span class="highlight-text">150%+</span></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- P 场域 -->
+                <div class="npl-card">
+                    <div class="npl-title">
+                        <span class="npl-icon">P</span>
+                        私域（Private）
+                    </div>
+                    <div class="npl-content">
+                        <ul>
+                            <li><strong>群聊预告辅助：</strong>通过群聊卡片推送直播预告，贡献预约人数 <span class="highlight-text">80+ 人</span>，虽占比不高但转化精准</li>
+                            <li><strong>老粉深度运营：</strong>老粉丝观看人数 <span class="highlight-text">2万+ 人</span>，支付转化率 <span class="highlight-text">9%+</span>，贡献全场 <span class="highlight-text">90%+</span> 成交金额</li>
+                            <li><strong>新粉高效转化：</strong>新粉丝 CVR 高达 <span class="highlight-text">42%+</span>，客单价 <span class="highlight-text">300+ 元</span>，但观看基数仅 <span class="highlight-text">300+ 人</span>，仍有扩量空间</li>
+                            <li><strong>赠品策略提客单：</strong>通过艾灸 3 罐装、蜂蜜 2 罐装等组合赠品，拉高平均客单价至 <span class="highlight-text">350+ 元</span></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- L 场域 -->
+                <div class="npl-card">
+                    <div class="npl-title">
+                        <span class="npl-icon">L</span>
+                        直播（Live）
+                    </div>
+                    <div class="npl-content">
+                        <ul>
+                            <li><strong>货盘梯度清晰：</strong>高客单石白蕲艾柱（¥128，占比 <span class="highlight-text">37%+</span>）拉 DGMV，中客单轻悦蜜新品（¥116）打夏日场景，低客单御灸键（¥65）走量拉订单数</li>
+                            <li><strong>商卡覆盖极高：</strong>商卡曝光率达 <span class="highlight-text">93%+</span>，点击转化率 <span class="highlight-text">38%+</span>，加购→支付漏斗流畅</li>
+                            <li><strong>新品首发引爆：</strong>轻悦蜜蜂蜜柠檬冲饮作为新品首秀，单场贡献近 <span class="highlight-text">10万元</span> GMV</li>
+                            <li><strong>店播频次密集：</strong>近期大促期间店播场次 <span class="highlight-text">25 场+</span>，总时长 <span class="highlight-text">300 小时+</span>，GPM 同比增长 <span class="highlight-text">20%+</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 历史案例回溯栏 -->
+        <div class="history-bar">
+            <div class="history-title">📚 往期案例回顾</div>
+            <div class="history-links">
+                <a href="#" class="history-link">← 上一期案例（待更新）</a>
+                <a href="#" class="history-link">逸刻 EGO - 买手引爆链路</a>
+                <a href="#" class="history-link">四时鲜果 - 一店一品模型</a>
+                <a href="#" class="history-link">瞪哥公考 - 低价钩子策略</a>
+                <a href="#" class="history-link">查看更多案例 →</a>
+            </div>
+        </div>
+        
+        <div class="footer-note">
+            NPL 案例库 · 每周更新 · 数据来源：小红书电商内部复盘文档<br>
+            本案例仅供内部交流学习，未经授权不可对外传播
+        </div>
+    </div>
+</body>
+</html>
