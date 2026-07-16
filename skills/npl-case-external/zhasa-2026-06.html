@@ -1,0 +1,1393 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NPL 案例库 | 札萨旗舰店</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: linear-gradient(135deg, #f5faf5 0%, #e8f5e8 100%);
+            color: #333;
+            line-height: 1.7;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px 16px;
+        }
+        
+        /* ========== 顶部标题区 ========== */
+        .header {
+            background: white;
+            padding: 28px 24px;
+            border-radius: 16px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #52c41a 0%, #95de64 100%);
+        }
+        
+        .merchant-name {
+            font-size: 26px;
+            font-weight: 800;
+            color: #2c2c2c;
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
+        }
+        
+        @media (min-width: 768px) {
+            .merchant-name {
+                font-size: 32px;
+            }
+        }
+        
+        .case-meta {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 16px;
+            font-size: 13px;
+            color: #777;
+            flex-wrap: wrap;
+        }
+        
+        .meta-tag {
+            padding: 4px 10px;
+            background: #f5f5f5;
+            border-radius: 12px;
+        }
+        
+        .core-strategy {
+            font-size: 15px;
+            color: #389e0d;
+            font-weight: 600;
+            padding: 14px 16px;
+            background: linear-gradient(135deg, #f6ffed 0%, #f0f9e8 100%);
+            border-left: 5px solid #52c41a;
+            border-radius: 8px;
+            line-height: 1.7;
+        }
+        
+        @media (min-width: 768px) {
+            .core-strategy {
+                font-size: 17px;
+                padding: 16px 20px;
+            }
+        }
+        
+        /* ========== 通用区块样式 ========== */
+        .section-title {
+            font-size: 20px;
+            font-weight: 800;
+            color: #2c2c2c;
+            margin-bottom: 18px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #f0f0f0;
+            display: flex;
+            align-items: center;
+        }
+        
+        @media (min-width: 768px) {
+            .section-title {
+                font-size: 22px;
+                margin-bottom: 20px;
+            }
+        }
+        
+        .section-title::before {
+            content: '';
+            width: 6px;
+            height: 22px;
+            background: #52c41a;
+            border-radius: 3px;
+            margin-right: 12px;
+        }
+        
+        .card {
+            background: white;
+            padding: 24px;
+            border-radius: 16px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        
+        @media (min-width: 768px) {
+            .card {
+                padding: 32px;
+            }
+        }
+        
+        /* ========== 经营成果 - 指标卡片网格 ========== */
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 14px;
+            margin-bottom: 20px;
+        }
+        
+        @media (min-width: 768px) {
+            .metrics-grid {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 16px;
+            }
+        }
+        
+        .metric-card {
+            background: linear-gradient(135deg, #f6ffed 0%, #f0f9e8 100%);
+            padding: 16px 12px;
+            border-radius: 12px;
+            text-align: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 2px solid transparent;
+            min-height: 140px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        @media (min-width: 768px) {
+            .metric-card {
+                padding: 20px 14px;
+                min-height: 160px;
+            }
+        }
+        
+        .metric-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 18px rgba(82,196,26,0.12);
+            border-color: #52c41a;
+        }
+        
+        .metric-icon {
+            font-size: 28px;
+            margin-bottom: 6px;
+        }
+        
+        .metric-value {
+            font-size: 18px;
+            font-weight: 800;
+            color: #389e0d;
+            margin-bottom: 4px;
+            line-height: 1.3;
+        }
+        
+        @media (min-width: 768px) {
+            .metric-value {
+                font-size: 22px;
+                margin-bottom: 6px;
+            }
+        }
+        
+        .metric-label {
+            font-size: 12px;
+            color: #666;
+            font-weight: 500;
+            line-height: 1.4;
+        }
+        
+        @media (min-width: 768px) {
+            .metric-label {
+                font-size: 13px;
+            }
+        }
+        
+        .growth-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #52c41a 0%, #95de64 100%);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 700;
+            margin-top: 8px;
+            box-shadow: 0 2px 6px rgba(82,196,26,0.2);
+            white-space: nowrap;
+        }
+        
+        @media (min-width: 768px) {
+            .growth-badge {
+                padding: 5px 12px;
+                font-size: 12px;
+                margin-top: 10px;
+            }
+        }
+        
+        .insight-box {
+            margin-top: 20px;
+            padding: 16px 18px;
+            background: linear-gradient(135deg, #fcffe6 0%, #f9f0ff 100%);
+            border-radius: 12px;
+            font-size: 14px;
+            color: #555;
+            line-height: 1.8;
+            border-left: 4px solid #b7eb8f;
+        }
+        
+        @media (min-width: 768px) {
+            .insight-box {
+                padding: 20px 24px;
+                font-size: 15px;
+                margin-top: 24px;
+            }
+        }
+        
+        .insight-box strong {
+            color: #389e0d;
+        }
+        
+        /* ========== 老粉价值可视化（精简版） ========== */
+        .old-fan-highlight {
+            background: white;
+            padding: 24px;
+            border-radius: 16px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        
+        @media (min-width: 768px) {
+            .old-fan-highlight {
+                padding: 32px;
+            }
+        }
+        
+        .highlight-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+        
+        @media (min-width: 600px) {
+            .highlight-stats {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 16px;
+            background: linear-gradient(135deg, #f6ffed 0%, #f0f9e8 100%);
+            border-radius: 12px;
+            border: 2px solid #52c41a;
+        }
+        
+        .stat-value {
+            font-size: 24px;
+            font-weight: 800;
+            color: #389e0d;
+            margin-bottom: 4px;
+        }
+        
+        @media (min-width: 768px) {
+            .stat-value {
+                font-size: 28px;
+            }
+        }
+        
+        .stat-label {
+            font-size: 12px;
+            color: #666;
+            font-weight: 600;
+        }
+        
+        @media (min-width: 768px) {
+            .stat-label {
+                font-size: 13px;
+            }
+        }
+        
+        /* ========== N/P/L 三场域卡片 ========== */
+        .npl-section {
+            background: white;
+            padding: 24px;
+            border-radius: 16px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        
+        @media (min-width: 768px) {
+            .npl-section {
+                padding: 32px;
+            }
+        }
+        
+        .npl-card {
+            background: linear-gradient(135deg, #f6ffed 0%, #f0f9e8 100%);
+            padding: 22px 20px;
+            border-radius: 12px;
+            border-top: 5px solid #52c41a;
+            margin-bottom: 20px;
+            transition: transform 0.2s;
+        }
+        
+        @media (min-width: 768px) {
+            .npl-card {
+                padding: 24px;
+                margin-bottom: 24px;
+            }
+        }
+        
+        .npl-card:last-child {
+            margin-bottom: 0;
+        }
+        
+        .npl-card:hover {
+            transform: translateY(-2px);
+        }
+        
+        .npl-title {
+            font-size: 19px;
+            font-weight: 800;
+            color: #2c2c2c;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+        }
+        
+        @media (min-width: 768px) {
+            .npl-title {
+                font-size: 20px;
+                margin-bottom: 16px;
+            }
+        }
+        
+        .npl-icon {
+            width: 34px;
+            height: 34px;
+            background: linear-gradient(135deg, #52c41a 0%, #95de64 100%);
+            color: white;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            margin-right: 10px;
+            font-size: 17px;
+            box-shadow: 0 2px 6px rgba(82,196,26,0.2);
+            flex-shrink: 0;
+        }
+        
+        @media (min-width: 768px) {
+            .npl-icon {
+                width: 36px;
+                height: 36px;
+                font-size: 18px;
+            }
+        }
+        
+        .npl-content {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.9;
+        }
+        
+        @media (min-width: 768px) {
+            .npl-content {
+                font-size: 15px;
+            }
+        }
+        
+        .npl-content ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .npl-content li {
+            padding: 10px 0;
+            padding-left: 22px;
+            position: relative;
+            border-bottom: 1px dashed #e8e0e2;
+        }
+        
+        @media (min-width: 768px) {
+            .npl-content li {
+                padding: 11px 0;
+                padding-left: 24px;
+            }
+        }
+        
+        .npl-content li:last-child {
+            border-bottom: none;
+        }
+        
+        .npl-content li:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #52c41a;
+            font-weight: 800;
+            font-size: 15px;
+        }
+        
+        .highlight-text {
+            color: #389e0d;
+            font-weight: 700;
+            background: linear-gradient(120deg, #f6ffed 0%, transparent 100%);
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+        
+        /* 内容类型标签 */
+        .content-type-tags {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-top: 12px;
+        }
+        
+        .content-tag {
+            padding: 6px 12px;
+            border-radius: 8px;
+            font-size: 12px;
+            font-weight: 700;
+            border: 2px solid;
+        }
+        
+        .content-tag.type-1 {
+            background: #f6ffed;
+            color: #389e0d;
+            border-color: #52c41a;
+        }
+        
+        .content-tag.type-2 {
+            background: #fffbe6;
+            color: #d48806;
+            border-color: #faad14;
+        }
+        
+        .content-tag.type-3 {
+            background: #f0f5ff;
+            color: #1890ff;
+            border-color: #40a9ff;
+        }
+        
+        .content-tag.type-4 {
+            background: #fff0f6;
+            color: #c41d7f;
+            border-color: #eb2f96;
+        }
+        
+        /* 笔记参考案例 - 带链接的卡片展示 */
+        .note-gallery {
+            margin-top: 16px;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+        }
+        
+        @media (min-width: 600px) {
+            .note-gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        .note-item {
+            padding: 14px;
+            background: white;
+            border-radius: 8px;
+            border-left: 4px solid #52c41a;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            transition: transform 0.2s;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        
+        .note-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(82,196,26,0.15);
+            border-left-color: #389e0d;
+        }
+        
+        .note-type {
+            display: inline-block;
+            background: #f6ffed;
+            color: #389e0d;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .note-title {
+            font-size: 14px;
+            color: #333;
+            font-weight: 600;
+            line-height: 1.6;
+        }
+        
+        .note-link-hint {
+            font-size: 11px;
+            color: #999;
+            margin-top: 6px;
+        }
+        
+        /* ========== 货盘结构可视化 ========== */
+        .product-structure {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+            margin-top: 16px;
+        }
+        
+        @media (min-width: 600px) {
+            .product-structure {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        .product-layer {
+            padding: 18px;
+            border-radius: 12px;
+            text-align: center;
+        }
+        
+        .product-layer.entry {
+            background: linear-gradient(135deg, #e6f7ff 0%, #bae0ff 100%);
+            border: 2px solid #1890ff;
+        }
+        
+        .product-layer.core {
+            background: linear-gradient(135deg, #f6ffed 0%, #d9f7be 100%);
+            border: 2px solid #52c41a;
+        }
+        
+        .layer-label {
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+        
+        .product-layer.entry .layer-label {
+            color: #096dd9;
+        }
+        
+        .product-layer.core .layer-label {
+            color: #389e0d;
+        }
+        
+        .layer-desc {
+            font-size: 13px;
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        /* ========== 可实践建议板块 ========== */
+        .tips-section {
+            background: white;
+            padding: 24px;
+            border-radius: 16px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        
+        @media (min-width: 768px) {
+            .tips-section {
+                padding: 32px;
+            }
+        }
+        
+        .tip-card {
+            background: linear-gradient(135deg, #fcffe6 0%, #f9f0ff 100%);
+            padding: 18px;
+            border-radius: 12px;
+            margin-bottom: 16px;
+            border-left: 5px solid #b7eb8f;
+            transition: transform 0.2s;
+        }
+        
+        @media (min-width: 768px) {
+            .tip-card {
+                padding: 20px;
+                margin-bottom: 18px;
+            }
+        }
+        
+        .tip-card:last-child {
+            margin-bottom: 0;
+        }
+        
+        .tip-card:hover {
+            transform: translateX(4px);
+        }
+        
+        .tip-title {
+            font-size: 16px;
+            font-weight: 800;
+            color: #2c2c2c;
+            margin-bottom: 10px;
+        }
+        
+        @media (min-width: 768px) {
+            .tip-title {
+                font-size: 17px;
+                margin-bottom: 12px;
+            }
+        }
+        
+        .tip-content {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.8;
+        }
+        
+        @media (min-width: 768px) {
+            .tip-content {
+                font-size: 15px;
+            }
+        }
+        
+        /* ========== 时间轴可视化 ========== */
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+            margin-top: 16px;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 10px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(180deg, #52c41a 0%, #95de64 100%);
+            border-radius: 2px;
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 16px;
+            padding: 14px 16px;
+            background: white;
+            border-radius: 10px;
+            border: 1px solid #e8f5e8;
+        }
+        
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -24px;
+            top: 18px;
+            width: 12px;
+            height: 12px;
+            background: #52c41a;
+            border-radius: 50%;
+            border: 3px solid #f6ffed;
+            box-shadow: 0 0 0 2px #52c41a;
+        }
+        
+        .timeline-day {
+            font-size: 12px;
+            color: #389e0d;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+        
+        .timeline-content {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.7;
+        }
+        
+        /* ========== 凑单机制优化对比 ========== */
+        .threshold-comparison {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+            margin-top: 16px;
+        }
+        
+        @media (min-width: 600px) {
+            .threshold-comparison {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        .threshold-box {
+            padding: 18px;
+            border-radius: 12px;
+            text-align: center;
+        }
+        
+        .threshold-box.before {
+            background: linear-gradient(135deg, #fff1f0 0%, #ffccc7 100%);
+            border: 2px solid #ff4d4f;
+        }
+        
+        .threshold-box.after {
+            background: linear-gradient(135deg, #f6ffed 0%, #d9f7be 100%);
+            border: 2px solid #52c41a;
+        }
+        
+        .threshold-label {
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .threshold-box.before .threshold-label {
+            color: #cf1322;
+        }
+        
+        .threshold-box.after .threshold-label {
+            color: #389e0d;
+        }
+        
+        .threshold-tiers {
+            text-align: left;
+            font-size: 14px;
+            color: #555;
+            line-height: 2;
+        }
+        
+        .tier-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .tier-arrow {
+            color: #999;
+        }
+        
+        /* ========== 直播节奏时间线 ========== */
+        .live-schedule {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 16px;
+        }
+        
+        .schedule-node {
+            padding: 10px 16px;
+            background: linear-gradient(135deg, #f6ffed 0%, #f0f9e8 100%);
+            border-radius: 10px;
+            border: 2px solid #52c41a;
+            text-align: center;
+            flex: 1;
+            min-width: 100px;
+        }
+        
+        .schedule-time {
+            font-size: 18px;
+            font-weight: 800;
+            color: #389e0d;
+            margin-bottom: 4px;
+        }
+        
+        .schedule-action {
+            font-size: 12px;
+            color: #666;
+        }
+        
+        /* ========== 私域运营可视化 ========== */
+        .private-ops-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+            margin-top: 16px;
+        }
+        
+        @media (min-width: 600px) {
+            .private-ops-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        .private-op-item {
+            padding: 16px;
+            background: white;
+            border-radius: 10px;
+            border-left: 4px solid #52c41a;
+        }
+        
+        .private-op-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: #2c2c2c;
+            margin-bottom: 6px;
+        }
+        
+        .private-op-desc {
+            font-size: 13px;
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        /* ========== 渠道效率对比表 ========== */
+        .channel-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin-top: 16px;
+            font-size: 14px;
+        }
+        
+        @media (min-width: 768px) {
+            .channel-table {
+                font-size: 15px;
+            }
+        }
+        
+        .channel-table th {
+            background: linear-gradient(135deg, #f6ffed 0%, #f0f9e8 100%);
+            color: #389e0d;
+            font-weight: 700;
+            padding: 12px 10px;
+            text-align: left;
+            border-bottom: 2px solid #52c41a;
+        }
+        
+        .channel-table td {
+            padding: 12px 10px;
+            border-bottom: 1px solid #f0f0f0;
+            color: #555;
+        }
+        
+        .channel-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .channel-table .highlight-row {
+            background: #f6ffed;
+        }
+        
+        .tag-high {
+            display: inline-block;
+            background: #52c41a;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 8px;
+            font-size: 11px;
+            font-weight: 700;
+        }
+        
+        .tag-mid {
+            display: inline-block;
+            background: #faad14;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 8px;
+            font-size: 11px;
+            font-weight: 700;
+        }
+        
+        /* ========== 预约转化漏斗 ========== */
+        .funnel-container {
+            margin-top: 16px;
+        }
+        
+        .funnel-step {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+        
+        .funnel-step:last-child {
+            margin-bottom: 0;
+        }
+        
+        .funnel-bar {
+            height: 36px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            padding: 0 12px;
+            color: white;
+            font-weight: 700;
+            font-size: 13px;
+            transition: width 0.6s ease;
+        }
+        
+        .funnel-bar.step-1 {
+            background: linear-gradient(90deg, #52c41a 0%, #95de64 100%);
+            width: 100%;
+        }
+        
+        .funnel-bar.step-2 {
+            background: linear-gradient(90deg, #73d13d 0%, #b7eb8f 100%);
+            width: 87%;
+        }
+        
+        .funnel-bar.step-3 {
+            background: linear-gradient(90deg, #95de64 0%, #d9f7be 100%);
+            width: 61%;
+        }
+        
+        .funnel-label {
+            font-size: 13px;
+            color: #666;
+            margin-left: 12px;
+            white-space: nowrap;
+        }
+        
+        /* ========== 留人能力雷达图替代 ========== */
+        .retention-metrics {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin-top: 16px;
+        }
+        
+        @media (min-width: 600px) {
+            .retention-metrics {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        .retention-item {
+            text-align: center;
+            padding: 14px;
+            background: white;
+            border-radius: 10px;
+            border: 2px solid #f0f9e8;
+        }
+        
+        .retention-value {
+            font-size: 20px;
+            font-weight: 800;
+            color: #389e0d;
+            margin-bottom: 4px;
+        }
+        
+        @media (min-width: 768px) {
+            .retention-value {
+                font-size: 24px;
+            }
+        }
+        
+        .retention-label {
+            font-size: 12px;
+            color: #666;
+            font-weight: 600;
+        }
+        
+        .retention-benchmark {
+            font-size: 11px;
+            color: #999;
+            margin-top: 4px;
+        }
+        
+        /* ========== 历史案例回溯栏 ========== */
+        .history-bar {
+            background: white;
+            padding: 20px;
+            border-radius: 16px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            text-align: center;
+        }
+        
+        @media (min-width: 768px) {
+            .history-bar {
+                padding: 24px;
+            }
+        }
+        
+        .history-title {
+            font-size: 17px;
+            font-weight: 800;
+            color: #2c2c2c;
+            margin-bottom: 10px;
+        }
+        
+        @media (min-width: 768px) {
+            .history-title {
+                font-size: 18px;
+                margin-bottom: 12px;
+            }
+        }
+        
+        .history-note {
+            font-size: 13px;
+            color: #999;
+            font-style: italic;
+        }
+        
+        @media (min-width: 768px) {
+            .history-note {
+                font-size: 14px;
+            }
+        }
+        
+        .footer-note {
+            text-align: center;
+            padding: 20px 16px;
+            color: #aaa;
+            font-size: 12px;
+            line-height: 1.8;
+        }
+        
+        @media (min-width: 768px) {
+            .footer-note {
+                padding: 24px;
+                font-size: 13px;
+            }
+        }
+        
+        /* 小标题 */
+        .sub-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #2c2c2c;
+            margin: 20px 0 12px;
+            padding-left: 10px;
+            border-left: 4px solid #52c41a;
+        }
+        
+        @media (min-width: 768px) {
+            .sub-title {
+                font-size: 17px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 顶部标题区 -->
+        <div class="header">
+            <div class="merchant-name">札萨旗舰店</div>
+            <div class="case-meta">
+                <span class="meta-tag">📅 大场日期：2026年6月</span>
+                <span class="meta-tag">🎯 类型：618年中宠粉大场</span>
+            </div>
+            <div class="core-strategy">
+                💡 核心策略：老粉私域做底盘 + 笔记预约蓄水 + 双层货盘分层转化 + 直播间强留人互动
+            </div>
+        </div>
+        
+        <!-- 经营成果 -->
+        <div class="card">
+            <div class="section-title">经营成果（大场前后对比）</div>
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div style="width:100%">
+                        <div class="metric-icon">💰</div>
+                        <div class="metric-value">突破百万</div>
+                        <div class="metric-label">单场DGMV<br>量级</div>
+                    </div>
+                    <span class="growth-badge">日播场数十倍</span>
+                </div>
+                <div class="metric-card">
+                    <div style="width:100%">
+                        <div class="metric-icon">⭐</div>
+                        <div class="metric-value">远超行业</div>
+                        <div class="metric-label">老粉支付<br>转化率</div>
+                    </div>
+                    <span class="growth-badge">行业均值2-3倍</span>
+                </div>
+                <div class="metric-card">
+                    <div style="width:100%">
+                        <div class="metric-icon">📅</div>
+                        <div class="metric-value">高效转化</div>
+                        <div class="metric-label">预约进房率<br>+支付率</div>
+                    </div>
+                    <span class="growth-badge">行业均值近3倍</span>
+                </div>
+                <div class="metric-card">
+                    <div style="width:100%">
+                        <div class="metric-icon">🛒</div>
+                        <div class="metric-value">持续攀升</div>
+                        <div class="metric-label">商卡点击<br>+购买转化</div>
+                    </div>
+                    <span class="growth-badge">行业均值数倍</span>
+                </div>
+            </div>
+            
+            <div class="insight-box">
+                 <strong>关键洞察：</strong>老粉贡献全场近七成成交，客单价是非粉的2.6倍；预约链路是决定性引擎，视频笔记带预约效率是图文的3-5倍；但退款率偏高（囤货装冲动下单），凑单门槛过陡未充分激活。
+            </div>
+        </div>
+        
+        <!-- 老粉价值可视化（精简版） -->
+        <div class="old-fan-highlight">
+            <div class="section-title">老粉价值核心数据</div>
+            <div class="highlight-stats">
+                <div class="stat-item">
+                    <div class="stat-value">远超行业</div>
+                    <div class="stat-label">老粉支付转化率<br><small>行业均值2-3倍</small></div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">近七成</div>
+                    <div class="stat-label">老粉成交占比<br><small>全场主力</small></div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">2.6倍</div>
+                    <div class="stat-label">老粉客单价倍数<br><small>vs非粉</small></div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">全场最长</div>
+                    <div class="stat-label">关注Tab停留时长<br><small>肌肉记忆级</small></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- N/P/L 三场域动作 - 纵向排列 -->
+        <div class="npl-section">
+            <div class="section-title">NPL 三场域协同打法详解</div>
+            
+            <!-- N 场域 -->
+            <div class="npl-card">
+                <div class="npl-title">
+                    <span class="npl-icon">N</span>
+                    笔记（Note）— 种草蓄水期
+                </div>
+                <div class="npl-content">
+                    <ul>
+                        <li><strong>系统性预告布局：</strong>大场前发<strong>30+篇预告笔记</strong>（视频为主），头部笔记单条带<strong>900+预约</strong>，形成密集触达矩阵</li>
+                        <li><strong>内容策略精细化：</strong>采用四类内容组合拳——<strong>新品预告型</strong>（效率最高）、<strong>机制/价格型</strong>（次高）、<strong>情绪/反差型</strong>（养人设）、<strong>UGC/对话型</strong>（内容多样性）</li>
+                        <li><strong>预约转化链路优化：</strong>通过"预告→预约→开播提醒"闭环，将内容流量高效转化为直播间预约用户，<strong>预约进房率远超行业均值</strong>，<strong>预约支付率优秀</strong></li>
+                        <li><strong>商笔协同放大声量：</strong>同步加大商业化笔记投放力度，通过达人种草+信息流广告组合拳，扩大品牌曝光面</li>
+                    </ul>
+                    
+                    <div class="sub-title">四类内容组合拳效果排序</div>
+                    <div class="content-type-tags">
+                        <span class="content-tag type-1"> 新品预告型（效率最高）</span>
+                        <span class="content-tag type-2">🥈 机制/价格型（次高）</span>
+                        <span class="content-tag type-3"> 情绪/反差型（养人设）</span>
+                        <span class="content-tag type-4">✨ UGC/对话型（多样性）</span>
+                    </div>
+                    
+                    <!-- 笔记参考案例（带链接） -->
+                    <div class="note-gallery">
+                        <a href="https://www.xiaohongshu.com/explore/6a0b09aa000000000702057a" target="_blank" class="note-item">
+                            <span class="note-type">新品预告型</span>
+                            <div class="note-title">你们要的法芙娜奶泡泡，要来了</div>
+                            <div class="note-link-hint">点击查看详情 →</div>
+                        </a>
+                        <a href="https://www.xiaohongshu.com/explore/6a1ffe1b0000000022015c06" target="_blank" class="note-item">
+                            <span class="note-type">机制/价格型</span>
+                            <div class="note-title">前无古人，后无来者的囤货一点鸡机制！</div>
+                            <div class="note-link-hint">点击查看详情 →</div>
+                        </a>
+                        <a href="https://www.xiaohongshu.com/explore/6a1fcd58000000000702d729" target="_blank" class="note-item">
+                            <span class="note-type">情绪/反差型</span>
+                            <div class="note-title">各位老顾客十分抱歉！冷冻类要说再见了</div>
+                            <div class="note-link-hint">点击查看详情 →</div>
+                        </a>
+                        <a href="https://www.xiaohongshu.com/explore/6a0c2a670000000007026b4d" target="_blank" class="note-item">
+                            <span class="note-type">UGC/对话型</span>
+                            <div class="note-title">等了半年！一根黑牛的新口味终于来了</div>
+                            <div class="note-link-hint">点击查看详情 →</div>
+                        </a>
+                    </div>
+                    
+                    <div class="sub-title">预约转化漏斗</div>
+                    <div class="funnel-container">
+                        <div class="funnel-step">
+                            <div class="funnel-bar step-1">30+篇预告笔记</div>
+                            <div class="funnel-label">蓄水起点</div>
+                        </div>
+                        <div class="funnel-step">
+                            <div class="funnel-bar step-2">4000+人预约</div>
+                            <div class="funnel-label">进房率远超行业</div>
+                        </div>
+                        <div class="funnel-step">
+                            <div class="funnel-bar step-3">¥50万+支付</div>
+                            <div class="funnel-label">支付率优秀</div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <!-- P 场域 -->
+            <div class="npl-card">
+                <div class="npl-title">
+                    <span class="npl-icon">P</span>
+                    私域（Private）— 粉丝运营期
+                </div>
+                <div class="npl-content">
+                    <ul>
+                        <li><strong>老粉私域是大场真正护城河：</strong>老粉支付转化率<strong>远超行业常规水位</strong>，贡献全场<strong>近七成</strong>成交金额，客单价是非粉的<strong>2.6倍</strong></li>
+                        <li><strong>关注渠道效率极高：</strong>老粉从"关注tab"直接进直播间，看播→支付率<strong>全场第二高</strong>，GPM<strong>全场第二高</strong>，平均停留<strong>全场最长</strong>——说明老粉有"主动进直播间"的肌肉记忆</li>
+                        <li><strong>群聊渠道ROI最高但基数小：</strong>群聊GPM<strong>全场最高</strong>，但只贡献极小比例成交，说明群聊用户质量极高但基数太小，建议重点扩大群聊基数</li>
+                        <li><strong>老粉专属价心智建立：</strong>通过"【6.9囤货】"系列大袋装+满减价，为老粉专门设计囤货机制，老粉对货盘极熟悉，跳过种草/比价/犹豫环节，直接"看SKU→拍"</li>
+                    </ul>
+                    
+                    <div class="sub-title">私域运营关键动作</div>
+                    <div class="private-ops-grid">
+                        <div class="private-op-item">
+                            <div class="private-op-title">群聊专属券</div>
+                            <div class="private-op-desc">设置"群专属券"激励老粉拉新进群，扩大群聊基数</div>
+                        </div>
+                        <div class="private-op-item">
+                            <div class="private-op-title">实时同步秒杀</div>
+                            <div class="private-op-desc">大场期间群聊实时同步秒杀节点，提升群内活跃度</div>
+                        </div>
+                        <div class="private-op-item">
+                            <div class="private-op-title">老粉价剧透</div>
+                            <div class="private-op-desc">大场前7天每天群聊推1条预告（图文+预约组件+老粉价剧透）</div>
+                        </div>
+                        <div class="private-op-item">
+                            <div class="private-op-title">返场承接</div>
+                            <div class="private-op-desc">大场后3天发"老粉专属返场"笔记，承接涨粉留存</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- L 场域 -->
+            <div class="npl-card">
+                <div class="npl-title">
+                    <span class="npl-icon">L</span>
+                    直播（Live）— 成交爆发期
+                </div>
+                <div class="npl-content">
+                    <ul>
+                        <li><strong>双层货盘结构：</strong><strong>引流层</strong>（低价尝鲜款，降低新客试错门槛）+ <strong>扛把层</strong>（大袋囤货装，拉老客客单），件均<strong>4+件/人</strong></li>
+                        <li><strong>直播间留人能力行业顶级：</strong>停留10s占比<strong>远超行业均值</strong>、人均观看时长<strong>优秀</strong>、商卡点击率<strong>显著优于行业</strong>——主播话术节奏+商品讲解密度+整点/半点互动设计三项都做得到位</li>
+                        <li><strong>凑单机制需优化：</strong>已设满减机制，但主流商品客单较低，凑到第一档需多件、第二档需更多件，心理门槛过陡，导致件单比偏低（远低于凑单型大场的3+）</li>
+                        <li><strong>退款率治理是关键：</strong>整体退款率<strong>偏高</strong>，重灾区是囤货装——客户冲动囤货，到货吃不完而退货，需在主播话术中提前管理预期</li>
+                    </ul>
+                    
+                    <div class="sub-title">双层货盘结构</div>
+                    <div class="product-structure">
+                        <div class="product-layer entry">
+                            <div class="layer-label">🔵 引流层</div>
+                            <div class="layer-desc">低价尝鲜款<br>降低新客试错门槛</div>
+                        </div>
+                        <div class="product-layer core">
+                            <div class="layer-label"> 扛把层</div>
+                            <div class="layer-desc">大袋囤货装<br>拉老客客单 · 件均4+件/人</div>
+                        </div>
+                    </div>
+                    
+                    <div class="sub-title">凑单机制优化方案</div>
+                    <div class="threshold-comparison">
+                        <div class="threshold-box before">
+                            <div class="threshold-label">❌ 当前机制（门槛过陡）</div>
+                            <div class="threshold-tiers">
+                                <div class="tier-item">第1档：需多件<span class="tier-arrow">→</span>心理门槛高</div>
+                                <div class="tier-item">第2档：需更多件<span class="tier-arrow">→</span>放弃凑单</div>
+                                <div class="tier-item" style="margin-top:8px;color:#cf1322;font-weight:700;">结果：件单比偏低</div>
+                            </div>
+                        </div>
+                        <div class="threshold-box after">
+                            <div class="threshold-label">✅ 优化后（3档梯度下移）</div>
+                            <div class="threshold-tiers">
+                                <div class="tier-item">满100减8<span class="tier-arrow">→</span>70%买家可达</div>
+                                <div class="tier-item">满200减20<span class="tier-arrow">→</span>轻松触达</div>
+                                <div class="tier-item">满300减35<span class="tier-arrow">→</span>激励凑单</div>
+                                <div class="tier-item" style="margin-top:8px;color:#389e0d;font-weight:700;">预期：客单价↑50%+ · 件单比→2.5+</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 可实践建议板块 -->
+        <div class="tips-section">
+            <div class="section-title">🎯 可复用的实操建议</div>
+            <div class="tip-card">
+                <div class="tip-title">📝 笔记预热SOP</div>
+                <div class="tip-content">大场前14天开始发预告笔记，每天2-3篇，累计30+篇；视频笔记优先于图文；头部笔记聚焦新品上市/机制剧透；尾部笔记做情绪共鸣/UGC互动</div>
+            </div>
+            <div class="tip-card">
+                <div class="tip-title"> 私域运营SOP</div>
+                <div class="tip-content">大场前7天每天群聊推1条预告（图文+预约组件+老粉价剧透）；设置"群专属券"激励老粉拉新进群；大场期间群聊实时同步秒杀节点；建议将群聊成交占比逐步提升</div>
+            </div>
+            <div class="tip-card">
+                <div class="tip-title">📦 货盘优化SOP</div>
+                <div class="tip-content">改为3档梯度凑单机制，把门槛下移：满100-8 / 满200-20 / 满300-35；让70%主流买家能轻松摸到第一档；预期客单价提升50%+，件单比提升至2.5+</div>
+            </div>
+            <div class="tip-card">
+                <div class="tip-title">⚠️ 退款率治理SOP</div>
+                <div class="tip-content">主播卖"大袋装"时强调"建议2-3人家庭购买/可分30天吃完/保质期X个月"，提前管理预期；商详页加"已购顾客真实反馈：能吃多久"模块；建议将退款率控制在合理区间</div>
+            </div>
+            <div class="tip-card">
+                <div class="tip-title">🎯 直播节奏SOP</div>
+                <div class="tip-content">设4个秒杀节点：11点/15点/20点/23点；主主播午休时由小主播承接讲解+答疑；23:30全店通用券触发夜间冲刺单；每15-20分钟循环讲解一次核心爆款</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="section-title">📅 笔记预热时间轴（大场前14天）</div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-day">T-14 ~ T-10（前5天）</div>
+                    <div class="timeline-content">每天发<strong>2篇新品预告型</strong>笔记，聚焦新品上市+机制剧透，快速建立期待感</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-day">T-9 ~ T-5（中5天）</div>
+                    <div class="timeline-content">每天发<strong>1篇机制/价格型</strong>+<strong>1篇情绪/反差型</strong>，兼顾转化效率与人设塑造</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-day">T-4 ~ T-1（后4天）</div>
+                    <div class="timeline-content">每天发<strong>1篇UGC/对话型</strong>+<strong>1篇冲刺预告</strong>，强化紧迫感+社群互动氛围</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-day">T日（大场当天）</div>
+                    <div class="timeline-content">开播前2小时发<strong>倒计时提醒笔记</strong>，带预约组件+直播间入口，收割最后一波流量</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 直播节奏可视化 -->
+        <div class="card">
+            <div class="section-title"> 直播节奏节点规划</div>
+            <div class="live-schedule">
+                <div class="schedule-node">
+                    <div class="schedule-time">11:00</div>
+                    <div class="schedule-action">上午秒杀<br>引爆第一波</div>
+                </div>
+                <div class="schedule-node">
+                    <div class="schedule-time">15:00</div>
+                    <div class="schedule-action">午后专场<br>主推爆款</div>
+                </div>
+                <div class="schedule-node">
+                    <div class="schedule-time">20:00</div>
+                    <div class="schedule-action">黄金档<br>全品类冲刺</div>
+                </div>
+                <div class="schedule-node">
+                    <div class="schedule-time">23:00</div>
+                    <div class="schedule-action">深夜秒杀<br>清库存</div>
+                </div>
+                <div class="schedule-node">
+                    <div class="schedule-time">23:30</div>
+                    <div class="schedule-action">全店券<br>夜间冲刺</div>
+                </div>
+            </div>
+            <div style="margin-top:16px;padding:14px;background:#f6ffed;border-radius:10px;font-size:14px;color:#555;line-height:1.8;">
+                 <strong>主播排班：</strong>主主播午休时段由小主播承接讲解+答疑；每15-20分钟循环讲解一次核心爆款
+            </div>
+        </div>
+        
+        <!-- 历史案例回溯栏 -->
+        <div class="history-bar">
+            <div class="history-title">📚 往期案例回顾</div>
+            <a href="https://picasso-private-1251524319.cos.ap-shanghai.myqcloud.com/formula-static/dibp/8h91589d/npl-case-danxiangshu-v6.html" class="history-link">单向树旗舰店</a>
+        </div>
+        
+        <div class="footer-note">
+            NPL 案例库 · 每周更新 · 数据来源：小红书电商内部复盘文档<br>
+            本案例仅供内部交流学习，未经授权不可对外传播
+        </div>
+    </div>
+</body>
+</html>
