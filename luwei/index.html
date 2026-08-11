@@ -14,6 +14,7 @@
 --amber:#C87F3C;--amber-soft:#FBF1E4;--amber-lite:#E2BC8C;
 }
 html{scroll-behavior:smooth}
+section[id]{scroll-margin-top:66px}
 body{background:var(--paper);color:var(--ink);
 font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
 line-height:1.8;font-size:15px;-webkit-font-smoothing:antialiased}
@@ -59,10 +60,11 @@ strong{font-weight:700;color:var(--ink)}
 .verdict{background:var(--card);border:1px solid var(--line);border-radius:14px;
 padding:30px 32px;margin-bottom:36px;box-shadow:0 1px 3px rgba(31,27,24,.04)}
 .verdict p:last-of-type{margin-bottom:0}
-.bignum{display:grid;grid-template-columns:repeat(auto-fit,minmax(118px,1fr));
+.bignum{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
 gap:22px;margin-top:26px;padding-top:24px;border-top:1px dashed var(--line2)}
 .bignum b{display:block;font-size:32px;color:var(--red);font-weight:800;
 line-height:1.15;letter-spacing:-1px}
+.bignum b.w{font-size:23px;letter-spacing:0}
 .bignum b i{font-style:normal;font-size:15px;margin-left:2px}
 .bignum span{font-size:12.5px;color:var(--ink3);display:block;margin-top:4px}
 
@@ -283,8 +285,9 @@ padding-bottom:17px;border-bottom:1px dashed #EFD9DD}
 border-radius:5px;padding:3px 6px;line-height:1.3;margin-top:2px;letter-spacing:.04em}
 .kp-i span{font-size:13.5px;line-height:1.68;color:var(--ink2)}
 /* 站内站外切换 */
-.zone{display:flex;gap:10px;margin:0 0 26px;flex-wrap:wrap}
-.zb{flex:1 1 260px;text-align:left;background:var(--card);border:1px solid var(--line2);
+.zone{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0 0 26px;align-items:stretch}
+.zb{display:flex;flex-direction:column;justify-content:center;min-height:74px;
+text-align:left;background:var(--card);border:1px solid var(--line2);box-sizing:border-box;
 border-radius:13px;padding:15px 20px;cursor:pointer;transition:.18s;font-family:inherit}
 .zb b{display:block;font-size:15.5px;font-weight:800;color:var(--ink);margin-bottom:3px}
 .zb span{font-size:12.5px;color:var(--ink3);line-height:1.6}
@@ -299,8 +302,8 @@ border-radius:13px;padding:15px 20px;cursor:pointer;transition:.18s;font-family:
 .kp-l{font-size:16px}
 .kp-g{grid-template-columns:1fr;gap:10px}
 .kp-i span{font-size:13px}
-.zone{flex-direction:column}
-.zb{flex:1 1 auto}
+.zone{grid-template-columns:1fr}
+.zb{min-height:0}
 }
 /* 分档可视化 */
 .lv{display:inline-flex;align-items:center;gap:5px;white-space:nowrap}
@@ -482,12 +485,12 @@ h1{font-size:24px}
 
 <div class="verdict">
 <p>3 月到 4 月成交涨了一波，之后就停住了。8 月的盘子和 4 月基本持平，四个月横盘。</p>
-<p>同期在这三个类目有商品在库的店铺<mark>涨了近两成</mark>，半年多进来数千家新店。</p>
+<p>同期在这三个类目有商品在库的店铺<mark>涨了近两成</mark>，盘子没大，分盘子的人多了。</p>
 <p>在售商品超过两百万款，其中近 30 天有成交的<span class="nb">不足百分之一。</span></p>
 <div class="bignum">
-<div><b>横盘</b><span>4 月至今大盘走势</span></div>
-<div><b>+29.4%</b><span>8 月较 3 月增幅</span></div>
-<div><b>+18.2%</b><span>半年店铺数增幅</span></div>
+<div><b class="w">横盘</b><span>4 月至今大盘走势</span></div>
+<div><b class="w">先涨后平</b><span>3 月到 4 月冲高，之后四个月无增长</span></div>
+<div><b class="w">近两成</b><span>半年内在库店铺数增幅</span></div>
 <div><b>&lt;1%</b><span>在售商品动销率</span></div>
 </div>
 </div>
@@ -502,9 +505,9 @@ h1{font-size:24px}
 <div class="fact">单款产出是 20 元以下档的 3.4 到 7.0 倍</div>
 <button class="exp-btn">这一档具体指什么<span class="arw">›</span></button>
 <div class="exp">
-<div class="ai"><b>指的是</b>商品实际售价落在 40 到 150 元区间的所有卤味商品，包含 40 到 80 元和 80 到 150 元两个价位段。对应的通常是多口味组合装、大规格家庭装、礼盒装这三种形态。</div>
-<div class="ai"><b>为什么是机会</b>这两档在售款数只占全类目六成，动销款数占三成，成交占比接近六成。同样上一款商品，放在这个区间的产出是低价档的 3.4 到 7.0 倍。</div>
-<div class="ai"><b>怎么进这一档</b>不用重新开发产品，把现有商品做成多件组合或加大规格，改售卖单位即可。数据里跑在前面的组合装多数是三到五件装配合满减规则。</div>
+<div class="ai"><b>指的是</b>售价落在 <mark>40 到 150 元</mark>的卤味商品，通常是多口味组合装、大规格家庭装、礼盒装。</div>
+<div class="ai"><b>为什么是机会</b>同样上一款商品，放这个区间的产出是低价档的 <mark>3.4 到 7.0 倍</mark>。</div>
+<div class="ai"><b>怎么进这一档</b>不用开发新品，<mark>现有商品做成三到五件组合装</mark>，配满减规则即可。</div>
 </div>
 </div>
 <div class="gap" data-exp>
@@ -514,9 +517,9 @@ h1{font-size:24px}
 <div class="fact">用户接受度已验证，供给仍在扩张期</div>
 <button class="exp-btn">这个形态具体指什么<span class="arw">›</span></button>
 <div class="exp">
-<div class="ai"><b>指的是</b>牛胸口脆、牛排脆、猪肉脆片这一类把肉做成薄脆口感的零食，工艺上多为低温慢烤或风干非油炸，区别于传统的牛肉干和肉脯。</div>
-<div class="ai"><b>为什么值得跟</b>六家不同的店同时进入成交前 30 名，说明用户接受度已经被验证过，不是单店偶然。同时价格从 40 元铺到 110 元，档位还没坐满，中间有空位。</div>
-<div class="ai"><b>怎么切入</b>缺口清单里脆片方向的商品供需缺口普遍在高档以上，其中三个品成交高速上升。带明确产地标签的脆片缺口更大。</div>
+<div class="ai"><b>指的是</b>牛胸口脆、牛排脆、猪肉脆片这类<mark>薄脆口感</mark>的肉零食，低温慢烤或风干非油炸。</div>
+<div class="ai"><b>为什么值得跟</b><mark>六家店同时</mark>进成交前 30 名，用户接受度已验证。价格从 40 元铺到 110 元，<mark>档位还没坐满</mark>。</div>
+<div class="ai"><b>怎么切入</b>脆片方向缺口普遍在<mark>高档以上</mark>，带<mark>明确产地标签</mark>的缺口更大。</div>
 </div>
 </div>
 <div class="gap" data-exp>
@@ -526,9 +529,9 @@ h1{font-size:24px}
 <div class="fact">账号过多的店，单篇效率可能更低</div>
 <button class="exp-btn">这个结论怎么来的<span class="arw">›</span></button>
 <div class="exp">
-<div class="ai"><b>看的是什么</b>取当日发文量 100 篇以上的卤味店铺作为样本，对比每家店的账号数量与篇均曝光、篇均购买两项效率指标。</div>
-<div class="ai"><b>看到了什么</b>用 3 个账号的店篇均曝光排第一，用 154 个账号的店发文量是它的近五倍，篇均曝光只有它的十分之一。样本内账号数越多的店，单篇效率普遍更低。</div>
-<div class="ai"><b>可能的原因</b>账号铺开之后粉丝积累被稀释，内容调性难以统一，单个账号拿到的初始流量池变小。这是单日样本的观察，不同店铺的投放策略会影响结果。</div>
+<div class="ai"><b>看的是什么</b>发文量 100 篇以上的卤味店铺，对比<mark>账号数</mark>与<mark>篇均曝光</mark>、篇均购买。</div>
+<div class="ai"><b>看到了什么</b><mark>3 个账号</mark>的店篇均曝光排第一。<mark>154 个账号</mark>的店发文量近五倍，篇均曝光只有它<mark>十分之一</mark>。</div>
+<div class="ai"><b>可能的原因</b>账号越多粉丝越稀释，<mark>单号初始流量池变小</mark>。单日样本观察，投放策略会影响结果。</div>
 </div>
 </div>
 </div>
@@ -599,22 +602,17 @@ h1{font-size:24px}
 <p class="tnote">单款产出为相对值，以 20 元以下档为 1 倍基准。占比基于三个二级类目在售商品与近 30 天成交计算。</p>
 
 <div class="insight">
-<div class="il">建议</div>
-<h4>三个类目的实际成交价都压在低位，往上走一档还有空间</h4>
-<p>肉干卤味当前成交均价 74.1 元，是三个类目里最高的，海味即食 31.2 元到 57.6 元之间，豆干蔬菜干只有 13.4 元到 24.2 元。对照 01 节的价位段结构，40 到 150 元这两档用三成动销款拿走近六成成交，说明用户愿意在更高的价格上买单。海味和素卤两类目前整体落在这个区间以下，把规格和组合方式改一改就有往上走的余地。</p>
-</div>
-
-<div class="insight">
 <div class="il">洞察</div>
 <h4>钱在往上走，款在往下堆，两边正在背向而行</h4>
-<p>动销款数最多的是 <mark>20 元以下档</mark>，占动销总数近四成。成交最多的是 <mark>40 到 80 元档</mark>。低价档用最多的款换来最少的钱，单款产出只有 80 到 150 元档的七分之一。</p>
-<p>20 到 40 元这一档最危险，在售款数占四分之一，成交占比只有两成出头。在售款数比 80 到 150 元档多两成，产出只有它的 29%。留在这一档意味着跟全类目四分之一的商品抢同一批用户。</p>
+<p>动销款数最多的是 <mark>20 元以下档</mark>，占动销总数近四成，成交最多的却是 <mark>40 到 80 元档</mark>。低价档用最多的款换最少的钱，单款产出只有 80 到 150 元档的<mark>七分之一</mark>。</p>
+<p><mark>20 到 40 元这一档最危险</mark>，在售款数占四分之一，成交只有两成出头，产出只有 80 到 150 元档的 29%。留在这里等于跟全类目四分之一的商品抢同一批用户。</p>
+<p>三个类目的实际成交价也都压在低位。肉干卤味 74.1 元最高，海味即食 31.2 到 57.6 元，豆干蔬菜干只有 13.4 到 24.2 元，<mark>后两类整体落在高效率区间以下</mark>。</p>
 </div>
 
 <div class="act">
 <div class="at">动作</div>
 <h4>把现有 SKU 打包成组合装或大规格，推到 40 到 150 元</h4>
-<p>产品配方不用改，改售卖单位和包装规格就能进这个池子。数据里 62.8 元的小全家桶和 43.2 元的多口味组合都跑在成交前列。</p>
+<p>产品配方不用改，<mark>改售卖单位和包装规格</mark>就能进这个池子。数据里 62.8 元的小全家桶和 43.2 元的多口味组合都跑在成交前列。海味和素卤离这个区间更远，先往 40 元以上走一档。</p>
 </div>
 </div></section>
 
@@ -738,7 +736,7 @@ h1{font-size:24px}
 <section id="s4"><div class="wrap">
 <div class="sn">04</div>
 <h2>先对号入座，你是哪一类</h2>
-<p class="sub">三类商家的机会点和动作完全不同，找到自己那一类，点开卡片看动作点。</p>
+<p class="sub">先确认自己属于哪一类，以及当前卡在什么地方。具体动作在下一节。</p>
 
 <div class="insight">
 <div class="il">洞察</div>
@@ -752,11 +750,11 @@ h1{font-size:24px}
 <h4>肉类型</h4>
 <p>主营牛肉干、猪肉脯、鸡鸭卤味等以肉为主体的商品。三类目里最大的盘子，也是竞争最充分的位置。</p>
 <div class="st">商笔占比 17.7% 到 85.5%，形态之间差别极大</div>
-<button class="exp-btn">查看动作点<span class="arw">›</span></button>
+<button class="exp-btn">怎么确认你是这一类<span class="arw">›</span></button>
 <div class="exp">
-<div class="ai"><b>货盘</b>牛肉类均价已到 74.1 元，落在高效率区间。往脆片形态迁移，该方向缺口品供需缺口普遍为高或极高，三个品成交高速上升。</div>
-<div class="ai"><b>内容</b>当日购买最高的三条标题全是生活对话，无产品参数。写家人视角、价格反差、复购实况三种句式。</div>
-<div class="ai"><b>账号</b>个位数账号的店篇均曝光是上百账号矩阵店的九倍以上。账号收到 3 到 5 个。</div>
+<div class="ai"><b>对上就是</b>成交里<mark>七成以上来自肉制品</mark>，主推款是牛肉干、猪肉脯或鸡鸭卤味。</div>
+<div class="ai"><b>你卡在哪</b>卡在<mark>竞争密度</mark>。盘子最大，做的店也最多，价格带已经在高位，再往上提空间有限。</div>
+<div class="ai"><b>先看哪个数</b>看你主推款属于哪个形态。<mark>牛肉类竞争已充分</mark>，短保肉类店铺不足百家还有位置。</div>
 </div>
 </div>
 <div class="type" data-exp>
@@ -764,11 +762,11 @@ h1{font-size:24px}
 <h4>海味型</h4>
 <p>主营鱼干、鱿鱼、虾类、海苔等海产即食零食。盘子小，缺口品密度大。</p>
 <div class="st">即食鱼商笔 57.7%，即食虾仅 5.3%</div>
-<button class="exp-btn">查看动作点<span class="arw">›</span></button>
+<button class="exp-btn">怎么确认你是这一类<span class="arw">›</span></button>
 <div class="exp">
-<div class="ai"><b>货盘</b>即食鱼均价 31.2 元，落在 40 到 150 元高效率区间以下。补功能成分往上提价，益生元海苔的供需缺口在全部商机里排第一。</div>
-<div class="ai"><b>内容</b>即食鱼商笔 57.7% 必须投，即食虾仅 5.3% 靠货架走货。同属海味，两个形态打法分开。</div>
-<div class="ai"><b>账号</b>盘子更小，把发文集中在少数账号上比铺矩阵更划算。</div>
+<div class="ai"><b>对上就是</b>主推款是<mark>鱼干、鱿鱼、虾类或海苔</mark>这类海产即食零食。</div>
+<div class="ai"><b>你卡在哪</b>卡在<mark>价格带</mark>。即食鱼均价只有 31.2 元，落在高效率区间以下，单款产出被压住。</div>
+<div class="ai"><b>先看哪个数</b>看你做的是鱼还是虾。<mark>两个形态的内容依赖度差十倍以上</mark>，打法完全分开。</div>
 </div>
 </div>
 <div class="type" data-exp>
@@ -776,11 +774,11 @@ h1{font-size:24px}
 <h4>素卤型</h4>
 <p>主营豆干、面筋、蔬菜干、素肉等植物基卤味。均价最低，价格竞争最激烈。</p>
 <div class="st">均价 13.4 元到 24.2 元，三个类目里最低</div>
-<button class="exp-btn">查看动作点<span class="arw">›</span></button>
+<button class="exp-btn">怎么确认你是这一类<span class="arw">›</span></button>
 <div class="exp">
-<div class="ai"><b>货盘</b>豆腐干均价 24.2 元，面筋 13.4 元，离 40 元这道坎还有距离。缺口集中在怀旧和地域，五个品都带产地或手工标签。</div>
-<div class="ai"><b>内容</b>面筋商笔占比 68.3%，是三类里最依赖内容的。低客单靠内容拉量在素卤能跑通。</div>
-<div class="ai"><b>账号</b>站内篇均效率最高的几家店，账号数都在 5 个以内。</div>
+<div class="ai"><b>对上就是</b>主推款是<mark>豆干、面筋、蔬菜干或素肉</mark>这类植物基卤味。</div>
+<div class="ai"><b>你卡在哪</b>卡在<mark>客单价</mark>。均价全类目垫底，离 40 元这道坎还有很长距离，靠走量撑规模。</div>
+<div class="ai"><b>先看哪个数</b>看你的<mark>商笔占比</mark>。面筋高达 68.3%，这一类内容做不起来货就走不动。</div>
 </div>
 </div>
 </div>
@@ -825,9 +823,9 @@ h1{font-size:24px}
 
 <div class="act">
 <div class="at">账号</div>
-<h4>把发文集中在 3 到 5 个账号上</h4>
-<p>商家 A 用 <mark>3 个账号</mark>做内容，篇均曝光和篇均购买两项都是当日样本第一。商家 D 铺了 <mark>154 个账号</mark>，发文量是前者的近五倍，篇均曝光只有前者的十分之一。</p>
-<div class="chart" style="margin:16px 0 0">
+<h4>停止开新号，把发文集中到跑得最好的 3 到 5 个账号</h4>
+<p>商家 A 用 <mark>3 个账号</mark>做内容，篇均曝光和篇均购买两项都是当日样本第一。商家 D 铺了 <mark>154 个账号</mark>，发文量是前者近五倍，篇均曝光只有前者<mark>十分之一</mark>。账号越多粉丝越稀释，单号拿到的初始流量池越小。</p>
+<div class="chart" style="margin:16px 0 14px">
 <div class="ct">篇均曝光相对值，账号越少效率越高</div>
 <div class="cd">同为卤味类目，当日发文量 100 篇以上的店铺，以效率最低的一家为 1 倍基准</div>
 <div class="row"><div class="lb"><b>商家 A</b><span>3 个账号</span></div><div class="bars"><div class="bar b2" style="width:100%">18.1×</div></div></div>
@@ -836,20 +834,7 @@ h1{font-size:24px}
 <div class="row"><div class="lb"><b>商家 D</b><span>154 个账号</span></div><div class="bars"><div class="bar b1" style="width:10.5%">1.9×</div></div></div>
 <div class="row"><div class="lb"><b>商家 E</b><span>91 个账号</span></div><div class="bars"><div class="bar b1" style="width:5.5%">1.0×</div></div></div>
 </div>
-</div>
-
-<div class="insight">
-<div class="il">洞察</div>
-<h4>账号铺得越开，单篇越不值钱</h4>
-<p>样本里铺了上百账号的两家店，篇均曝光排在最后两位。只用个位数账号的两家，篇均曝光是它们的 <mark>十五倍以上</mark>。前者发文量是后者的十几倍，拿到的总曝光反而更少。</p>
-<p>原因在于账号越多，每个账号的粉丝积累和内容调性越薄，平台给的初始流量池就越小。少数账号持续发同一类内容，账号权重和用户认知都能攒起来。</p>
-</div>
-
-<div class="act">
-<div class="at">建议</div>
-<h4>先停止开新号，把发文集中到跑得最好的 3 到 5 个账号上</h4>
-<p>挑账号看两个数，篇均曝光和篇均购买，只留排前面的。剩下的账号不必注销，降低发文频率即可，把内容产能挪到主力账号。</p>
-<p>主力账号每天保持稳定发文节奏，内容围绕同一批主推商品做变体，不要一个账号什么都发。</p>
+<p>挑账号只看两个数，<mark>篇均曝光和篇均购买</mark>，留排前面的。其余账号不必注销，降低发文频率，把产能挪到主力号。主力号围绕同一批主推商品做内容变体，不要一个号什么都发。</p>
 </div>
 </div>
 
@@ -874,9 +859,10 @@ h1{font-size:24px}
 </div>
 
 <div class="act">
-<div class="at">账号</div>
-<h4>把发文集中在少数账号上</h4>
-<p>账号过多的店单篇效率可能更低，海味型盘子更小，铺矩阵的必要性更弱。</p>
+<div class="at">选品</div>
+<h4>海味是三类里缺口密度最大的，优先挑功能化和免洗即食</h4>
+<p>缺口清单里海味方向的品数量最多，且档位普遍靠前。挑品按两个顺序来。先看<mark>有没有功能成分</mark>，益生元、低脂高蛋白、0 糖这类标签的缺口档位最高。再看<mark>是不是免洗即食</mark>，开袋直接吃的规格站内供给几乎为零。</p>
+<p>盘子小意味着铺矩阵的必要性弱，把精力放在选品比放在铺量上回报更高。</p>
 </div>
 </div>
 
@@ -901,9 +887,10 @@ h1{font-size:24px}
 </div>
 
 <div class="act">
-<div class="at">账号</div>
-<h4>把发文集中在少数账号上</h4>
-<p>本次样本里篇均效率最高的几家店，账号数都在 5 个以内。</p>
+<div class="at">客单</div>
+<h4>单品提价走不通，用组合装把一单做到 40 元以上</h4>
+<p>素卤单品价格已经被压到底，硬提单价会直接掉量。可行的路径是<mark>做多口味组合装</mark>，把一单的金额抬上去而不动单品价格，用户感知是买得更划算不是买得更贵。</p>
+<p>参照 01 节，跑在成交前列的组合装多数是<mark>三到五件装配满减</mark>。素卤单件价格低，凑到 40 元以上需要的件数更多，正好适合做家庭囤货装和办公室分享装这类场景。</p>
 </div>
 </div>
 </div></section>
@@ -995,10 +982,11 @@ document.querySelectorAll('.tabs').forEach(function(g){
   });
 });
 document.querySelectorAll('.type[data-exp] .exp-btn').forEach(function(b){
+  var t=b.childNodes[0].nodeValue;
   b.addEventListener('click',function(){
     var c=b.closest('.type');
     var open=c.classList.toggle('open');
-    b.childNodes[0].nodeValue = open ? '收起动作点' : '查看动作点';
+    b.childNodes[0].nodeValue = open ? '收起' : t;
   });
 });
 document.querySelectorAll('.gap[data-exp] .exp-btn').forEach(function(b){
@@ -1018,7 +1006,12 @@ document.querySelectorAll('.zb').forEach(function(b){
     document.querySelectorAll('nav a[data-nz]').forEach(function(a){
       a.style.display = a.dataset.nz===z ? '' : 'none';
     });
-    window.scrollTo({top:document.querySelector('nav').offsetTop-10,behavior:'smooth'});
+    var first = z==='zin' ? document.getElementById('s1') : document.getElementById('s6');
+    var navH = document.querySelector('nav').offsetHeight || 0;
+    if(first){
+      var y = first.getBoundingClientRect().top + window.pageYOffset - navH - 8;
+      window.scrollTo({top:y,behavior:'smooth'});
+    }
   });
 });
 document.querySelectorAll('nav a[data-nz="zout"]').forEach(function(a){a.style.display='none'});
