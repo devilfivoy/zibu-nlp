@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>卤味洞察 VOL.01｜站内卤味赛道商家行动指引</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--paper:#FCFAF7;--paper2:#F6F2EC;--card:#FFFFFF;
+--ink:#1F1B18;--ink2:#5C534B;--ink3:#9A9089;
+--line:#E8E1D8;--line2:#D9D0C4;
+--red:#FF2442;--red-soft:#FFE9EC;--red-deep:#D91832;
+--amber:#C87F3C;--amber-soft:#FBF1E4;--amber-lite:#E2BC8C;
+}
+html{scroll-behavior:smooth}
+section[id]{scroll-margin-top:66px}
+body{background:var(--paper);color:var(--ink);
+font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+line-height:1.8;font-size:15px;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1240px;margin:0 auto;padding:0 40px}
+
+/* HERO */
+.hero{padding:84px 0 58px;position:relative;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:end}
+.hero-r{padding-bottom:6px}
+.hero::after{content:"";position:absolute;top:40px;right:-90px;width:340px;height:340px;
+border-radius:50%;background:radial-gradient(circle,rgba(255,36,66,.06),transparent 70%);pointer-events:none}
+.kicker{display:inline-flex;align-items:center;gap:9px;font-size:12px;letter-spacing:.14em;
+color:var(--red);font-weight:700;margin-bottom:28px}
+.kicker::before{content:"";width:22px;height:2px;background:var(--red);border-radius:2px}
+h1{font-size:52px;line-height:1.22;font-weight:800;letter-spacing:-1.5px;margin-bottom:0}
+h1 em{font-style:normal;position:relative;white-space:nowrap}
+h1 em::after{content:"";position:absolute;left:0;right:0;bottom:5px;height:11px;
+background:var(--red-soft);z-index:-1;border-radius:2px}
+.lead{font-size:17px;color:var(--ink2);margin-bottom:26px;line-height:1.85}
+.meta{font-size:12.5px;color:var(--ink3);line-height:1.75;padding-left:14px;
+border-left:2px solid var(--line2);max-width:600px}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:50;background:rgba(252,250,247,.94);
+backdrop-filter:blur(14px);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;gap:4px;overflow-x:auto;padding-top:10px;padding-bottom:10px;scrollbar-width:none}
+nav .wrap::-webkit-scrollbar{display:none}
+nav a{color:var(--ink2);text-decoration:none;font-size:13px;padding:6px 13px;
+border-radius:20px;white-space:nowrap;transition:.18s;font-weight:500}
+nav a:hover{color:var(--red);background:var(--red-soft)}
+
+/* SECTION */
+section{padding:66px 0;border-bottom:1px solid var(--line)}
+.sn{display:inline-block;font-size:11.5px;letter-spacing:.18em;color:var(--red);
+font-weight:800;margin-bottom:14px}
+h2{font-size:31px;font-weight:800;letter-spacing:-.5px;margin-bottom:16px;line-height:1.35}
+h3{font-size:20px;font-weight:700;margin:36px 0 14px;letter-spacing:-.2px}
+.sub{color:var(--ink2);font-size:15.5px;margin-bottom:30px;max-width:860px}
+p{margin-bottom:15px}
+strong{font-weight:700;color:var(--ink)}
+
+/* VERDICT */
+.verdict{background:var(--card);border:1px solid var(--line);border-radius:14px;
+padding:30px 32px;margin-bottom:36px;box-shadow:0 1px 3px rgba(31,27,24,.04)}
+.verdict p:last-of-type{margin-bottom:0}
+.bignum{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+gap:22px;margin-top:26px;padding-top:24px;border-top:1px dashed var(--line2)}
+.bignum b{display:block;font-size:32px;color:var(--red);font-weight:800;
+line-height:1.15;letter-spacing:-1px}
+.bignum b.w{font-size:23px;letter-spacing:0}
+.bignum b i{font-style:normal;font-size:15px;margin-left:2px}
+.bignum span{font-size:12.5px;color:var(--ink3);display:block;margin-top:4px}
+
+/* GAP CARDS */
+.gaps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:10px}
+.gap{background:var(--card);border:1px solid var(--line);border-radius:14px;
+padding:26px 24px;transition:.22s}
+.gap:hover{border-color:var(--red);box-shadow:0 8px 24px rgba(255,36,66,.10);transform:translateY(-3px)}
+.gap .idx{display:inline-flex;align-items:center;justify-content:center;
+width:28px;height:28px;border-radius:50%;background:var(--red-soft);color:var(--red);
+font-size:13px;font-weight:800;margin-bottom:14px}
+.gap h4{font-size:16.5px;margin-bottom:10px;line-height:1.5;font-weight:700}
+.gap p{font-size:13.5px;color:var(--ink2);margin:0;line-height:1.75}
+.gap .fact{margin-top:14px;padding-top:13px;border-top:1px dashed var(--line2);
+font-size:12.5px;color:var(--red);font-weight:600;line-height:1.6}
+
+/* CHART */
+.chart{background:var(--card);border:1px solid var(--line);border-radius:14px;
+padding:28px 26px;margin:26px 0}
+.chart .ct{font-size:15.5px;font-weight:700;margin-bottom:6px}
+.chart .cd{font-size:12.5px;color:var(--ink3);margin-bottom:24px}
+.legend{display:flex;gap:20px;margin-bottom:22px;font-size:12.5px;color:var(--ink2);flex-wrap:wrap}
+.legend i{display:inline-block;width:22px;height:9px;margin-right:7px;
+vertical-align:0;border-radius:5px}
+.row{margin-bottom:20px}
+.row:last-child{margin-bottom:0}
+.row .lb{display:flex;justify-content:space-between;font-size:13.5px;margin-bottom:8px;gap:12px}
+.row .lb b{font-weight:600}
+.row .lb span{color:var(--ink3);font-size:12px;white-space:nowrap}
+.bars{display:flex;flex-direction:column;gap:5px}
+.bar{height:19px;border-radius:11px;display:flex;align-items:center;
+justify-content:flex-end;padding-right:10px;font-size:11.5px;font-weight:700;
+min-width:44px;transition:width .9s cubic-bezier(.2,.8,.3,1)}
+.b1{background:#EFE6DA;color:var(--amber)}
+.b2{background:linear-gradient(90deg,#FF5C74,var(--red));color:#fff}
+.b3{background:linear-gradient(90deg,#E2A867,var(--amber));color:#fff}
+
+/* TABLE */
+.tw{overflow-x:auto;margin:24px 0;border:1px solid var(--line);
+border-radius:12px;background:var(--card)}
+table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:520px}
+th{background:var(--paper2);text-align:left;padding:13px 16px;
+font-weight:700;font-size:12.5px;color:var(--ink2);border-bottom:1px solid var(--line)}
+td{padding:12px 16px;border-bottom:1px solid #F2ECE4;color:var(--ink2)}
+tr:last-child td{border-bottom:none}
+tbody tr:hover td{background:#FFF9F5}
+td.num{text-align:right;font-variant-numeric:tabular-nums;color:var(--ink)}
+td.hi{color:var(--red);font-weight:700}
+th:not(:first-child){text-align:right}
+.tnote{font-size:12px;color:var(--ink3);margin:-12px 0 24px}
+
+/* TABS */
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:28px 0 24px}
+.tab{background:var(--card);border:1px solid var(--line2);color:var(--ink2);
+padding:9px 18px;font-size:13.5px;cursor:pointer;border-radius:22px;
+transition:.18s;font-family:inherit;font-weight:600}
+.tab:hover{border-color:var(--red);color:var(--red)}
+.tab.on{background:var(--red);border-color:var(--red);color:#fff;
+box-shadow:0 3px 12px rgba(255,36,66,.24)}
+.panel{display:none;animation:fi .34s ease}
+.panel.on{display:block}
+@keyframes fi{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+/* TYPE CARDS */
+.types{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:24px;align-items:start}
+.type{background:var(--card);border:1px solid var(--line);border-radius:14px;
+padding:26px 24px;transition:.22s}
+.type:hover{border-color:var(--red);box-shadow:0 8px 24px rgba(255,36,66,.09)}
+.type .tg{display:inline-block;font-size:11px;letter-spacing:.12em;color:var(--red);
+background:var(--red-soft);padding:4px 10px;border-radius:12px;font-weight:700;margin-bottom:14px}
+.type h4{font-size:21px;margin-bottom:12px;font-weight:800}
+.type p{font-size:13.5px;color:var(--ink2);margin-bottom:14px;line-height:1.75}
+.type .st{font-size:12.5px;color:var(--amber);border-top:1px dashed var(--line2);
+padding-top:13px;font-weight:600}
+.type[data-exp]{display:flex;flex-direction:column}
+.exp-btn{margin-top:16px;background:var(--paper2);border:1px solid var(--line2);
+color:var(--ink2);font-family:inherit;font-size:13px;font-weight:600;cursor:pointer;
+padding:9px 14px;border-radius:20px;transition:.18s;display:inline-flex;
+align-items:center;justify-content:center;gap:6px;width:100%}
+.exp-btn:hover{border-color:var(--red);color:var(--red);background:var(--red-soft)}
+.exp-btn .arw{display:inline-block;transition:transform .25s;font-size:15px;line-height:1}
+.type.open .exp-btn,.gap.open .exp-btn{background:var(--red);border-color:var(--red);color:#fff}
+.type.open .exp-btn .arw,.gap.open .exp-btn .arw{transform:rotate(90deg)}
+.exp{max-height:0;overflow:hidden;transition:max-height .38s cubic-bezier(.2,.8,.3,1)}
+.type.open .exp,.gap.open .exp{max-height:620px}
+.ai{font-size:13px;color:var(--ink2);line-height:1.72;padding:13px 0;
+border-bottom:1px dashed var(--line)}
+.ai:first-child{padding-top:18px}
+.ai:last-child{border-bottom:none;padding-bottom:0}
+.ai b{display:inline-block;background:var(--ink);color:#fff;font-size:11px;
+padding:2px 9px;border-radius:10px;margin-right:8px;font-weight:700;vertical-align:1px}
+
+/* ACTION */
+.act{background:var(--card);border:1px solid var(--line);border-radius:14px;
+padding:26px 28px;margin-bottom:18px}
+.act .at{display:inline-block;font-size:11px;letter-spacing:.1em;color:#fff;
+background:var(--ink);padding:3px 11px;border-radius:11px;font-weight:700;margin-bottom:12px}
+.act h4{font-size:18px;margin-bottom:12px;font-weight:700;line-height:1.5}
+.act p{font-size:14.5px;color:var(--ink2);margin-bottom:13px}
+.act p:last-child{margin-bottom:0}
+.case{background:var(--amber-soft);border-radius:10px;padding:17px 19px;margin-top:16px}
+.case .cl{font-size:11.5px;color:var(--amber);font-weight:700;margin-bottom:8px;letter-spacing:.05em}
+.case p{font-size:13.5px;color:#6B5537;margin:0;line-height:1.75}
+
+/* TITLE LIST */
+.tl{display:grid;gap:10px;margin:18px 0}
+.tli{background:var(--paper2);border-radius:10px;padding:14px 18px;
+display:flex;justify-content:space-between;gap:14px;align-items:center;flex-wrap:wrap}
+.tli span{font-size:14px;color:var(--ink)}
+.tli b{font-size:12.5px;color:var(--red);white-space:nowrap;font-weight:700}
+
+/* OUTSIDE */
+.out{padding-left:20px;border-left:2px solid var(--line2);margin-bottom:26px}
+.out h4{font-size:16.5px;margin-bottom:9px;font-weight:700}
+.out p{font-size:14px;color:var(--ink2);margin-bottom:8px}
+.out .src{font-size:11.5px;color:var(--ink3);margin:0}
+
+/* END */
+.end{background:linear-gradient(150deg,#FFF4F1,#FFFCFA);
+border:1px solid #F7DCD8;border-radius:16px;padding:38px 34px}
+.end h3{margin-top:0;font-size:23px}
+.end>p{color:var(--ink2)}
+.steps{counter-reset:s;margin-top:24px}
+.step{counter-increment:s;position:relative;padding-left:44px;
+margin-bottom:17px;font-size:14.5px;color:var(--ink2)}
+.step:last-child{margin-bottom:0}
+.step::before{content:counter(s);position:absolute;left:0;top:0;width:28px;height:28px;
+background:var(--red);color:#fff;border-radius:50%;display:flex;
+align-items:center;justify-content:center;font-size:13px;font-weight:800}
+.fin{margin-top:26px;padding-top:20px;border-top:1px dashed #F0CCC6;
+color:var(--red);font-weight:700;font-size:15px}
+
+/* FOOTER */
+footer{padding:48px 0 64px;font-size:12px;color:var(--ink3)}
+footer h5{font-size:13px;color:var(--ink2);margin-bottom:14px;font-weight:700}
+footer table{font-size:11.5px;min-width:440px}
+footer th,footer td{padding:9px 13px}
+footer th:not(:first-child),footer td:not(:first-child){text-align:left}
+.disc{margin-top:24px;padding-top:20px;border-top:1px solid var(--line);line-height:1.9}
+.brand{margin-top:20px;font-size:12.5px;color:var(--ink2);font-weight:600}
+
+/* 宽屏并排 */
+.split{display:grid;grid-template-columns:.92fr 1.08fr;gap:22px;align-items:start;margin:26px 0}
+.split>.chart,.split>.tw{margin:0}
+.split-32{display:grid;grid-template-columns:.92fr 1.08fr;gap:22px;align-items:start;margin:26px 0}
+.split-32>.chart,.split-32>.tw,.split-32>.act{margin:0}
+.act-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:start}
+.act-grid>.act{margin-bottom:0}
+.out-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px 40px}
+.out-grid>.out{margin-bottom:0}
+.end-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:40px;align-items:center}
+
+/* 平板 */
+
+.nb{white-space:nowrap}
+.nb mark{white-space:nowrap}
+
+/* 解读块（数据下方的文字分析） */
+.read{background:var(--card);border:1px solid var(--line);border-radius:12px;
+padding:24px 26px;margin:24px 0}
+.read>p{margin-bottom:13px;font-size:14.5px}
+.read>p:last-child{margin-bottom:0}
+.read .rt{font-size:12.5px;letter-spacing:.1em;color:var(--ink3);
+font-weight:700;margin-bottom:14px;text-transform:uppercase}
+.read-list{display:grid;gap:14px}
+.read-item{padding-left:16px;border-left:2px solid var(--line2)}
+.read-item:hover{border-left-color:var(--amber)}
+.read-item b{display:block;font-size:15px;color:var(--ink);margin-bottom:5px;font-weight:700}
+.read-item p{font-size:13.8px;color:var(--ink2);margin:0;line-height:1.75}
+/* 站外卡片强化 */
+.out{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--line2);
+border-radius:12px;padding:22px 24px;margin-bottom:0;transition:.2s}
+.out:hover{border-left-color:var(--amber);box-shadow:0 4px 16px rgba(31,27,24,.05)}
+.out h4{font-size:16px;margin-bottom:10px;font-weight:800}
+.out p{font-size:13.8px;color:var(--ink2);margin-bottom:10px;line-height:1.78}
+.out .src{font-size:11px;color:var(--ink3);margin:0;padding-top:10px;
+border-top:1px dashed var(--line);display:inline-block;width:100%}
+/* 表格等高对齐 */
+.split{align-items:stretch}
+.split>.tw,.split>.chart{display:flex;flex-direction:column}
+.split>.tw>table{flex:1 1 auto}
+.split-32{align-items:stretch}
+.split-32>.tw,.split-32>.chart{display:flex;flex-direction:column}
+/* 分区卡片文字垂直居中并等高 */
+.zone{align-items:stretch}
+.zb{justify-content:center;min-height:82px}
+.zb b{line-height:1.35}
+.zb span{display:block}
+/* 压缩图表与表格纵向空白 */
+.split>.chart .row{margin-bottom:9px}
+.split>.chart{justify-content:flex-start}
+.split>.tw>table td,.split>.tw>table th{padding-top:9px;padding-bottom:9px}
+.chart .ct{margin-bottom:4px}
+.chart .cd{margin-bottom:16px}
+/* 缺口分档说明加宽减少断行 */
+.scale{gap:18px 20px;padding-left:2px;padding-right:2px}
+.scale em{white-space:nowrap}
+/* 收紧动作卡与图表间距 */
+.act .chart{margin:16px 0 0}
+section{padding:52px 0}
+
+/* 收紧纵向留白 */
+h3{margin:30px 0 12px}
+.tw{margin:20px 0}
+.chart{margin:20px 0}
+.insight{margin:20px 0}
+.read{margin:20px 0}
+.act{margin-bottom:16px}
+.tabs{margin:24px 0 20px}
+.sub{margin-bottom:26px}
+.verdict{margin-bottom:30px}
+.gaps{margin-top:6px}
+.split,.split-32{margin:22px 0}
+.panel>h3:first-child{margin-top:0}
+.act:last-child{margin-bottom:0}
+
+
+.gap{position:relative}
+.gap .exp-btn{margin-top:12px}
+.gaps{align-items:start}
+.gap.open{box-shadow:0 6px 24px rgba(31,27,24,.07)}
+/* Key point */
+.kp-sec{padding:0 0 6px;background:var(--paper)}
+.kp{background:linear-gradient(135deg,#FFF6F7,#FFFDFC);border:1px solid #F5DFE3;
+border-radius:16px;padding:26px 30px;margin:26px 0 2px}
+.kp-h{font-size:11px;letter-spacing:.16em;color:var(--red);font-weight:800;margin-bottom:12px}
+.kp-l{font-size:19px;line-height:1.62;font-weight:700;color:var(--ink);margin:0 0 18px;
+padding-bottom:17px;border-bottom:1px dashed #EFD9DD}
+.kp-g{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:11px 26px}
+.kp-i{display:flex;gap:11px;align-items:flex-start}
+.kp-i b{flex:0 0 auto;font-size:11px;font-weight:800;color:#fff;background:var(--red);
+border-radius:5px;padding:3px 6px;line-height:1.3;margin-top:2px;letter-spacing:.04em}
+.kp-i span{font-size:13.5px;line-height:1.68;color:var(--ink2)}
+/* 站内站外切换 */
+.zone{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0 0 26px;align-items:stretch}
+.zb{display:flex;flex-direction:column;justify-content:center;min-height:74px;
+text-align:left;background:var(--card);border:1px solid var(--line2);box-sizing:border-box;
+border-radius:13px;padding:15px 20px;cursor:pointer;transition:.18s;font-family:inherit}
+.zb b{display:block;font-size:15.5px;font-weight:800;color:var(--ink);margin-bottom:3px}
+.zb span{font-size:12.5px;color:var(--ink3);line-height:1.6}
+.zb:hover{border-color:var(--amber)}
+.zb.on{background:var(--ink);border-color:var(--ink)}
+.zb.on b{color:#fff}.zb.on span{color:rgba(255,255,255,.72)}
+.zone-p{display:none}.zone-p.on{display:block}
+/* 页脚简述 */
+.fsum{font-size:12.5px;line-height:1.85;color:var(--ink3);margin:0 0 16px;max-width:900px}
+@media(max-width:640px){
+.kp{padding:20px 17px;border-radius:13px}
+.kp-l{font-size:16px}
+.kp-g{grid-template-columns:1fr;gap:10px}
+.kp-i span{font-size:13px}
+.zone{grid-template-columns:1fr}
+.zb{min-height:0}
+}
+/* 分档可视化 */
+.lv{display:inline-flex;align-items:center;gap:5px;white-space:nowrap}
+.lv i{width:7px;height:7px;border-radius:50%;background:#E3DAD0;display:inline-block}
+.lv i.on{background:var(--red)}
+.lv i.on.a{background:var(--amber)}
+.lv span{font-size:11.5px;color:var(--ink3);margin-left:3px;font-weight:600}
+.badge{display:inline-block;font-size:11.5px;font-weight:700;padding:3px 10px;
+border-radius:11px;white-space:nowrap;line-height:1.5}
+.bg-hi{background:#FFE4E8;color:#C8102E}
+.bg-md{background:#FBEBD6;color:#A66A28}
+.bg-lo{background:#EFEBE5;color:#8A8078}
+.bg-gr{background:#E4F1EA;color:#2F7A57}
+td .lv,td .badge{vertical-align:middle}
+.scale{display:flex;align-items:center;gap:14px;flex-wrap:wrap;
+font-size:11.5px;color:var(--ink3);margin:-8px 0 20px}
+.scale b{font-weight:700;color:var(--ink2)}
+.scale em{font-style:normal;display:inline-flex;align-items:center;gap:5px}
+/* 洞察卡片 */
+.insight{background:linear-gradient(140deg,#FFF8F3,#FFFDFB);
+border:1px solid #F0E2D2;border-left:3px solid var(--amber);
+border-radius:12px;padding:22px 24px;margin:24px 0}
+.insight .il{display:inline-flex;align-items:center;gap:7px;font-size:11px;
+letter-spacing:.12em;color:var(--amber);font-weight:800;margin-bottom:11px}
+.insight .il::before{content:"";width:14px;height:14px;border-radius:50%;
+background:var(--amber);opacity:.22}
+.insight h4{font-size:17px;font-weight:800;margin:0 0 10px;line-height:1.55;color:var(--ink)}
+.isrc{font-size:11.5px;color:var(--ink3);margin-top:9px;padding-top:9px;border-top:1px dashed #EFE3D5}
+.insight p{font-size:14px;color:var(--ink2);margin:0;line-height:1.8}
+.insight p+p{margin-top:9px}
+/* 关键信息高亮 */
+mark{background:linear-gradient(transparent 58%,#FCE9C8 58%);
+color:var(--ink);font-weight:700;padding:0 1px;border-radius:1px}
+/* 中文避免孤字 */
+p,.lead,.sub,.gap p,.act p,.type p,.out p,.ai,.insight p,.step,.cd,.tnote,.meta,.case p{
+text-wrap:pretty;word-break:normal;overflow-wrap:break-word}
+/* 卡片内元素跨列对齐 */
+.gaps,.types{align-items:stretch}
+.gap,.type{display:flex;flex-direction:column}
+.gap h4,.type h4{min-height:2.9em}
+.gap p,.type p{flex:1 1 auto}
+.gap .fact,.type .st{margin-top:auto}
+.type .st{min-height:3.2em;display:flex;align-items:flex-end}
+
+@media(max-width:900px){
+.wrap{padding:0 24px}
+h1{font-size:38px}h2{font-size:27px}
+.hero-grid{grid-template-columns:1fr;gap:26px}
+.hero-r{padding-bottom:0}
+.gaps,.types{grid-template-columns:1fr 1fr}
+.split,.split-32,.end-grid{grid-template-columns:1fr;gap:20px}
+.act-grid{grid-template-columns:1fr}
+.out-grid{grid-template-columns:1fr;gap:0}
+.out-grid>.out{margin-bottom:22px}
+.hero{padding:64px 0 46px}section{padding:56px 0}
+}
+/* 手机 */
+@media(max-width:640px){
+body{font-size:14.5px;line-height:1.76}
+.wrap{padding:0 18px}
+h1{font-size:28px;letter-spacing:-.5px;line-height:1.3}
+.gaps,.types{grid-template-columns:1fr}
+h1 em::after{height:9px;bottom:3px}
+h2{font-size:22px}h3{font-size:18px;margin:28px 0 12px}
+.lead{font-size:15px}.sub{font-size:14px;margin-bottom:24px}
+.hero{padding:44px 0 34px}
+.hero::after{width:210px;height:210px;right:-70px;top:20px}
+section{padding:40px 0}
+.verdict,.end{padding:22px 18px;border-radius:12px}
+.bignum{grid-template-columns:repeat(2,1fr);gap:16px;margin-top:20px;padding-top:18px}
+.bignum b{font-size:24px}
+.bignum span{font-size:11.5px}
+.gaps,.types{grid-template-columns:1fr;gap:12px}
+.gap,.type{padding:20px 18px}
+.gap h4,.type h4,.type .st{min-height:0}
+.insight{padding:19px 17px;border-radius:10px}
+.insight h4{font-size:15.5px}
+.insight p{font-size:13.5px}
+.gap:hover,.type:hover{transform:none;box-shadow:none}
+.chart{padding:20px 16px;border-radius:12px}
+.chart .ct{font-size:14.5px}
+.legend{gap:14px;margin-bottom:18px;font-size:12px}
+.row .lb{font-size:12.5px;flex-wrap:wrap;gap:4px}
+.row .lb span{font-size:11px}
+.bar{height:20px;font-size:11px;padding-right:8px}
+.act{padding:20px 18px;border-radius:12px}
+.act h4{font-size:16.5px}
+.act p{font-size:14px}
+.case{padding:15px 16px}
+.tabs{gap:6px;margin:22px 0 20px}
+.tab{padding:8px 14px;font-size:12.5px;flex:1 1 auto;text-align:center}
+.type.open .exp,.gap.open .exp{max-height:900px}
+.tli{padding:13px 15px}
+.tli span{font-size:13.5px}
+.tw{margin:20px 0;border-radius:10px;
+-webkit-overflow-scrolling:touch;position:relative}
+.tw::after{content:"";position:absolute;top:0;right:0;bottom:0;width:26px;
+background:linear-gradient(90deg,transparent,rgba(255,255,255,.96));
+pointer-events:none;border-radius:0 10px 10px 0}
+table{font-size:12.5px;min-width:460px}
+th{padding:10px 11px;font-size:11.5px;white-space:nowrap}
+td{padding:10px 11px}
+.tnote{font-size:11.5px}
+.out{padding:19px 17px}
+.out h4{font-size:15px}
+.read{padding:20px 18px}
+.read>p{font-size:13.8px}
+.out p{font-size:13.5px}
+.step{font-size:14px;padding-left:38px}
+.step::before{width:25px;height:25px;font-size:12px}
+footer{padding:36px 0 48px}
+footer table{min-width:400px}
+}
+/* 小屏手机 */
+@media(max-width:380px){
+h1{font-size:24px}
+.bignum{grid-template-columns:1fr 1fr;gap:13px}
+.bignum b{font-size:21px}
+.tab{padding:7px 11px;font-size:12px}
+}
+/* 触屏设备关闭 hover 位移 */
+@media(hover:none){
+.gap:hover,.type:hover{transform:none}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+<div class="wrap">
+<div class="kicker">卤味洞察 VOL.01　·　2026 秋</div>
+<div class="hero-grid">
+<div class="hero-l">
+<h1>卤味还有的做，<br>但不在<em>「低价冲量」</em>上</h1>
+</div>
+<div class="hero-r">
+<p class="lead">这份小报把卤味生意拆成两半看。站内讲清楚用户现在集中消费在哪一档、哪些形态还缺货、什么样的内容打法真的有效，站外讲下一批可能起来的品长什么样。三个二级类目，半年数据，结论都能直接对着自己的货盘用。</p>
+<p class="meta">统计范围为站内零食类目下肉干卤味、海味即食、豆干蔬菜干三个二级类目，数据周期 2026 年 3 月至 8 月，成交为近 30 天站内实付成交，<span class="nb">页面更新 2026.08</span></p>
+</div>
+</div>
+</div>
+</header>
+
+<section class="kp-sec"><div class="wrap">
+<div class="kp">
+<div class="kp-h">一句话看完</div>
+<p class="kp-l">卤味大盘已经走平，靠上架数量抢份额的阶段结束，接下来的增量在价格带、品类形态和内容效率这三件事上。</p>
+<div class="kp-g">
+<div class="kp-i"><b>01</b><span>用户消费集中在 40 到 150 元，这两档用三成动销款拿走近六成成交，往上补规格比往下卷价格划算</span></div>
+<div class="kp-i"><b>02</b><span>形态之间竞争密度差很远，短保肉类和即食虾参与店铺少、均价高，是现成的低竞争位</span></div>
+<div class="kp-i"><b>03</b><span>缺口集中在高蛋白、脆片、地域细分、功能海味四条线，需求跑在供给前面</span></div>
+<div class="kp-i"><b>04</b><span>当日有发文的店成交额中位数是不发文店的 2.4 倍，发文量提到 300 篇以上时账号数要同步跟上</span></div>
+<div class="kp-i"><b>05</b><span>站外热卤正餐化和高蛋白零食化尚未在站内形成供给，可作为下一轮开品方向</span></div>
+</div>
+</div>
+</div></section>
+
+<section class="kp-sec"><div class="wrap">
+<div class="zone">
+<button class="zb on" data-z="zin"><b>站内怎么做</b><span>现在这门生意的钱在哪、缺什么、内容怎么写</span></button>
+<button class="zb" data-z="zout"><b>站外看什么</b><span>下一批可能起来的品和风向</span></button>
+</div>
+</div></section>
+
+<nav><div class="wrap">
+<a href="#s0">开篇判断</a>
+<a href="#s1" data-nz="zin">01 价格带</a>
+<a href="#s2" data-nz="zin">02 形态盘点</a>
+<a href="#s3" data-nz="zin">03 缺口清单</a>
+<a href="#s4" data-nz="zin">04 找到你的类型</a>
+<a href="#s5" data-nz="zin">05 三类打法</a>
+<a href="#s6" data-nz="zout">06 站外风向</a>
+</div></nav>
+
+<!-- 开篇 -->
+<section id="s0"><div class="wrap">
+<div class="sn">开篇判断</div>
+<h2>一句话判断</h2>
+
+<div class="verdict">
+<p>3 月到 4 月成交涨了一波，之后就停住了。8 月的盘子和 4 月基本持平，四个月横盘。</p>
+<p>同期在售商品数<mark>涨了约四成</mark>，能卖动的商品数几乎没变，在库店铺数还<mark>少了约一成</mark>。款越堆越多，卖动的没跟着变多。</p>
+<p>在售商品超过两百万款，其中近 30 天有成交的<span class="nb">不足百分之一。</span></p>
+<div class="bignum">
+<div><b class="w">横盘</b><span>4 月至今大盘走势</span></div>
+<div><b class="w">涨四成</b><span>半年在售商品数变化</span></div>
+<div><b class="w">几乎没变</b><span>半年动销商品数变化</span></div>
+<div><b>&lt;1%</b><span>在售商品动销率</span></div>
+</div>
+</div>
+
+<p class="sub">上架数量这条路已经跑到头。下面三个位置还开着。</p>
+
+<div class="gaps">
+<div class="gap" data-exp>
+<div class="idx">1</div>
+<h4>中间两档花的力气最少，收得最多</h4>
+<p>两档合计只占动销款数的 <mark>29%</mark>，拿走 <mark>57%</mark> 的成交。</p>
+<div class="fact">单款产出是 20 元以下档的 4 到 7 倍</div>
+<button class="exp-btn">这一档具体指什么<span class="arw">›</span></button>
+<div class="exp">
+<div class="ai"><b>指的是</b>售价落在 <mark>40 到 150 元</mark>的卤味商品，通常是多口味组合装、大规格家庭装、礼盒装。</div>
+<div class="ai"><b>为什么是机会</b>同样上一款商品，放这个区间的产出是低价档的 <mark>4 到 7 倍</mark>。</div>
+<div class="ai"><b>怎么进这一档</b>不用开发新品，<mark>现有商品做成三到五件组合装</mark>，配满减规则即可。</div>
+</div>
+</div>
+<div class="gap" data-exp>
+<div class="idx">2</div>
+<h4>一个形态正在成型，六家店同时在做</h4>
+<p>牛脆片在成交前 30 名里出现六次，分属六家不同的店，价格从 40 元档铺到 110 元档。</p>
+<div class="fact">用户接受度已验证，供给仍在扩张期</div>
+<button class="exp-btn">这个形态具体指什么<span class="arw">›</span></button>
+<div class="exp">
+<div class="ai"><b>指的是</b>牛胸口脆、牛排脆、猪肉脆片这类<mark>薄脆口感</mark>的肉零食，低温慢烤或风干非油炸。</div>
+<div class="ai"><b>为什么值得跟</b><mark>六家店同时</mark>进成交前 30 名，用户接受度已验证。价格从 40 元铺到 110 元，<mark>档位还没坐满</mark>。</div>
+<div class="ai"><b>怎么切入</b>脆片方向缺口普遍在<mark>高档以上</mark>，带<mark>明确产地标签</mark>的缺口更大。</div>
+</div>
+</div>
+<div class="gap" data-exp>
+<div class="idx">3</div>
+<h4>发文量提上去，账号数要跟着上</h4>
+<p>发文 800 篇以上但账号在 5 个以内的店，篇均曝光中位数只有 <mark>8</mark>，比发文 100 到 300 篇的同规模店还低。</p>
+<div class="fact">发文量与账号数不匹配时，篇均曝光不升反降</div>
+<button class="exp-btn">这个结论怎么来的<span class="arw">›</span></button>
+<div class="exp">
+<div class="ai"><b>看的是什么</b>三个类目有在售商品的商家，按当日<mark>发文量</mark>与<mark>账号数</mark>交叉分组，比较篇均曝光中位数。</div>
+<div class="ai"><b>看到了什么</b>发文 100 篇以下时，账号多少带来的差距只有 <mark>1.5 倍</mark>。发文 800 篇以上时，20 个号以上的店篇均曝光中位数为 94，1 到 5 个号的店只有 8，差距 <mark>11.8 倍</mark>。</div>
+<div class="ai"><b>怎么用</b>计划把发文量提到 <mark>300 篇以上</mark>时，账号数需要同步增加。若账号数不变而只增加发文量，篇均曝光不会提升。</div>
+</div>
+</div>
+</div>
+</div></section>
+
+<div class="zone-p on" id="zin">
+<!-- 01 -->
+<section id="s1"><div class="wrap">
+<div class="sn">01</div>
+<h2>价位段明细，用户集中消费在哪一档</h2>
+<p class="sub">三个二级类目全部在售商品按售价分五档，对照近 30 天成交。两条柱子的落差，就是这一档的拥挤程度。</p>
+
+<div class="split-32">
+<div class="chart">
+<div class="ct">成交占比　与　在售款数占比</div>
+<div class="cd">红色长于灰色，说明这一档钱多人少，值得进</div>
+<div class="legend">
+<span><i class="b1"></i>在售款数占比</span>
+<span><i class="b2"></i>成交占比</span>
+</div>
+
+<div class="row">
+<div class="lb"><b>&lt;20 元　尝鲜装</b><span>单款产出 1.0×</span></div>
+<div class="bars">
+<div class="bar b1" style="width:8.8%">3.6%</div>
+<div class="bar b2" style="width:37.5%">15.3%</div>
+</div></div>
+
+<div class="row">
+<div class="lb"><b>20-40 元　日常装</b><span>单款产出 2.1×</span></div>
+<div class="bars">
+<div class="bar b1" style="width:62.3%">25.4%</div>
+<div class="bar b2" style="width:56.1%">22.9%</div>
+</div></div>
+
+<div class="row">
+<div class="lb"><b>40-80 元　主力带</b><span>单款产出 4.1×</span></div>
+<div class="bars">
+<div class="bar b1" style="width:100%">40.8%</div>
+<div class="bar b2" style="width:75.7%">30.9%</div>
+</div></div>
+
+<div class="row">
+<div class="lb"><b>80-150 元　高效带</b><span>单款产出 7.4×</span></div>
+<div class="bars">
+<div class="bar b1" style="width:50.5%">20.6%</div>
+<div class="bar b2" style="width:63.2%">25.8%</div>
+</div></div>
+
+<div class="row">
+<div class="lb"><b>≥150 元　高价带</b><span>单款产出 5.0×</span></div>
+<div class="bars">
+<div class="bar b1" style="width:23.5%">9.6%</div>
+<div class="bar b2" style="width:12.3%">5.0%</div>
+</div></div>
+</div>
+
+<div class="tw" data-p1><table>
+<thead><tr><th>价位段</th><th>在售款数占比</th><th>动销款数占比</th><th>成交占比</th><th>单款产出</th></tr></thead>
+<tbody>
+<tr><td>&lt;20 元</td><td class="num">3.6%</td><td class="num">40.3%</td><td class="num">15.3%</td><td class="num">1.0×</td></tr>
+<tr><td>20-40 元</td><td class="num">25.4%</td><td class="num">28.1%</td><td class="num">22.9%</td><td class="num">2.1×</td></tr>
+<tr><td>40-80 元</td><td class="num">40.8%</td><td class="num">19.8%</td><td class="num hi">30.9%</td><td class="num hi">4.1×</td></tr>
+<tr><td>80-150 元</td><td class="num">20.6%</td><td class="num">9.2%</td><td class="num hi">25.8%</td><td class="num hi">7.4×</td></tr>
+<tr><td>≥150 元</td><td class="num">9.6%</td><td class="num">2.6%</td><td class="num">5.0%</td><td class="num">5.0×</td></tr>
+</tbody></table></div>
+</div>
+<p class="tnote">单款产出为相对值，以 20 元以下档为 1 倍基准。占比基于三个二级类目在售商品与近 30 天成交计算。</p>
+
+<div class="insight">
+<div class="il">洞察</div>
+<h4>钱在往上走，款在往下堆，两边正在背向而行</h4>
+<p>动销款数最多的是 <mark>20 元以下档</mark>，占动销总数四成，成交最多的却是 <mark>40 到 80 元档</mark>。低价档用最多的款换最少的钱，单款产出只有 80 到 150 元档的<mark>七分之一</mark>。</p>
+<p><mark>20 到 40 元这一档最危险</mark>，在售款数占四分之一，成交只有两成出头，产出只有 80 到 150 元档的 28%。留在这里等于跟全类目四分之一的商品抢同一批用户。</p>
+<p>三个类目的实际成交价也都压在低位。肉干卤味 74 元最高，海味即食 32 到 57 元，豆干蔬菜干只有 13 到 24 元，<mark>后两类整体落在高效率区间以下</mark>。</p>
+</div>
+
+<div class="act">
+<div class="at">动作</div>
+<h4>把现有 SKU 打包成组合装或大规格，推到 40 到 150 元</h4>
+<p>产品配方不用改，<mark>改售卖单位和包装规格</mark>就能进这个池子。数据里 63 元的小全家桶和 43 元的多口味组合都跑在成交前列。海味和素卤离这个区间更远，先往 40 元以上走一档。</p>
+</div>
+</div></section>
+
+<!-- 02 -->
+<section id="s2"><div class="wrap">
+<div class="sn">02</div>
+<h2>形态明细，什么在卖</h2>
+<p class="sub">近 30 天有成交的商品按形态归类，看清楚钱实际流向哪些品。</p>
+
+<div class="split">
+<div class="tw"><table>
+<thead><tr><th>形态</th><th>成交占比</th><th>均价</th><th>商笔占比</th><th>店铺密度</th><th>竞争判断</th></tr></thead>
+<tbody><tr><td>牛肉类零食</td><td class="num hi">52.1%</td><td class="num">74</td><td class="num">27.8%</td><td><span class="badge bg-hi">很高</span></td><td><span class="badge bg-hi">充分竞争</span></td></tr><tr><td>短保肉类</td><td class="num hi">10.1%</td><td class="num">50</td><td class="num">20.0%</td><td><span class="badge bg-gr">很低</span></td><td><span class="badge bg-gr">机会位</span></td></tr><tr><td>猪肉类零食</td><td class="num">9.5%</td><td class="num">40</td><td class="num">39.4%</td><td><span class="badge bg-hi">高</span></td><td><span class="badge bg-hi">充分竞争</span></td></tr><tr><td>鸡肉零食</td><td class="num">7.2%</td><td class="num">35</td><td class="num">43.7%</td><td><span class="badge bg-hi">高</span></td><td><span class="badge bg-md">较拥挤</span></td></tr><tr><td>鸭肉类零食</td><td class="num">4.9%</td><td class="num">38</td><td class="num">31.2%</td><td><span class="badge bg-md">中</span></td><td><span class="badge bg-md">较拥挤</span></td></tr><tr><td>即食鱼零食</td><td class="num">4.8%</td><td class="num">32</td><td class="num hi">58.6%</td><td><span class="badge bg-md">中</span></td><td><span class="badge bg-md">较拥挤</span></td></tr><tr><td>豆腐干</td><td class="num">2.6%</td><td class="num">24</td><td class="num">39.3%</td><td><span class="badge bg-md">中</span></td><td><span class="badge bg-md">较拥挤</span></td></tr><tr><td>即食虾零食</td><td class="num">2.2%</td><td class="num hi">57</td><td class="num">5.2%</td><td><span class="badge bg-gr">低</span></td><td><span class="badge bg-gr">机会位</span></td></tr><tr><td>面筋制品</td><td class="num">1.9%</td><td class="num">13</td><td class="num hi">68.2%</td><td><span class="badge bg-md">中</span></td><td><span class="badge bg-md">低客单</span></td></tr><tr><td>其它豆制品</td><td class="num">1.8%</td><td class="num">19</td><td class="num">39.2%</td><td><span class="badge bg-md">中</span></td><td><span class="badge bg-md">较拥挤</span></td></tr><tr><td>即食鱿鱼零食</td><td class="num">1.5%</td><td class="num">40</td><td class="num">28.4%</td><td><span class="badge bg-gr">低</span></td><td><span class="badge bg-gr">机会位</span></td></tr><tr><td>鹅肉干零食</td><td class="num">1.4%</td><td class="num">37</td><td class="num hi">85.3%</td><td><span class="badge bg-gr">低</span></td><td><span class="badge bg-gr">内容驱动</span></td></tr></tbody></table></div>
+<div class="chart">
+<div class="ct">商笔成交占比，决定你该不该投内容</div>
+<div class="cd">该形态由商品笔记带来的成交，占其全部成交的比例</div>
+<div class="row"><div class="lb"><b>鹅肉干零食</b><span>内容驱动</span></div><div class="bars"><div class="bar b2" style="width:85.3%">85.3%</div></div></div>
+<div class="row"><div class="lb"><b>面筋制品</b><span>内容驱动</span></div><div class="bars"><div class="bar b2" style="width:68.2%">68.2%</div></div></div>
+<div class="row"><div class="lb"><b>即食鱼零食</b><span>内容驱动</span></div><div class="bars"><div class="bar b2" style="width:58.6%">58.6%</div></div></div>
+<div class="row"><div class="lb"><b>鸡肉零食</b><span>中等</span></div><div class="bars"><div class="bar b3" style="width:43.6%">43.6%</div></div></div>
+<div class="row"><div class="lb"><b>牛肉类零食</b><span>中等</span></div><div class="bars"><div class="bar b3" style="width:28.0%">28.0%</div></div></div>
+<div class="row"><div class="lb"><b>短保肉类</b><span>货架驱动</span></div><div class="bars"><div class="bar b1" style="width:17.7%">17.7%</div></div></div>
+<div class="row"><div class="lb"><b>即食虾零食</b><span>货架驱动</span></div><div class="bars"><div class="bar b1" style="width:5.2%">5.2%</div></div></div>
+</div>
+</div>
+
+<div class="read">
+<div class="rt">从这张表读出三件事</div>
+<div class="read-list">
+<div class="read-item">
+<b>牛肉类一家独大，也最挤</b>
+<p>这一个形态吃掉三个类目<mark>一半以上</mark>的成交，均价在全类目高位。做这个形态的店铺数量<mark>全场最多</mark>。</p>
+</div>
+<div class="read-item">
+<b>短保肉类是店铺密度最低的位置</b>
+<p>做这个形态的店<mark>不足百家</mark>，均价接近牛肉类的七成，<span class="nb">成交做到牛肉类的两成。</span></p>
+</div>
+<div class="read-item">
+<b>商品笔记带来的成交，形态之间差别很大</b>
+<p><mark>鹅肉干、面筋制品、即食鱼</mark>这三类，超过一半的成交来自商品笔记。<mark>即食虾、千张、臭豆腐</mark>这三类，来自商品笔记的成交不足一成。做前一类要把内容投足，做后一类投内容的回报相对较低。</p>
+</div>
+</div>
+</div>
+
+
+<div class="insight">
+<div class="il">洞察</div>
+<h4>选形态先看店铺密度，再看内容依赖，两个都对才好进</h4>
+<p><mark>短保肉类</mark>是这张表里店铺密度最低的位置，参与店铺不足百家，店铺数只有牛肉类的<mark>一成</mark>，成交做到它的<mark>两成</mark>，均价还有 50 元。牛肉类盘子最大，同时被最多的店分摊。</p>
+<p>商品笔记占比决定投入方式。<mark>鹅肉干、面筋、即食鱼</mark>这一档超过一半成交来自笔记，内容做不起来货就走不动。<mark>即食虾、短保肉类</mark>这一档笔记占比在两成以下，把商品卡和货架做扎实更有效。</p>
+</div>
+
+<div class="act">
+<div class="at">值得单独看</div>
+<h4>牛脆片，六家店同时把它推起来了</h4>
+<p>成交前 30 名里出现六次，分属六家不同的店，价格从 43 元到 114 元。同一个形态被六家店同时推起来，用户接受度已经验证。传统牛肉干正在向薄脆片形态迁移。</p>
+</div>
+</div></section>
+
+<!-- 03 -->
+<section id="s3"><div class="wrap">
+<div class="sn">03</div>
+<h2>缺口明细，哪些高需求缺供给</h2>
+<p class="sub">平台输出的单品级供需关系，反映站内需求与现有供给的相对差距。缺口分为极高、高、中高三档，<span class="nb">档位越高</span>代表需求超出供给越多。下面按四条线<span class="nb">分开看。</span></p>
+
+<div class="insight">
+<div class="il">洞察</div>
+<h4>缺口集中在两件事上，把成分规格写清楚，把产地写具体</h4>
+<p>缺口排前列的品有两个共同点。一个是商品名称里带有<mark>成分或规格描述</mark>，例如高蛋白、益生元、七日装这类词，这些词的站内求购热度靠前而在售供给较少。另一个是产地下沉到<mark>县市一级</mark>，醴陵、岳阳、阿勒泰、保定这些名称站内几乎没有在售商品对应，求购热度多数处于高位。</p>
+<p>本次盘点的单品商机里，<mark>84.2%</mark> 处在需求大于供给的状态。三个类目的这一比例都在 84% 左右，差异很小。</p>
+</div>
+
+<div class="scale">
+<b>分档说明</b>
+<em><span class="badge bg-hi">极高</span>需求显著大于供给</em>
+<em><span class="badge bg-hi">高</span>需求明显大于供给</em>
+<em><span class="badge bg-md">中高</span>需求略大于供给</em>
+<em>求购热度按相对分级，五档制</em>
+</div>
+<div class="tabs" data-group="g3">
+<button class="tab on" data-t="t1">高蛋白轻食化</button>
+<button class="tab" data-t="t2">脆片化</button>
+<button class="tab" data-t="t3">地域特产化</button>
+<button class="tab" data-t="t4">海味与素卤</button>
+</div>
+
+<div class="panel on" id="t1">
+<h3>高蛋白轻食化，这条线缺口最大</h3>
+<div class="tw"><table>
+<thead><tr><th>缺口品</th><th>供需缺口</th><th>求购热度</th><th>成交趋势</th></tr></thead>
+<tbody><tr><td>轻食鸡腿肉组合 7 日装</td><td><span class="badge bg-hi">极高</span></td><td><span class="lv"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span></td><td><span class="badge bg-hi">高速上升</span></td></tr><tr><td>烟熏风味即食鸡胸肉</td><td><span class="badge bg-hi">极高</span></td><td><span class="lv"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span></td><td><span class="badge bg-md">上升</span></td></tr><tr><td>南京风味盐水鸭胗</td><td><span class="badge bg-hi">高</span></td><td><span class="lv"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span></td><td><span class="badge bg-lo">持平</span></td></tr><tr><td>风干原切鸡胸肉条</td><td><span class="badge bg-md">中高</span></td><td><span class="lv"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span></td><td><span class="badge bg-md">上升</span></td></tr><tr><td>薄脆鸡胸肉片</td><td><span class="badge bg-md">中高</span></td><td><span class="lv"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span></td><td><span class="badge bg-lo">持平</span></td></tr></tbody></table></div>
+<p><mark>七日装、小份量</mark>是这条线的共同特征。五个品全部落在鸡鸭禽类。</p>
+</div>
+
+<div class="panel" id="t2">
+<h3>脆片化，牛肉正在换形态</h3>
+<div class="tw"><table>
+<thead><tr><th>缺口品</th><th>供需缺口</th><th>求购热度</th><th>成交趋势</th></tr></thead>
+<tbody><tr><td>内蒙古特产猪肉脆片香辣味</td><td><span class="badge bg-hi">极高</span></td><td><span class="lv"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span></td><td><span class="badge bg-hi">高速上升</span></td></tr><tr><td>草原风味非油炸原切牛胸口脆</td><td><span class="badge bg-hi">极高</span></td><td><span class="lv"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span></td><td><span class="badge bg-lo">持平</span></td></tr><tr><td>内蒙古风干牛胸口脆片</td><td><span class="badge bg-hi">高</span></td><td><span class="lv"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span></td><td><span class="badge bg-hi">高速上升</span></td></tr><tr><td>低温慢烤谷饲安格斯雪花牛排脆</td><td><span class="badge bg-hi">高</span></td><td><span class="lv"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span></td><td><span class="badge bg-lo">持平</span></td></tr><tr><td>芥末风味酥脆桶装牛脆片</td><td><span class="badge bg-hi">高</span></td><td><span class="lv"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span></td><td><span class="badge bg-hi">高速上升</span></td></tr></tbody></table></div>
+<p>这条线和 02 节的牛脆片现象相互印证。五个品里三个成交高速上升，同时<mark>供需缺口都在高档以上</mark>。</p>
+</div>
+
+<div class="panel" id="t3">
+<h3>地域特产化，具体到县市的品有缺口</h3>
+<div class="tw"><table>
+<thead><tr><th>缺口品</th><th>供需缺口</th><th>求购热度</th></tr></thead>
+<tbody><tr><td>香辣卤味湖南醴陵特产真空鸭肉</td><td><span class="badge bg-hi">极高</span></td><td><span class="lv"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span></td></tr><tr><td>陕西手工香辣芝麻烧筋辣条</td><td><span class="badge bg-hi">高</span></td><td><span class="lv"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span></td></tr><tr><td>湖南特产香辣三角豆干怀旧零食</td><td><span class="badge bg-hi">高</span></td><td><span class="lv"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span></td></tr><tr><td>湖南岳阳特产手工牙签泡泡豆腐干</td><td><span class="badge bg-md">中高</span></td><td><span class="lv"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span></td></tr><tr><td>新疆阿勒泰手撕豆干五香麻辣</td><td><span class="badge bg-md">中高</span></td><td><span class="lv"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span></td></tr><tr><td>河北保定特产带皮驴肉五香卤味</td><td><span class="badge bg-md">中高</span></td><td><span class="lv"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span></td></tr></tbody></table></div>
+<p><mark>醴陵、岳阳、阿勒泰、保定</mark>这一层的县市级地名，站内基本没有商品在承接，同时求购热度多数处于高位。省级特产已经拥挤，往下一层还有位置。</p>
+</div>
+
+<div class="panel" id="t4">
+<h3>海味与素卤，小盘子高缺口</h3>
+<div class="tw"><table>
+<thead><tr><th>缺口品</th><th>供需缺口</th><th>求购热度</th></tr></thead>
+<tbody><tr><td>益生元岩烧酥脆原味海苔</td><td><span class="badge bg-hi">极高</span></td><td><span class="lv"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span></td></tr><tr><td>香辣味手工豆皮怀旧解馋辣片</td><td><span class="badge bg-hi">极高</span></td><td><span class="lv"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span></td></tr><tr><td>烘干压缩海带丝脱水圆饼免洗即食</td><td><span class="badge bg-hi">高</span></td><td><span class="lv"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span></td></tr><tr><td>碳烤风味明太鱼丝即食海鲜</td><td><span class="badge bg-hi">高</span></td><td><span class="lv"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span></td></tr><tr><td>酸甜开胃即食海带丝裙带菜海藻沙拉</td><td><span class="badge bg-hi">高</span></td><td><span class="lv"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span></td></tr></tbody></table></div>
+<p>海苔加益生元这个组合的<mark>供需缺口最大</mark>，在全部商机里排第一。成分加进传统海味，站内几乎没有供给在接。</p>
+</div>
+</div></section>
+
+<!-- 04 -->
+<section id="s4"><div class="wrap">
+<div class="sn">04</div>
+<h2>先对号入座，你是哪一类</h2>
+<p class="sub">先确认自己属于哪一类，以及当前卡在什么地方。具体动作在下一节。</p>
+
+<div class="insight">
+<div class="il">洞察</div>
+<h4>三类商家的瓶颈不在同一个地方</h4>
+<p>肉类型卡在<mark>竞争密度</mark>，盘子最大但参与店铺也最多。海味型卡在<mark>价格带</mark>，均价落在高效率区间以下。素卤型卡在<mark>客单价</mark>，均价全类目垫底。</p>
+</div>
+
+<div class="types">
+<div class="type" data-exp>
+<div class="tg">TYPE A</div>
+<h4>肉类型</h4>
+<p>主营牛肉干、猪肉脯、鸡鸭卤味等以肉为主体的商品。三类目里最大的盘子，也是竞争最充分的位置。</p>
+<div class="st">商品笔记占比从两成到八成五，形态之间差别极大</div>
+<button class="exp-btn">怎么确认你是这一类<span class="arw">›</span></button>
+<div class="exp">
+<div class="ai"><b>怎么判断</b>成交里<mark>七成以上来自肉制品</mark>，主推款是牛肉干、猪肉脯或鸡鸭卤味。</div>
+<div class="ai"><b>主要瓶颈</b>竞争密度。盘子最大，做的店也最多，价格带已经在高位。</div>
+<div class="ai"><b>优先看什么</b>看主推款属于哪个形态。<mark>牛肉类竞争已充分</mark>，短保肉类店铺不足百家还有位置。</div>
+</div>
+</div>
+<div class="type" data-exp>
+<div class="tg">TYPE B</div>
+<h4>海味型</h4>
+<p>主营鱼干、鱿鱼、虾类、海苔等海产即食零食。盘子小，缺口品密度大。</p>
+<div class="st">即食鱼商品笔记占比近六成，即食虾不足一成</div>
+<button class="exp-btn">怎么确认你是这一类<span class="arw">›</span></button>
+<div class="exp">
+<div class="ai"><b>怎么判断</b>主推款是<mark>鱼干、鱿鱼、虾类或海苔</mark>这类海产即食零食。</div>
+<div class="ai"><b>主要瓶颈</b>价格带。即食鱼均价只有 <mark>32 元</mark>，落在高效率区间以下。</div>
+<div class="ai"><b>优先看什么</b>看做的是鱼还是虾。<mark>两个形态的内容依赖度差十倍以上</mark>，打法完全分开。</div>
+</div>
+</div>
+<div class="type" data-exp>
+<div class="tg">TYPE C</div>
+<h4>素卤型</h4>
+<p>主营豆干、面筋、蔬菜干、素肉等植物基卤味。均价最低，价格竞争最激烈。</p>
+<div class="st">均价 13 元到 24 元，三个类目里最低</div>
+<button class="exp-btn">怎么确认你是这一类<span class="arw">›</span></button>
+<div class="exp">
+<div class="ai"><b>怎么判断</b>主推款是<mark>豆干、面筋、蔬菜干或素肉</mark>这类植物基卤味。</div>
+<div class="ai"><b>主要瓶颈</b>客单价。均价全类目垫底，离 40 元这道坎还有很长距离。</div>
+<div class="ai"><b>优先看什么</b>看<mark>商品笔记占比</mark>。面筋接近七成，这一类内容做不起来货就走不动。</div>
+</div>
+</div>
+</div>
+</div></section>
+
+<!-- 05 -->
+<section id="s5"><div class="wrap">
+<div class="sn">05</div>
+<h2>分类行动指引</h2>
+<p class="sub">每一类给三件事，货盘怎么补、内容怎么写、下一步做什么。点按钮切换所属类型。</p>
+
+<div class="tabs" data-group="g5">
+<button class="tab on" data-t="p1">TYPE A · 肉类型</button>
+<button class="tab" data-t="p2">TYPE B · 海味型</button>
+<button class="tab" data-t="p3">TYPE C · 素卤型</button>
+</div>
+
+<div class="panel on" id="p1">
+<h3>TYPE A · 肉类型</h3>
+
+<div class="act">
+<div class="at">货盘</div>
+<h4>往 40 到 150 元补，同时试脆片形态</h4>
+<p>牛肉类零食均价已经到 <mark>74 元</mark>，正好落在高效率区间。机会在<mark>形态迁移</mark>，脆片类商机的供需缺口普遍在高档以上，其中内蒙古猪肉脆片、芥末牛脆片、内蒙古风干牛胸口脆片三个品成交高速上升。</p>
+<div class="case">
+<div class="cl">案例　商家 F</div>
+<p>商家 F 把牛脆片做成 <mark>63 元</mark>的小全家桶，用选 3 件减 15 元的组合规则拉高客单，单品进入类目成交前十。成交前 30 名里另有五家店在做同一形态，这些商品的价格从 40 元到 110 元不等，中间还有价格段没有商品出现。</p>
+</div>
+</div>
+
+<div class="act">
+<div class="at">内容</div>
+<h4>写家人对话和价格惊讶，不写产品参数</h4>
+<p>站内当天购买次数最高的三条卤味笔记标题全部出自商家 A，全部是生活对话结构，没有一个产品参数。</p>
+<div class="tl">
+<div class="tli"><span>我爸让我发网上问问看谁要啊</span><b>当日转化第一</b></div>
+<div class="tli"><span>客人已经不是按周回购了，是按天了</span><b>当日转化第二</b></div>
+<div class="tli"><span>以为很贵。。。结果一盒才 7r 而已</span><b>当日转化前十</b></div>
+</div>
+<p>其余高转化标题集中在三种句式。<mark>家人视角</mark>，比如和老爸商量后给独居人上小份装。<mark>价格反差</mark>，比如奶奶腿儿我还不信了卖 19 块还卖不出去。<mark>复购实况</mark>，比如糖醋一点鸡最近复购库库上涨。</p>
+</div>
+
+<div class="act">
+<div class="at">账号</div>
+<h4>发文量和账号数要匹配，先算清楚再决定加哪个</h4>
+<p>三个类目有在售商品的商家里，当日有发文的店成交额中位数是不发文店的 <mark>2.4 倍</mark>。发文这件事本身有效果。</p>
+<p>但发文量和账号数需要匹配。下表为不同发文量档内，按账号数分组的<mark>篇均曝光中位数</mark>。</p>
+<div class="tw" style="margin:16px 0 14px">
+<table>
+<thead><tr><th>发文量档</th><th class="num">1到5个号</th><th class="num">6到20个号</th><th class="num">20个号以上</th></tr></thead>
+<tbody>
+<tr><td>100 篇以下</td><td class="num">7.0</td><td class="num">8.6</td><td class="num">10.5</td></tr>
+<tr><td>100 到 300 篇</td><td class="num">12.1</td><td class="num">15.7</td><td class="num">15.1</td></tr>
+<tr><td>300 到 800 篇</td><td class="num">10.3</td><td class="num">26.6</td><td class="num hi">46.0</td></tr>
+<tr><td>800 篇以上</td><td class="num">8.0</td><td class="num">54.2</td><td class="num hi">94.0</td></tr>
+</tbody>
+</table>
+<div class="tn">数值为篇均曝光中位数。统计范围为三个二级类目有在售商品的商家，数据日期 2026 年 8 月 10 日。</div>
+</div>
+<p>分四步做。第一步，数清楚当前有几个账号在发、每天发多少篇。第二步，对照上表找到自己所在的格子。第三步，若发文量在 <mark>300 篇以下</mark>，账号保持现状即可，此时账号数带来的差距只有 1.2 到 1.5 倍。第四步，若计划把发文量提到 <mark>300 篇以上</mark>，账号数需要同步增加到 6 个以上，否则篇均曝光不会提升。</p>
+<p>特别提示。发文 800 篇以上但账号在 5 个以内的店共 <mark>113 家</mark>，篇均曝光中位数只有 8.0，低于发文 100 到 300 篇的同规模店铺的 12.1。在账号数不变的情况下继续加发文量，篇均曝光没有提升。</p>
+</div>
+</div>
+
+<div class="panel" id="p2">
+<h3>TYPE B · 海味型</h3>
+
+<div class="act">
+<div class="at">货盘</div>
+<h4>补成分规格，把价格带往上提</h4>
+<p>即食鱼零食均价只有 <mark>32 元</mark>，落在高效率区间以下。即食虾零食均价 <mark>57 元</mark>，位置更好，同时参与店铺数在全表里排倒数第二，这个形态值得优先补。</p>
+<p>缺口最大的方向是<mark>带成分描述</mark>的品。益生元岩烧海苔的供需缺口在全部商机里排第一。海带丝脱水圆饼和明太鱼丝也都在高档。海产加成分描述或加免洗即食规格，站内供给几乎为零。</p>
+<div class="case">
+<div class="cl">案例　商家 G</div>
+<p>商家 G 把烤虾仁做成 <mark>125 元</mark>的规格，单品进入海味类目成交前列。价格做到即食鱼零食均价的 <mark>4 倍</mark>。</p>
+</div>
+</div>
+
+<div class="act">
+<div class="at">内容</div>
+<h4>先看自己在哪个形态，再决定投不投</h4>
+<p>即食鱼零食商品笔记占比<mark>近六成</mark>，内容是主要成交来源，必须投。即食虾零食商品笔记占比<mark>不足一成</mark>，这个形态靠商品卡和货架走货。同属海味，两个形态的打法完全分开。</p>
+</div>
+
+<div class="act">
+<div class="at">选品</div>
+<h4>海味是三类里缺口密度最大的，优先挑带成分描述和免洗即食的品</h4>
+<p>缺口清单里海味方向的品数量最多，且档位普遍靠前。挑品按两个顺序来。先看有没有<mark>成分描述</mark>，益生元、高蛋白这类词的缺口档位最高。再看是不是<mark>免洗即食</mark>，开袋直接吃的规格站内供给几乎为零。</p>
+<p>盘子小意味着铺矩阵的必要性弱，把精力放在选品比放在铺量上回报更高。</p>
+</div>
+</div>
+
+<div class="panel" id="p3">
+<h3>TYPE C · 素卤型</h3>
+
+<div class="act">
+<div class="at">货盘</div>
+<h4>往上突破 24 元，或者做怀旧地域款</h4>
+<p>豆腐干均价 <mark>24 元</mark>，面筋制品 <mark>13 元</mark>，是全类目最低的两个形态，离 40 到 150 元的高效率区间还有很长距离。</p>
+<p>素卤的缺口集中在<mark>怀旧和地域</mark>两个方向。香辣手工豆皮、湖南香辣三角豆干、陕西手工烧筋的缺口在高档，湖南岳阳牙签豆腐干和新疆阿勒泰手撕豆干在中高档。五个品全部带明确产地或手工工艺标签。</p>
+</div>
+
+<div class="act">
+<div class="at">内容</div>
+<h4>素卤是三类里最依赖内容的</h4>
+<p>面筋制品商品笔记占比<mark>接近七成</mark>，豆腐干和其他豆制品都在四成左右。低客单靠内容拉量的路径在素卤能跑通。</p>
+<div class="case">
+<div class="cl">案例　商家 H</div>
+<p>商家 H 麻辣面筋卖 <mark>11 元</mark>，商品笔记占比 93%，购买人数在素卤形态里排第一。客单价全类目垫底，靠内容把量做起来了。</p>
+</div>
+</div>
+
+<div class="act">
+<div class="at">客单</div>
+<h4>单品提价走不通，用组合装把一单做到 40 元以上</h4>
+<p>素卤单品价格已经被压到底，硬提单价会直接掉量。可行的路径是<mark>做多口味组合装</mark>，把一单的金额抬上去而不动单品价格。</p>
+<p>参照 01 节，跑在成交前列的组合装多数是<mark>三到五件装配满减</mark>。素卤单件价格低，凑到 40 元以上需要的件数更多，适合做家庭囤货装和办公室分享装这类场景。</p>
+</div>
+</div>
+</div></section>
+
+<!-- 06 -->
+</div>
+
+<div class="zone-p" id="zout">
+<section id="s6"><div class="wrap">
+<div class="sn">06</div>
+<h2>站外风向，下一款可以开什么品</h2>
+<p class="sub">以下为公开报道整理，引用时点为 2026 年，仅供开品参考。</p>
+
+<div class="insight">
+<div class="il">洞察</div>
+<h4>站外四条线里有两条已经在站内数据上显形</h4>
+<p><mark>地域细分化</mark>和<mark>功能营养化</mark>这两条，在站内缺口清单里能直接找到对应品，县市级产地和益生元海苔都是同一个方向的早期信号。热卤正餐化和高蛋白零食化目前只在站外可见，站内还没有形成规模供给，适合作为下一步开品的观察方向。</p>
+</div>
+
+<div class="out-grid">
+<div class="out">
+<h4>热卤正餐化</h4>
+<p>2026 年 1 月起绝味、煌上煌、周黑鸭三家同时推热卤产品线，绝味 <mark>4.9 元</mark>热卤杯数周卖出超 <mark>10 万份</mark>，煌上煌推出 23.9 元一人食套餐，周黑鸭推出热卤子品牌。卤味单次消费最集中的价格带是 <mark>20 到 30 元</mark>，占比 42.7%。</p>
+<p class="src">来源　红餐产业研究院、公开报道</p>
+</div>
+
+<div class="out">
+<h4>地域风味细分化</h4>
+<p>2026 年休闲卤味赛道公开报道显示，麻辣口味同质化和终端动销承压成为行业痛点，多个新品牌转向<mark>地域风味矩阵</mark>破局，川渝糊辣壳、云贵木姜子、闽南沙茶这类带本土记忆点的口味成为差异化主线。这和站内县市级地名商机的缺口方向一致。</p>
+<p class="src">来源　新经销、公开报道，2026 年 7 月</p>
+</div>
+
+<div class="out">
+<h4>高蛋白零食化</h4>
+<p>2026 年食品趋势报告显示<mark>近 60%</mark> 全球消费者主动增加蛋白质摄入。原料企业指出高蛋白需求正从蛋白棒延伸到休闲零食，厂商开始用鸡胸肉、鱼肉、虾替代部分淀粉。站内高蛋白鸡胸肉类商机的供需缺口在中高到极高之间，方向吻合。</p>
+<p class="src">来源　英诺华市场洞察 2026 年食品健康趋势报告、公开报道</p>
+</div>
+
+<div class="out">
+<h4>功能营养化</h4>
+<p>2026 年行业观察指出，休闲零食内部正在分化，主打<mark>健康概念</mark>的品类增速远超行业均值，低糖低脂高蛋白和功能性成分成为增量赛道，缺乏差异化的传统品类持续承压。站内益生元海苔的高供需缺口是同一逻辑的早期信号。</p>
+<p class="src">来源　和君咨询、全国糖酒会行业分析，2026 年 7 月至 8 月</p>
+</div>
+</div>
+</div></section>
+
+</div>
+
+<!-- END -->
+<section><div class="wrap">
+<div class="end">
+<div class="end-grid">
+<div>
+<h3>三件事，按顺序做</h3>
+<p>卤味的盘子已经走平。半年里在售商品数涨了约四成，能卖动的商品数几乎没变，在库店铺数还少了约一成。两百多万款在售商品里，近 30 天有成交的不到百分之一。</p>
+<p class="fin">先动第一件，其余两件跟着排。</p>
+</div>
+<div class="steps">
+<div class="step">把一款主力商品推到 40 到 150 元，改包装规格和售卖单位就行，产品不用重做。</div>
+<div class="step">从 03 节里挑一个缺口品开发，优先看高蛋白和脆片两条线，这两条线的成交增速跑在最前面。</div>
+<div class="step">数清楚现在有几个账号在发、每天发多少篇，对照 05 节的表看两者是否匹配。发文量要往 300 篇以上走时，账号数需要同步增加。</div>
+</div>
+</div>
+</div>
+</div></section>
+
+<footer><div class="wrap">
+<h5>数据来源与口径</h5>
+<p class="fsum">站内部分基于零食类目下肉干卤味、海味即食、豆干蔬菜干三个二级类目的商品成交、供需缺口与商家内容表现整理，成交口径为近 30 天站内实付成交，数据周期 2026 年 3 月至 8 月。</p>
+
+<p class="disc">
+统计范围为站内零食类目下肉干卤味、海味即食、豆干蔬菜干三个二级类目，站外部分为综合公开报道整理，与站内数据口径不同，不可直接比较。<br>
+本页内容仅供商家经营参考，具体决策请结合自身供应链与货盘实际情况判断，不构成任何经营承诺。
+</p>
+<p class="brand">小红书休食　卤味洞察 VOL.01　页面更新于 2026.08</p>
+</div></footer>
+
+<script>
+document.querySelectorAll('.tabs').forEach(function(g){
+  g.addEventListener('click',function(e){
+    var b=e.target.closest('.tab'); if(!b) return;
+    var ids=[].map.call(g.querySelectorAll('.tab'),function(x){return x.dataset.t});
+    g.querySelectorAll('.tab').forEach(function(x){x.classList.remove('on')});
+    b.classList.add('on');
+    ids.forEach(function(id){
+      var p=document.getElementById(id);
+      if(p) p.classList.toggle('on', id===b.dataset.t);
+    });
+  });
+});
+document.querySelectorAll('.type[data-exp] .exp-btn').forEach(function(b){
+  var t=b.childNodes[0].nodeValue;
+  b.addEventListener('click',function(){
+    var c=b.closest('.type');
+    var open=c.classList.toggle('open');
+    b.childNodes[0].nodeValue = open ? '收起' : t;
+  });
+});
+document.querySelectorAll('.gap[data-exp] .exp-btn').forEach(function(b){
+  var t=b.childNodes[0].nodeValue;
+  b.addEventListener('click',function(){
+    var c=b.closest('.gap');
+    var open=c.classList.toggle('open');
+    b.childNodes[0].nodeValue = open ? '收起' : t;
+  });
+});
+
+document.querySelectorAll('.zb').forEach(function(b){
+  b.addEventListener('click',function(){
+    var z=b.dataset.z;
+    document.querySelectorAll('.zb').forEach(function(x){x.classList.toggle('on',x===b)});
+    document.querySelectorAll('.zone-p').forEach(function(p){p.classList.toggle('on',p.id===z)});
+    document.querySelectorAll('nav a[data-nz]').forEach(function(a){
+      a.style.display = a.dataset.nz===z ? '' : 'none';
+    });
+    var first = z==='zin' ? document.getElementById('s1') : document.getElementById('s6');
+    var navH = document.querySelector('nav').offsetHeight || 0;
+    if(first){
+      var y = first.getBoundingClientRect().top + window.pageYOffset - navH - 8;
+      window.scrollTo({top:y,behavior:'smooth'});
+    }
+  });
+});
+document.querySelectorAll('nav a[data-nz="zout"]').forEach(function(a){a.style.display='none'});
+</script>
+</body>
+</html>
