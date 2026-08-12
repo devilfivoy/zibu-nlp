@@ -532,6 +532,69 @@ font-size:11.5px;letter-spacing:.1em;font-weight:800;color:var(--ink3)}
 .stack{height:26px}
 .stack i{font-size:10.5px}
 }
+
+/* v10 小图表：图给形状，结论用文字 */
+.chart.sm{padding:18px 20px;margin:16px 0}
+.chart.sm .ct{font-size:14px;margin-bottom:2px}
+.chart.sm .cd{font-size:11.5px;margin-bottom:12px}
+.chart.sm .row{margin-bottom:7px}
+.chart.sm .row .lb{font-size:12.5px;margin-bottom:5px}
+.chart.sm .row .lb span{font-size:11px}
+.chart.sm .bar{height:14px;font-size:10.5px;padding-right:7px;min-width:34px;border-radius:8px}
+.chart.sm .legend{font-size:11.5px;margin-bottom:12px;gap:14px}
+.chart.sm .tn{font-size:11.5px;margin-top:10px}
+.chart.sm .stack{height:24px;margin:8px 0 6px}
+.chart.sm .stack i{font-size:10.5px}
+/* 图文并排：左文右图，文字为主 */
+.tx-ch{display:grid;grid-template-columns:1.25fr .75fr;gap:24px;align-items:start;margin:20px 0}
+.tx-ch>.chart{margin:0}
+.tx-ch>.tw{margin:0}
+@media(max-width:900px){.tx-ch{grid-template-columns:1fr;gap:16px}}
+/* 行动步骤块 */
+.dothis{background:#FFF9F5;border:1px solid #F5E3D8;border-left:3px solid var(--red);
+border-radius:0 12px 12px 0;padding:20px 22px;margin:18px 0}
+.dothis .dl{font-size:11px;letter-spacing:.14em;color:var(--red);font-weight:800;margin-bottom:12px}
+.dothis ol{margin:0;padding-left:20px}
+.dothis li{font-size:14px;color:var(--ink2);line-height:1.85;margin-bottom:9px}
+.dothis li:last-child{margin-bottom:0}
+.dothis li b{color:var(--ink)}
+/* 范例块（标题/商品名照着写） */
+.samp{background:var(--card);border:1px solid var(--line);border-radius:12px;
+padding:20px 22px;margin:18px 0}
+.samp .sl{font-size:11px;letter-spacing:.14em;color:var(--ink3);font-weight:800;margin-bottom:14px}
+.samp-i{padding:12px 0;border-bottom:1px dashed var(--line)}
+.samp-i:last-child{border-bottom:none;padding-bottom:0}
+.samp-i:first-of-type{padding-top:0}
+.samp-q{font-size:14.5px;color:var(--ink);font-weight:600;line-height:1.7;
+background:var(--paper2);padding:10px 14px;border-radius:8px;margin-bottom:8px}
+.samp-w{font-size:13px;color:var(--ink2);line-height:1.72;margin:0}
+.samp-w b{color:var(--red)}
+.samp-bad .samp-q{background:#F7F4F0;color:var(--ink3);text-decoration:line-through;
+text-decoration-color:#C9BFB4;font-weight:500}
+/* 案例卡（真实店铺画像） */
+.cs{background:var(--card);border:1px solid var(--line);border-radius:12px;
+padding:18px 20px;margin-bottom:14px}
+.cs-h{display:flex;justify-content:space-between;align-items:baseline;gap:12px;
+flex-wrap:wrap;margin-bottom:12px;padding-bottom:11px;border-bottom:1px dashed var(--line)}
+.cs-h b{font-size:15.5px;font-weight:800}
+.cs-h span{font-size:12px;color:var(--ink3);font-weight:600}
+.cs-g{display:grid;grid-template-columns:repeat(auto-fit,minmax(88px,1fr));gap:12px;margin-bottom:13px}
+.cs-g div{text-align:left}
+.cs-g em{font-style:normal;display:block;font-size:16px;font-weight:800;color:var(--red);
+line-height:1.3;letter-spacing:-.3px}
+.cs-g i{font-style:normal;display:block;font-size:11px;color:var(--ink3);margin-top:2px}
+.cs-t{font-size:13.5px;color:var(--ink2);line-height:1.8;margin:0}
+.cs-t b{color:var(--ink)}
+.cs-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:900px){.cs-grid{grid-template-columns:1fr}}
+@media(max-width:640px){
+.cs-g{grid-template-columns:repeat(2,1fr);gap:10px}
+.cs-g em{font-size:15px}
+.samp-q{font-size:13.5px;padding:9px 12px}
+.dothis{padding:17px 18px}
+.dothis li{font-size:13.5px}
+.chart.sm{padding:16px 15px}
+}
 </style>
 <body>
 
@@ -543,7 +606,7 @@ font-size:11.5px;letter-spacing:.1em;font-weight:800;color:var(--ink3)}
 <h1>卤味还有的做，<br>但不在<em>「再堆一款便宜的」</em>上</h1>
 </div>
 <div class="hero-r">
-<p class="lead">过去半年，站内在售商品涨了约三成半，能卖动的还是那一万五千款。多出来的款没换来生意。同一档价位，站内用户的出手比站外高一截，钱在往三个地方集中。</p>
+<p class="lead">过去半年，站内在售商品涨了约三成半，能卖动的还是那一万五千款。多出来的款没换来生意。这一页按你该做事的顺序排：先定价格，再定主推，再定渠道，最后是内容怎么写。每一步都有能照着做的动作。</p>
 <p class="meta">统计范围：食品 &gt; 零食/坚果/特产 &gt; 牛肉干/猪肉脯/卤味零食、鱿鱼丝/鱼干/海味即食、豆干制品/蔬菜干<br>站内数据周期 2026 年 2 月至 8 月　·　站外为同期第三方平台经营数据　·　页面更新 2026.08</p>
 </div>
 </div>
@@ -553,15 +616,15 @@ font-size:11.5px;letter-spacing:.1em;font-weight:800;color:var(--ink3)}
 <section class="kp-sec">
 <div class="wrap">
 <div class="kp">
-<div class="kp-h">KEY POINT</div>
-<p class="kp-l">卤味已经从「谁都能上一款」进入「上了也卖不动」。决定生意的不再是你有多少款，而是你的款在哪个价位、什么形态、有没有内容托着。</p>
+<div class="kp-h">这一页想让你做成的六件事</div>
+<p class="kp-l">卤味已经从「谁都能上一款」进入「上了也卖不动」。决定生意的不再是你有多少款，而是你的款卖多少钱、主推哪一个、从哪个渠道卖、内容怎么写。</p>
 <div class="kp-g">
-<div class="kp-i"><b>01</b><span>钱在 40 到 150 元这一段。这两档拿走六成以上成交，单款产出是最低档的四五倍。</span></div>
-<div class="kp-i"><b>02</b><span>把力气压在一款上。头款撑起全店八成的店，单店产出是分散经营的数倍。</span></div>
-<div class="kp-i"><b>03</b><span>脆片是唯一在涨的形态。半年成交占比从约一成半涨到约两成半，同期礼盒组合装大幅下滑。</span></div>
-<div class="kp-i"><b>04</b><span>要提价就得开播。中高价的钱有近四成从店播出来，只靠笔记撑不住高价。</span></div>
-<div class="kp-i"><b>05</b><span>上新控制在半年六到二十款。这一档实现成交增长的店最多，上更多反而不如。</span></div>
-<div class="kp-i"><b>06</b><span>站内用户比站外更愿意出高价。同类目 40 元以上占比，站内近七成、站外五成上下。</span></div>
+<div class="kp-i"><b>01</b><span>把主推款的价格挪到你所在形态最赚钱的那一档，多数形态在 40 到 150 元。</span></div>
+<div class="kp-i"><b>02</b><span>选一款当主推，把上新、内容、直播的力气都压在它身上，别平摊。</span></div>
+<div class="kp-i"><b>03</b><span>货盘控制在二三十款，半年上新六到二十款，不要一次上几十个。</span></div>
+<div class="kp-i"><b>04</b><span>想卖 40 元以上就得开播。中高价的钱有近四成从直播间出来。</span></div>
+<div class="kp-i"><b>05</b><span>标题写满 22 字，带上场景词和规格数字，别只写品名。</span></div>
+<div class="kp-i"><b>06</b><span>下一款开脆片、高蛋白禽肉、地域鲜卤、即食鱼片这四个方向里的一个。</span></div>
 </div>
 </div>
 </div>
@@ -569,9 +632,8 @@ font-size:11.5px;letter-spacing:.1em;font-weight:800;color:var(--ink3)}
 
 <section class="zone-sec">
 <div class="wrap">
-<div class="zone">
-<button class="zb on" data-z="zin"><b>站内怎么做</b><span>价位、形态、主推、场域、内容，五件事怎么排</span></button>
-<button class="zb" data-z="zout"><b>站外在卖什么</b><span>三个平台的形态与价格带，跟站内差在哪</span></button>
+<div class="zone" style="grid-template-columns:1fr 1fr">
+<button class="zb on" data-z="zin"><b>站内怎么做</b><span>价格、主推、渠道、内容，按顺序四步</span></button>
 <button class="zb" data-z="znew"><b>下一步开什么品</b><span>需求有热度、站内还没人做透的四条线</span></button>
 </div>
 </div>
@@ -579,28 +641,26 @@ font-size:11.5px;letter-spacing:.1em;font-weight:800;color:var(--ink3)}
 
 <nav>
 <div class="wrap">
-<a href="#s1" data-nz="zin">一句话判断</a>
-<a href="#s2" data-nz="zin">钱在哪一档</a>
-<a href="#s3" data-nz="zin">什么在卖</a>
-<a href="#s4" data-nz="zin">主推怎么排</a>
-<a href="#s5" data-nz="zin">生意从哪来</a>
-<a href="#s6" data-nz="zin">内容怎么发</a>
-<a href="#s7" data-nz="zin">你是哪一型</a>
-<a href="#s8" data-nz="zout">站外形态结构</a>
-<a href="#s9" data-nz="zout">价格带落差</a>
-<a href="#s10" data-nz="znew">四条开品线</a>
-<a href="#s11" data-nz="znew">这周先做什么</a>
+<a href="#s1" data-nz="zin">你的位置在哪</a>
+<a href="#s2" data-nz="zin">第一步 定价格</a>
+<a href="#s3" data-nz="zin">第二步 定主推</a>
+<a href="#s4" data-nz="zin">第三步 定渠道</a>
+<a href="#s5" data-nz="zin">第四步 写内容</a>
+<a href="#s6" data-nz="zin">找你的同类</a>
+<a href="#s7" data-nz="znew">四条开品线</a>
+<a href="#s8" data-nz="znew">这周先做什么</a>
 </div>
 </nav>
+
 <div class="zone-p on" id="zin">
 
 <section id="s1">
 <div class="wrap">
-<div class="sn">PART 01</div>
-<h2>一句话判断</h2>
+<div class="sn">先看清楚</div>
+<h2>你的位置在哪</h2>
 <div class="verdict">
 <p>半年里在售商品数涨了约三成半，<mark>能卖动的商品数几乎没动</mark>，成交额基本走平。这半年新上的那些款，绝大部分没变成生意。同期在库店铺少了约四分之一，走的是没做出成交的店。</p>
-<p>换句话说，这个类目的总盘子没有变大，但参与的商品变多了。<mark>同样的钱被更多的款分摊</mark>，单款能拿到的份额在缩小。这种情况下继续上新款，多数只是在摊薄自己。</p>
+<p>说白了，这个类目的钱没变多，但分钱的商品变多了。<mark>你继续上新款，多数只是在摊薄自己</mark>。要在这种局面里做出增长，只能靠三件事：把价格定对、把主推选对、把渠道配对。</p>
 <div class="bignum">
 <div><b>约 +35<i>%</i></b><span>在售商品数半年增幅</span></div>
 <div><b class="w">几乎没动</b><span>能卖动的商品数</span></div>
@@ -609,669 +669,694 @@ font-size:11.5px;letter-spacing:.1em;font-weight:800;color:var(--ink3)}
 </div>
 </div>
 
-<h3>三个还空着的位置</h3>
-<div class="gaps">
-<div class="gap" data-exp>
-<div class="idx">1</div>
-<h4>40 到 150 元这一段，钱最集中</h4>
-<p>肉干类里这两档合起来约占动销款四成，拿走六成以上成交。同一个上架名额，放在中间价位能收回来的钱差好几倍。</p>
-<div class="fact">单款产出是 20 元以下档的四到六倍</div>
-<button class="exp-btn">展开看细节 <span class="arw">›</span></button>
-<div class="exp">
-<div class="ai"><b>数据</b>以 20 元以下档为 1 倍基准，20-40 元 1.6 倍，40-80 元 4.5 倍，80-150 元 5.9 倍，150 元以上回落到 3.2 倍。</div>
-<div class="ai"><b>动作</b>先看你卖得动的款分布在哪一档。如果 40 元以上一款都没有，建议先把主推款做一个中高价规格出来测。</div>
-<div class="ai"><b>注意</b>150 元以上不是没人买，是买的人明显变少，这一档动销款数只有 80-150 元档的三成不到，往上顶要有原料故事和品牌支撑。</div>
-</div>
-</div>
-<div class="gap" data-exp>
-<div class="idx">2</div>
-<h4>脆片形态，是唯一在涨的方向</h4>
-<p>名字里带脆片、爆脆、胸口脆、薄脆的商品，成交占比半年从约一成半涨到约两成半，做这类的店也在增加。</p>
-<div class="fact">同期礼盒组合装大幅下滑，健身概念款也在降</div>
-<button class="exp-btn">展开看细节 <span class="arw">›</span></button>
-<div class="exp">
-<div class="ai"><b>数据</b>整个类目成交走平的半年里，只有脆片这一个形态在涨，成交占比涨幅约七成。同期礼盒全家桶类组合装成交下滑约七成，健身概念款下滑约三成。</div>
-<div class="ai"><b>动作</b>近 30 天成交前十里六款是脆片形态，成交价集中在 40 到 85 元，正好落在最赚钱那一段。做牛肉类的可以从这里切入。</div>
-<div class="ai"><b>注意</b>这条线已经有一批店在做，进场要有工艺或原料上的区隔，单纯跟做会直接撞进价格战。</div>
-</div>
-</div>
-<div class="gap" data-exp>
-<div class="idx">3</div>
-<h4>内容还没做够的店，最多</h4>
-<p>三十天发文十篇以内的店，只有约三成有笔记直接带来购买；发到两三百篇以上，这个比例接近九成。</p>
-<div class="fact">但发过八百篇之后，单篇的效果开始往下走</div>
-<button class="exp-btn">展开看细节 <span class="arw">›</span></button>
-<div class="exp">
-<div class="ai"><b>数据</b>有笔记带来购买的店铺比例：十篇以内约三成，11-50 篇约五成，51-200 篇约七成，201-800 篇约九成，800 篇以上约九成。</div>
-<div class="ai"><b>动作</b>发文有明确门槛，从几乎不发到稳定发是最大的一步。建议把发文变成固定动作，结合自身内容产能安排节奏。</div>
-<div class="ai"><b>注意</b>效率在两三百篇这一档见顶，篇均曝光在 800 篇以后掉得很明显。发得再多，单篇的效果在往下走。</div>
-</div>
-</div>
-</div>
-
-<div class="insight">
-<div class="il">现在先做哪一件</div>
-<h4>先看你卖得动的款分布在哪个价位，这件事比再上二十个低价款有用</h4>
-<p>把你现在有成交的款按成交价列出来，对照下一节那张形态价位表，看你所在形态最赚钱的那一档在哪、你的主推款在哪。<mark>如果两者不在同一档，这是今年最值得做的一件事</mark>。</p>
+<div class="dothis">
+<div class="dl">现在花五分钟做这件事</div>
+<ol>
+<li>打开你的后台，<b>把近 30 天有成交的款按成交价从高到低列出来</b>，看看它们分布在哪几个价位。</li>
+<li>数一下<b>头款的成交占全店多少</b>。如果不到一半，说明你还没有真正的主推款。</li>
+<li>看一眼<b>你的生意主要从哪来</b>：笔记、商品卡、还是直播间。</li>
+</ol>
+<p style="font-size:13.5px;color:#5C534B;margin:12px 0 0">这三个数拿到手，下面四步每一步你都能对上自己的情况。</p>
 </div>
 </div>
 </section>
-
 <section id="s2">
 <div class="wrap">
-<div class="sn">PART 02</div>
-<h2>用户集中消费在哪一档</h2>
-<p class="sub">同一个上架名额，放在不同价位能收回来的钱差好几倍。这一节告诉你，你所在的形态该往哪个价位上新。</p>
+<div class="sn">第一步</div>
+<h2>你的货该卖多少钱</h2>
+<p class="sub">价格是第一个要定的事，因为它决定后面所有决策。定错了价，主推再对、内容再好也补不回来。</p>
 
-<div class="split">
-<div class="chart">
-<div class="ct">肉干类各价位档的单款产出</div>
-<div class="cd">以 20 元以下档为 1 倍基准，数值越高说明同一个上架名额能收回来的钱越多</div>
-<div class="row"><div class="lb"><b>20 元以下</b><span>1.0 倍</span></div><div class="bars"><div class="bar b1" style="width:17%">1.0×</div></div></div>
-<div class="row"><div class="lb"><b>20-40 元</b><span>1.6 倍</span></div><div class="bars"><div class="bar b1" style="width:27%">1.6×</div></div></div>
-<div class="row"><div class="lb"><b>40-80 元</b><span>4.5 倍</span></div><div class="bars"><div class="bar b2" style="width:76%">4.5×</div></div></div>
-<div class="row"><div class="lb"><b>80-150 元</b><span>5.9 倍　最高</span></div><div class="bars"><div class="bar b2" style="width:100%">5.9×</div></div></div>
-<div class="row"><div class="lb"><b>150 元以上</b><span>3.2 倍</span></div><div class="bars"><div class="bar b3" style="width:54%">3.2×</div></div></div>
-</div>
+<h3>先说结论：多数形态的钱在 40 到 150 元</h3>
+<p>同一个上架名额，放在不同价位能收回来的钱差好几倍。肉干类里 40 到 150 元这两档，款数只占动销款约四成，<mark>成交拿走六成以上</mark>。</p>
+
+<div class="tx-ch">
+<div>
 <div class="tw c3 ptbl">
 <table>
-<thead><tr><th>形态</th><th class="pick">产出最高的一档</th><th class="num">相对最低档</th></tr></thead>
+<thead><tr><th>你做的形态</th><th class="pick">该定的价位</th><th class="num">比最低档多赚</th></tr></thead>
 <tbody>
-<tr><td>牛肉类</td><td class="pick"><span class="badge bg-hi">80-150 元</span></td><td class="num best">5.9 倍</td></tr>
-<tr><td>短保肉类</td><td class="pick"><span class="badge bg-md">20-40 元</span></td><td class="num">1.9 倍</td></tr>
-<tr><td>猪肉类</td><td class="pick"><span class="badge bg-md">20-40 元</span></td><td class="num">2.2 倍</td></tr>
-<tr><td>鸡肉零食</td><td class="pick"><span class="badge bg-md">40-80 元</span></td><td class="num">2.0 倍</td></tr>
-<tr><td>鸭肉类</td><td class="pick"><span class="badge bg-hi">80-150 元</span></td><td class="num">3.8 倍</td></tr>
-<tr><td>即食鱼零食</td><td class="pick"><span class="badge bg-md">20-40 元</span></td><td class="num">1.3 倍</td></tr>
-<tr><td>即食虾零食</td><td class="pick"><span class="badge bg-hi">80-150 元</span></td><td class="num best">27.6 倍</td></tr>
-<tr><td>豆腐干</td><td class="pick"><span class="badge bg-md">20-40 元</span></td><td class="num">4.3 倍</td></tr>
-<tr><td>面筋制品</td><td class="pick"><span class="badge bg-lo">20 元以下</span></td><td class="num">1.0 倍</td></tr>
+<tr><td>牛肉类</td><td class="pick"><span class="badge bg-hi">80-150 元</span></td><td class="num best">约 6 倍</td></tr>
+<tr><td>鸭肉类</td><td class="pick"><span class="badge bg-hi">80-150 元</span></td><td class="num">约 4 倍</td></tr>
+<tr><td>即食虾零食</td><td class="pick"><span class="badge bg-hi">80-150 元</span></td><td class="num best">二十多倍</td></tr>
+<tr><td>鸡肉零食</td><td class="pick"><span class="badge bg-md">40-80 元</span></td><td class="num">约 2 倍</td></tr>
+<tr><td>猪肉类</td><td class="pick"><span class="badge bg-md">20-40 元</span></td><td class="num">约 2 倍</td></tr>
+<tr><td>短保肉类</td><td class="pick"><span class="badge bg-md">20-40 元</span></td><td class="num">约 2 倍</td></tr>
+<tr><td>即食鱼零食</td><td class="pick"><span class="badge bg-md">20-40 元</span></td><td class="num">约 1.3 倍</td></tr>
+<tr><td>豆腐干</td><td class="pick"><span class="badge bg-md">20-40 元</span></td><td class="num">约 4 倍</td></tr>
+<tr><td>面筋制品</td><td class="pick"><span class="badge bg-lo">20 元以下</span></td><td class="num">已是最优</td></tr>
 </tbody>
 </table>
-<p class="tn"><b>怎么读这张表：</b>找到你的形态那一行，看最高的那一档在哪。单款产出为相对值，各形态以自身最低档为 1 倍基准，<b>跨形态不能横比</b>，牛肉和豆干的原料成本差得太远。</p>
+<p class="tn">「比最低档多赚」指同一个上架名额在这一档能收回来的钱，是该形态最低价位档的多少倍。<b>只能跟自己比，不能跨形态比</b>，牛肉和豆干的成本差得太远。</p>
 </div>
 </div>
-<p class="scroll-hint">左右滑动查看完整表格</p>
-
-<div class="read">
-<div class="rt">三个形态，三个方向</div>
-<div class="read-list">
-<div class="read-item"><b>肉干类的钱在 40 到 150 元</b><p>这两档款数占动销款约四成，成交拿走六成以上。做牛肉类的，主推款建议做到这个区间。</p></div>
-<div class="read-item"><b>海味即食的钱在更高的位置</b><p>即食虾零食 80-150 元这一档的单款产出，是它最低档的二十多倍。<mark>海味做低价基本没有生意</mark>，低价档款数不少，成交贴着地板。</p></div>
-<div class="read-item"><b>豆干制品完全相反，钱在 40 元以下</b><p>豆腐干 20-40 元档的单款产出是 40-80 元档的数倍。面筋制品更极端，成交几乎全部集中在 20 元以下。<mark>豆干类不宜往高价走</mark>。</p></div>
-</div>
-</div>
-
-<h3>往上提一档，会损失什么</h3>
-<p>提价会掉转化，这是必然的。但掉多少、值不值，数据能算清楚。</p>
-<div class="split">
-<div class="chart">
-<div class="ct">各价位档的转化表现</div>
-<div class="cd">每千次商品浏览带来的购买次数，以及加购意愿</div>
-<div class="legend"><em><i style="background:linear-gradient(90deg,#FF5C74,#FF2442)"></i>购买转化</em><em><i style="background:#EFE6DA"></i>加购意愿</em></div>
-<div class="row"><div class="lb"><b>20 元以下</b><span>转化最高</span></div><div class="bars"><div class="bar b2" style="width:100%">89</div><div class="bar b1" style="width:92%">154</div></div></div>
-<div class="row"><div class="lb"><b>20-40 元</b><span>加购最高</span></div><div class="bars"><div class="bar b2" style="width:89%">79</div><div class="bar b1" style="width:100%">167</div></div></div>
-<div class="row"><div class="lb"><b>40-80 元</b><span>加购几乎不掉</span></div><div class="bars"><div class="bar b2" style="width:76%">68</div><div class="bar b1" style="width:99%">165</div></div></div>
-<div class="row"><div class="lb"><b>80-150 元</b><span>加购仍在高位</span></div><div class="bars"><div class="bar b2" style="width:65%">58</div><div class="bar b1" style="width:94%">156</div></div></div>
-<div class="row"><div class="lb"><b>150 元以上</b><span>真门槛在这里</span></div><div class="bars"><div class="bar b2" style="width:41%">36</div><div class="bar b1" style="width:76%">127</div></div></div>
-</div>
-<div class="insight" style="margin:0">
-<div class="il">这张图说明什么</div>
-<h4>提价到 80 元以内几乎不损失加购意愿，150 元以上才是真门槛</h4>
-<p>从 20 元以下提到 80-150 元，购买转化掉了约三成半，<mark>但客单价翻了好几倍，净收益是正的</mark>。这就是为什么中高价档的单款产出反而更高。</p>
-<p>更值得注意的是加购意愿：<mark>20 到 150 元这一整段，加购几乎没有变化</mark>，用户对这个区间的价格是接受的。只有到 150 元以上，加购才明显下滑。</p>
-<p class="isrc">口径：站内近 30 天有成交且浏览量达到基础量级的商品，按成交均价分档统计。</p>
+<div class="chart sm">
+<div class="ct">牛肉类各档产出</div>
+<div class="cd">以 20 元以下档为 1 倍</div>
+<div class="row"><div class="lb"><b>20 元以下</b><span>1.0×</span></div><div class="bars"><div class="bar b1" style="width:17%"></div></div></div>
+<div class="row"><div class="lb"><b>20-40 元</b><span>1.6×</span></div><div class="bars"><div class="bar b1" style="width:27%"></div></div></div>
+<div class="row"><div class="lb"><b>40-80 元</b><span>4.5×</span></div><div class="bars"><div class="bar b2" style="width:76%"></div></div></div>
+<div class="row"><div class="lb"><b>80-150 元</b><span>5.9× 最高</span></div><div class="bars"><div class="bar b2" style="width:100%"></div></div></div>
+<div class="row"><div class="lb"><b>150 元以上</b><span>3.2× 回落</span></div><div class="bars"><div class="bar b3" style="width:54%"></div></div></div>
+<p class="tn">150 元以上买的人明显变少，往上顶要有原料故事和品牌支撑。</p>
 </div>
 </div>
 
 <div class="insight">
-<div class="il">一个常见的误解</div>
-<h4>低价路径不是「靠单量做大」，全量看它根本没做大</h4>
-<p>按店铺客单价把全量商家分成四组，每组都有上千家店。<mark>四组的中位订单数几乎一样，都在五六单</mark>，但中位成交额从几十元一路涨到七百多元。</p>
-<p>低价组的店数最多，做出来的成交占比却最低；中高价组店数只有低价组的七成，成交占比接近三倍。<mark>同样卖动五六单，客单价决定了你这个月能收回来多少钱</mark>。</p>
-<p>榜单上确实有几款单价很低、三十天做了两万单以上的商品，但那是极少数个案，对供应链和履约的要求远高于做中高价，不代表低价路径整体。</p>
+<div class="il">三类货，三个方向，别搞反</div>
+<h4>肉干往中高价走，海味往高价走，豆干守住 40 元以下</h4>
+<p><b>做牛肉、鸭肉的：</b>主推款做到 80 到 150 元。如果你现在最贵的款不到 40 元，<mark>建议先做一个 40 到 80 元的规格测起来</mark>，成了再往上走一档。</p>
+<p><b>做海味的（虾、鱿鱼）：</b>这类做低价基本没生意。低价档的款不少，成交贴着地板。<mark>海味的钱在 80 元以上</mark>，单个买家愿意花的钱也是所有形态里最高的。</p>
+<p><b>做豆干、面筋的：</b>方向完全相反，<mark>不宜往高价走</mark>。面筋的成交几乎全在 20 元以下，往上每一档都是断崖。豆干在 20 到 40 元最好。</p>
+</div>
+
+<h3>提价会掉转化，但账是划得来的</h3>
+<p>这是商家最担心的一件事，数据能算清楚。把价格从 20 元以下提到 80 到 150 元，<mark>每千次浏览带来的购买会掉约三成半，但客单价翻了好几倍</mark>，净收益是正的。这就是为什么中高价档反而更赚钱。</p>
+
+<div class="tx-ch">
+<div>
+<div class="insight" style="margin:0">
+<div class="il">这里有个关键发现</div>
+<h4>提到 80 元以内，用户的加购意愿几乎不变</h4>
+<p>加购是最能反映「用户想不想买」的动作。<mark>从 20 元一直到 150 元，加购意愿几乎没有变化</mark>——用户对这个区间的价格是接受的。</p>
+<p>只有到 150 元以上，加购才明显往下掉。<mark>所以真正的门槛在 150 元，不在 80 元</mark>。你从 30 元提到 80 元，用户的购买意愿不会有明显变化，掉的只是那部分只看便宜的人。</p>
+<p class="isrc">口径：站内近 30 天有成交且浏览量达到基础量级的商品，按成交均价分档统计。</p>
+</div>
+</div>
+<div class="chart sm">
+<div class="ct">各档转化与加购</div>
+<div class="cd">每千次商品浏览</div>
+<div class="legend"><em><i style="background:linear-gradient(90deg,#FF5C74,#FF2442)"></i>购买</em><em><i style="background:#EFE6DA"></i>加购</em></div>
+<div class="row"><div class="lb"><b>20 元以下</b><span></span></div><div class="bars"><div class="bar b2" style="width:100%">89</div><div class="bar b1" style="width:92%">154</div></div></div>
+<div class="row"><div class="lb"><b>20-40 元</b><span></span></div><div class="bars"><div class="bar b2" style="width:89%">79</div><div class="bar b1" style="width:100%">167</div></div></div>
+<div class="row"><div class="lb"><b>40-80 元</b><span></span></div><div class="bars"><div class="bar b2" style="width:76%">68</div><div class="bar b1" style="width:99%">165</div></div></div>
+<div class="row"><div class="lb"><b>80-150 元</b><span></span></div><div class="bars"><div class="bar b2" style="width:65%">58</div><div class="bar b1" style="width:94%">156</div></div></div>
+<div class="row"><div class="lb"><b>150 元以上</b><span>加购掉了</span></div><div class="bars"><div class="bar b2" style="width:41%">36</div><div class="bar b1" style="width:76%">127</div></div></div>
+</div>
+</div>
+
+<div class="insight">
+<div class="il">一个很多人搞错的事</div>
+<h4>低价不是「靠卖得多把钱做起来」，全量看它根本没做起来</h4>
+<p>把全量商家按客单价分成四组，每组都有上千家店。<mark>四组卖出去的订单数几乎一样，都是五六单</mark>，但一个月收回来的钱差了十倍以上：客单 20 元以下的店中位约 60 元，客单 80 元以上的店中位约 720 元。</p>
+<p>而且低价组的店数是最多的，做出来的成交占比反而最低。<mark>同样卖动五六单，你的客单价决定这个月能收回来多少钱</mark>。</p>
+<p>确实有几款单价很低、一个月卖两万多单的商品，但那是极少数，对供应链和发货能力的要求远高于做中高价。<mark>如果你没有那个体量，低价这条路走不通</mark>。</p>
 <p class="isrc">口径：站内近 30 天有成交的全量卤味商家，按店铺客单价分四组，取各组中位数。</p>
 </div>
 
-<div class="split-32">
-<div class="chart">
-<div class="ct">四种客单价路径的成交占比</div>
-<div class="cd">店数最多的一组，做出来的钱最少</div>
-<div class="stack-lg">
-<em><i style="background:#EFE6DA"></i>20 元以下</em>
-<em><i style="background:#E2A867"></i>20-40 元</em>
-<em><i style="background:#FF5C74"></i>40-80 元</em>
-<em><i style="background:#C8102E"></i>80 元以上</em>
+<div class="tx-ch">
+<div class="chart sm">
+<div class="ct">四种客单价的店，钱差多少</div>
+<div class="cd">中位店铺月成交额，以最低组为 1 倍</div>
+<div class="row"><div class="lb"><b>客单 20 元以下</b><span>店最多</span></div><div class="bars"><div class="bar b1" style="width:9%">1.0×</div></div></div>
+<div class="row"><div class="lb"><b>客单 20-40 元</b><span></span></div><div class="bars"><div class="bar b1" style="width:23%">2.6×</div></div></div>
+<div class="row"><div class="lb"><b>客单 40-80 元</b><span>成交占比最高</span></div><div class="bars"><div class="bar b2" style="width:46%">5.3×</div></div></div>
+<div class="row"><div class="lb"><b>客单 80 元以上</b><span>钱最多</span></div><div class="bars"><div class="bar b2" style="width:100%">11.7×</div></div></div>
+<p class="tn">四组的中位订单数都是五六单，差别只在客单价。</p>
 </div>
-<div class="stack">
-<i style="width:14%;background:#EFE6DA;color:#A66A28">约 15%</i>
-<i style="width:25%;background:#E2A867">约 25%</i>
-<i style="width:39%;background:#FF5C74">约 40%</i>
-<i style="width:22%;background:#C8102E">约 20%</i>
-</div>
-<p class="tn" style="margin-top:14px"><b>店铺数分布正好相反：</b>低价组店数最多，高价组店数最少。店最多的那一组，钱最少。</p>
-</div>
-<div class="tw c4">
-<table>
-<thead><tr><th>店铺客单价</th><th class="num">占全盘成交</th><th class="num">中位订单数</th><th class="num">中位成交额</th></tr></thead>
-<tbody>
-<tr><td>20 元以下</td><td class="num">约 15%</td><td class="num">5 单</td><td class="num">约 60 元</td></tr>
-<tr><td>20-40 元</td><td class="num">约 25%</td><td class="num">6 单</td><td class="num">约 160 元</td></tr>
-<tr><td>40-80 元</td><td class="num hi">约 40%</td><td class="num">6 单</td><td class="num hi">约 330 元</td></tr>
-<tr><td>80 元以上</td><td class="num">约 20%</td><td class="num">5 单</td><td class="num hi">约 720 元</td></tr>
-</tbody>
-</table>
-<p class="tn">中位成交额为各组店铺近 30 天成交额的中位数。订单数四组基本一致，成交额差十倍以上。</p>
+<div>
+<div class="dothis">
+<div class="dl">这一步你该做什么</div>
+<ol>
+<li><b>找到你的形态在上面表里的那一行</b>，看该定的价位是哪一档。</li>
+<li><b>拿你现在的主推款对比。</b>如果价格低于该档，不要直接改价——<b>做一个新规格</b>：加量装、组合装、或者升级原料，把价格顶到那一档。原配方不用改。</li>
+<li><b>新规格上架后跟 30 天。</b>只要有成交、动销率没掉，就把内容和直播的资源往这一款倾斜。</li>
+<li><b>不要一次提两档。</b>从 20 元直接跳到 150 元会掉得厉害，一档一档来。</li>
+</ol>
 </div>
 </div>
-<p class="scroll-hint">左右滑动查看完整表格</p>
+</div>
+
+<h3>还有一个参考：站内用户比站外更愿意出高价</h3>
+<div class="tx-ch">
+<div>
+<p>如果你同时在别的平台经营，这一条对你定价有直接帮助。同类目的成交里，<mark>站内 40 元以上占约七成，站外三个平台都只有五成上下</mark>。</p>
+<p>站外的主力价格带在 20 到 40 元，<mark>站内的主力在 40 到 150 元</mark>。这意味着同一款货，在站内可以定得比站外高，用户是接受的。</p>
+<p>反过来说，<mark>把别的平台的低价策略照搬到站内，会正好落在站内最薄的那一段</mark>。这是很多多平台经营的商家在站内做不起来的原因。</p>
+<div class="insight" style="margin-top:18px">
+<div class="il">怎么用这条</div>
+<h4>同一款货，站内的定价可以比站外高一档</h4>
+<p>建议做法：<mark>把你在其他平台卖得最好的那一款，在站内做一个更高一档的规格</mark>，比如站外卖 35 元的单包，站内做成 3 包装卖 90 元。价格带对上了站内用户的习惯，转化不会明显变差。</p>
+<p class="isrc">口径：第三方平台店铺月度经营数据（抖音、淘宝、京东），时点 2026 年 8 月；站内为同期肉干类近 30 天成交。两侧统计方式不同，仅作结构参照。</p>
+</div>
+</div>
+<div class="chart sm">
+<div class="ct">40 元以上成交占比</div>
+<div class="cd">站内明显更集中在中高价</div>
+<div class="row"><div class="lb"><b>站内</b><span>约七成</span></div><div class="bars"><div class="bar b2" style="width:100%">约 70%</div></div></div>
+<div class="row"><div class="lb"><b>京东</b><span>约五成</span></div><div class="bars"><div class="bar b3" style="width:74%">约 50%</div></div></div>
+<div class="row"><div class="lb"><b>抖音</b><span>约五成</span></div><div class="bars"><div class="bar b3" style="width:71%">约 50%</div></div></div>
+<div class="row"><div class="lb"><b>淘宝</b><span>约四成半</span></div><div class="bars"><div class="bar b1" style="width:66%">约 45%</div></div></div>
+</div>
+</div>
 </div>
 </section>
 <section id="s3">
 <div class="wrap">
-<div class="sn">PART 03</div>
-<h2>什么在卖，什么在涨</h2>
-<p class="sub">牛肉类是最大也最挤的一块。真正值得注意的是用最少的款做出最多钱的那个形态，和唯一还在涨的那个方向。</p>
+<div class="sn">第二步</div>
+<h2>你该主推哪一款</h2>
+<p class="sub">价格定完，接着定货盘。这一节回答三个问题：主推几款、总共铺多少款、半年上新多少。这三件是同一个决策。</p>
 
-<div class="split">
-<div class="chart">
-<div class="ct">各形态成交占比</div>
-<div class="cd">近 30 天站内成交结构</div>
-<div class="row"><div class="lb"><b>牛肉类</b><span>约 50%</span></div><div class="bars"><div class="bar b2" style="width:100%">约 50%</div></div></div>
-<div class="row"><div class="lb"><b>短保肉类</b><span>约 10%</span></div><div class="bars"><div class="bar b2" style="width:20%">约 10%</div></div></div>
-<div class="row"><div class="lb"><b>猪肉类</b><span>约 10%</span></div><div class="bars"><div class="bar b3" style="width:18%">约 10%</div></div></div>
-<div class="row"><div class="lb"><b>鸡肉零食</b><span>约 5%</span></div><div class="bars"><div class="bar b3" style="width:14%">约 5%</div></div></div>
-<div class="row"><div class="lb"><b>鸭肉类</b><span>约 5%</span></div><div class="bars"><div class="bar b3" style="width:10%">约 5%</div></div></div>
-<div class="row"><div class="lb"><b>即食鱼零食</b><span>约 5%</span></div><div class="bars"><div class="bar b1" style="width:9%">约 5%</div></div></div>
-<div class="row"><div class="lb"><b>海味 + 豆干其余</b><span>约 15%</span></div><div class="bars"><div class="bar b1" style="width:30%">约 15%</div></div></div>
-</div>
+<h3>先说最重要的：把力气压在一款上</h3>
+<p>这是这次跑数据发现的最明确的一条规律。按头款成交占全店的比例分组看，<mark>头款能撑起全店约八成的那批店，一个月收回来的钱是「头款只占三到五成」那批店的七倍多</mark>，而它们卖动的款数反而更少。</p>
+
+<div class="tx-ch">
+<div>
 <div class="insight" style="margin:0">
-<div class="il">最值得注意的一个形态</div>
-<h4>短保肉类用最少的款做出最多的钱</h4>
-<p>短保肉类的动销款数不到牛肉类的八分之一，成交做到了五分之一。<mark>它的单款产出是所有形态里最高的</mark>。</p>
-<p>更关键的是复购。三十天内每个购买用户的购买次数，<mark>短保肉类比大盘高约四成</mark>，是所有形态里最高的。这说明这个形态适合做复购运营，不只是一次性成交。</p>
-<p>代价是它对履约和直播的要求高——保质期短，压不住库存。这一型的店播占比接近一半，是所有形态里最高的。</p>
-<p class="isrc">口径：站内近 30 天成交与购买用户数，按四级形态分组统计。</p>
+<div class="il">为什么会这样</div>
+<h4>卖动的款多，不等于赚的钱多</h4>
+<p>头款占三成以下的那批店，卖动了十几款，一个月的钱还不到最集中那批店的三成。<mark>款分散意味着你的内容、直播、上新资源也是分散的</mark>，每一款都只推了一点点，谁也没推起来。</p>
+<p>反过来，主推集中的店只卖动四款左右，但那一款被推到了足够的量级，<mark>它自己会带来搜索流量、评价积累和复购</mark>，形成正循环。</p>
+<p>这条的好处是不用花钱、不用改货，<mark>今天就能开始做</mark>：把接下来一个月的内容和直播排期，全部围绕一款来做。</p>
+<p class="isrc">口径：站内近 30 天卖动 3 款以上的商家，按头款成交占全店比例分组，取各组店铺成交额中位数。</p>
+</div>
+</div>
+<div class="chart sm">
+<div class="ct">主推集中度与单店产出</div>
+<div class="cd">中位店铺月成交额，以最低组为 1 倍</div>
+<div class="row"><div class="lb"><b>头款占约八成以上</b><span>7.2×</span></div><div class="bars"><div class="bar b2" style="width:100%"></div></div></div>
+<div class="row"><div class="lb"><b>头款占约五到八成</b><span>1.4×</span></div><div class="bars"><div class="bar b3" style="width:20%"></div></div></div>
+<div class="row"><div class="lb"><b>头款占约三到五成</b><span>1.0×</span></div><div class="bars"><div class="bar b1" style="width:14%"></div></div></div>
+<div class="row"><div class="lb"><b>头款占约三成以下</b><span>1.8×</span></div><div class="bars"><div class="bar b1" style="width:25%"></div></div></div>
+<p class="tn">最分散那组卖动的款数是最集中组的三倍，钱不到三成。</p>
 </div>
 </div>
 
-<h3>脆片是唯一在涨的方向</h3>
-<div class="split-32">
-<div class="chart">
-<div class="ct">三个概念方向的半年成交变化</div>
-<div class="cd">整个类目成交走平的半年里，各方向的相对变化</div>
-<div class="row"><div class="lb"><b>脆片类</b><span>成交占比涨约七成</span></div><div class="bars"><div class="bar b2" style="width:100%">↑ 涨</div></div></div>
-<div class="row"><div class="lb"><b>健身概念款</b><span>成交降约三成</span></div><div class="bars"><div class="bar b1" style="width:44%">↓ 降</div></div></div>
-<div class="row"><div class="lb"><b>礼盒组合装</b><span>成交降约七成</span></div><div class="bars"><div class="bar b1" style="width:19%">↓ 大幅降</div></div></div>
-<p class="tn" style="margin-top:14px">脆片类统计名字里带脆片、爆脆、胸口脆、薄脆的商品；礼盒组合装统计带礼盒、全家桶、组合、混合的商品。</p>
+<h3>货盘铺多少款</h3>
+<p>不宜太薄，也不宜太厚。<mark>5 款以内的店只有不到一半做出成交</mark>，货盘太薄撑不起来；<mark>超过 50 款之后，有成交的店铺比例掉回到跟 5 款以内差不多</mark>，一个月收回来的钱还明显更少。二十到五十款这一档表现最好。</p>
+
+<div class="tx-ch">
+<div class="chart sm">
+<div class="ct">铺多少款的店更容易有成交</div>
+<div class="cd">各档有成交店铺比例</div>
+<div class="row"><div class="lb"><b>约 21 到 50 款</b><span>约 75% 最高</span></div><div class="bars"><div class="bar b2" style="width:100%"></div></div></div>
+<div class="row"><div class="lb"><b>约 11 到 20 款</b><span>约 70%</span></div><div class="bars"><div class="bar b2" style="width:95%"></div></div></div>
+<div class="row"><div class="lb"><b>约 6 到 10 款</b><span>约 65%</span></div><div class="bars"><div class="bar b3" style="width:89%"></div></div></div>
+<div class="row"><div class="lb"><b>5 款以内</b><span>约 45% 太薄</span></div><div class="bars"><div class="bar b1" style="width:63%"></div></div></div>
+<div class="row"><div class="lb"><b>50 款以上</b><span>约 45% 摊薄了</span></div><div class="bars"><div class="bar b1" style="width:62%"></div></div></div>
 </div>
-<div class="tw c3">
-<table>
-<thead><tr><th>近 30 天成交前十</th><th>形态</th><th class="num">价格带</th></tr></thead>
-<tbody>
-<tr><td>第 1 名</td><td>短保鸡粒</td><td class="num">约 21 元</td></tr>
-<tr><td>第 2 名</td><td>内蒙牛胸口脆</td><td class="num hi">约 84 元</td></tr>
-<tr><td>第 3 名</td><td>川式牛脆片</td><td class="num hi">约 65 元</td></tr>
-<tr><td>第 4 名</td><td>短保猪肉干</td><td class="num">约 41 元</td></tr>
-<tr><td>第 5 名</td><td>牛胸口脆</td><td class="num hi">约 75 元</td></tr>
-<tr><td>第 6 名</td><td>内蒙牛爆脆</td><td class="num hi">约 56 元</td></tr>
-<tr><td>第 7 名</td><td>轻卤牛腱子</td><td class="num hi">约 113 元</td></tr>
-<tr><td>第 8 名</td><td>猪爆脆</td><td class="num">约 36 元</td></tr>
-<tr><td>第 9 名</td><td>组合全家桶</td><td class="num hi">约 60 元</td></tr>
-<tr><td>第 10 名</td><td>内蒙牛爆脆</td><td class="num">约 44 元</td></tr>
-</tbody>
-</table>
-<p class="tn"><b>前十里六款是脆片形态</b>，价格集中在 40 到 85 元，正好落在单款产出最高那一段。标红为 40 元以上的款。</p>
+<div class="chart sm">
+<div class="ct">半年上新多少款最好</div>
+<div class="cd">各档实现成交增长的店铺比例</div>
+<div class="row"><div class="lb"><b>上新约 6 到 20 款</b><span>约 45% 最优</span></div><div class="bars"><div class="bar b2" style="width:100%"></div></div></div>
+<div class="row"><div class="lb"><b>上新约 1 到 5 款</b><span>约 40%</span></div><div class="bars"><div class="bar b3" style="width:82%"></div></div></div>
+<div class="row"><div class="lb"><b>上新 20 款以上</b><span>约 35% 反而不如</span></div><div class="bars"><div class="bar b3" style="width:73%"></div></div></div>
+<div class="row"><div class="lb"><b>没上新或减款</b><span>约 20% 最低</span></div><div class="bars"><div class="bar b1" style="width:46%"></div></div></div>
+<p class="tn">上新超过二十款的店，增长比例反而低于上新六到二十款的店。</p>
 </div>
 </div>
-<p class="scroll-hint">左右滑动查看完整表格</p>
 
 <div class="insight">
-<div class="il">复购这个维度，值得单独看</div>
-<h4>短保肉类和鹅肉干的复购明显更好，面筋和豆干必须靠量</h4>
-<p>三十天内每个购买用户的购买次数：<mark>短保肉类和鹅肉干比大盘高三到四成</mark>，牛肉类和即食鱿鱼略高于平均，其余形态基本都是一次性成交。</p>
-<p>单个购买用户带来的成交额差得更远：即食虾零食和牛肉类是最高的一档，面筋制品和即食鱼零食只有十几二十块。<mark>做面筋和豆干的，单人产出低是结构性的，必须靠量和复购频次补</mark>。</p>
-<p class="isrc">口径：站内近 30 天购买次数与购买用户数，按四级形态分组，已剔除样本过小的形态。</p>
+<div class="il">三件事怎么同时做到</div>
+<h4>上新是为了找下一个主推，不是为了把货架填满</h4>
+<p>铺二三十款、半年上新六到二十款、把资源集中在一两个主推款上，这三件事不矛盾。<mark>关键是你上新的目的</mark>。</p>
+<p>正确的做法：每次上新两三款作为测试款，<mark>三十天后只留有成交的，把资源集中到跑出来的那一款</mark>，没成交的就不再投入内容。这样一年下来你会有一到两个真正的主推款。</p>
+<p>不建议的做法：一次上二十款，每款都发两三篇笔记就不管了。这样上新数量够了，但没有一款被推起来。</p>
+</div>
+
+<div class="dothis">
+<div class="dl">这一步你该做什么</div>
+<ol>
+<li><b>算一下你的头款占全店多少。</b>如果不到五成，说明你还没有真正的主推款。</li>
+<li><b>选一款当主推。</b>选的标准：价格在上一节说的最优档、近 30 天有稳定成交、库存和供应能跟上。</li>
+<li><b>接下来一个月，把内容和直播的排期全部围绕这一款做。</b>其他款保持在架，但不投入新的内容资源。</li>
+<li><b>如果你现在铺了 50 款以上</b>，不需要下架，但建议把上新和推广的力气从「多上款」转到「把主推做透」。</li>
+<li><b>上新节奏</b>：每次两三款测试款，半年累计控制在六到二十款。</li>
+</ol>
 </div>
 </div>
 </section>
 
 <section id="s4">
 <div class="wrap">
-<div class="sn">PART 04</div>
-<h2>主推怎么排，上新上多少</h2>
-<p class="sub">这一节回答两个最常问的问题：力气该压在一款上还是铺开来，以及半年该上多少款。两个问题都有明确答案。</p>
+<div class="sn">第三步</div>
+<h2>你的货该从哪卖出去</h2>
+<p class="sub">价格和主推定完，接着定渠道。这一节最重要的一条是：想提价就得开播，这不是选择题。</p>
 
-<div class="split">
-<div class="chart">
-<div class="ct">头款集中度与单店产出</div>
-<div class="cd">按头款成交占全店的比例分组，看各组的中位店铺成交额（以最低组为 1 倍）</div>
-<div class="row"><div class="lb"><b>头款占约八成以上</b><span>产出最高</span></div><div class="bars"><div class="bar b2" style="width:100%">7.2×</div></div></div>
-<div class="row"><div class="lb"><b>头款占约五到八成</b><span></span></div><div class="bars"><div class="bar b3" style="width:20%">1.4×</div></div></div>
-<div class="row"><div class="lb"><b>头款占约三到五成</b><span>产出最低</span></div><div class="bars"><div class="bar b1" style="width:14%">1.0×</div></div></div>
-<div class="row"><div class="lb"><b>头款占约三成以下</b><span>卖动款最多，产出不高</span></div><div class="bars"><div class="bar b1" style="width:25%">1.8×</div></div></div>
-</div>
-<div class="insight" style="margin:0">
-<div class="il">这次最硬的一条发现</div>
-<h4>把力气压在一款上，这一款能撑起全店</h4>
-<p>头款成交占到全店约八成以上的那批店，<mark>中位店铺成交额是「头款占三到五成」那组的七倍多</mark>，而它们卖动的款数反而更少。</p>
-<p>头款占三成以下的分散组，卖动的款数是最集中组的三倍，中位成交额却不到它的三成。<mark>款卖得多不等于钱赚得多</mark>。</p>
-<p>这条的动作很直接：建议把上新、内容、直播的资源集中到一到两个主推款上，而不是平摊到十几个款。</p>
-<p class="isrc">口径：站内近 30 天卖动三款以上的商家，按头款成交占全店比例分组，取各组店铺成交额中位数。</p>
-</div>
-</div>
+<h3>不同价位的店，生意来源完全不同</h3>
+<p>这是这次最有实操价值的一组数据。<mark>客单 20 元以下的店，近七成生意来自商品笔记，直播间不到一成</mark>；<mark>客单 40 到 80 元的店，直播间占到约四成</mark>，是四组里最高的。</p>
 
-<div class="split-32">
-<div class="chart">
-<div class="ct">半年上新款数与成交增长</div>
-<div class="cd">各组实现成交增长的店铺占比</div>
-<div class="row"><div class="lb"><b>上新约 6 到 20 款</b><span>最优区间</span></div><div class="bars"><div class="bar b2" style="width:100%">约 45%</div></div></div>
-<div class="row"><div class="lb"><b>上新约 1 到 5 款</b><span></span></div><div class="bars"><div class="bar b3" style="width:82%">约 40%</div></div></div>
-<div class="row"><div class="lb"><b>上新 20 款以上</b><span>反而不如</span></div><div class="bars"><div class="bar b3" style="width:73%">约 35%</div></div></div>
-<div class="row"><div class="lb"><b>没上新或减款</b><span>最低</span></div><div class="bars"><div class="bar b1" style="width:46%">约 20%</div></div></div>
-<p class="tn" style="margin-top:14px">统计 2026 年 2 月至 8 月在售商品数的变化，与同期成交变化的关系。</p>
-</div>
-<div class="chart">
-<div class="ct">在售款数与有成交店铺比例</div>
-<div class="cd">铺多少款的店，更容易做出成交</div>
-<div class="row"><div class="lb"><b>约 21 到 50 款</b><span>比例最高</span></div><div class="bars"><div class="bar b2" style="width:100%">约 75%</div></div></div>
-<div class="row"><div class="lb"><b>约 11 到 20 款</b><span></span></div><div class="bars"><div class="bar b2" style="width:95%">约 70%</div></div></div>
-<div class="row"><div class="lb"><b>约 6 到 10 款</b><span></span></div><div class="bars"><div class="bar b3" style="width:89%">约 65%</div></div></div>
-<div class="row"><div class="lb"><b>5 款以内</b><span>货盘太薄</span></div><div class="bars"><div class="bar b1" style="width:63%">约 45%</div></div></div>
-<div class="row"><div class="lb"><b>50 款以上</b><span>摊薄了</span></div><div class="bars"><div class="bar b1" style="width:62%">约 45%</div></div></div>
-<p class="tn" style="margin-top:14px">在售款数为最新一期快照，有成交指近 30 天有成交额。</p>
-</div>
-</div>
-
-<div class="read">
-<div class="rt">两张图合起来读</div>
-<div class="read-list">
-<div class="read-item"><b>货盘不宜太薄，也不宜太厚</b><p>5 款以内的店只有不到一半做出成交，货盘太薄撑不起来。<mark>但超过 50 款之后，有成交的店铺比例掉回到跟 5 款以内差不多</mark>，中位成交额也明显下滑。二十到五十款这一档表现最好。</p></div>
-<div class="read-item"><b>上新有用，但半年六到二十款就够</b><p>完全不上新的店，只有约两成实现了成交增长。上新六到二十款的店，约四成半实现增长。<mark>上新超过二十款的组，增长比例反而低于上新六到二十款的组</mark>。</p></div>
-<div class="read-item"><b>两件事不矛盾</b><p>铺到二三十款、半年上新六到二十款、把资源集中在一两个主推款上，这三件事可以同时做到。<mark>关键在于新上的款是为了找下一个主推，不是为了把货架填满</mark>。</p></div>
-</div>
-</div>
-</div>
-</section>
-
-<section id="s5">
-<div class="wrap">
-<div class="sn">PART 05</div>
-<h2>生意从哪来</h2>
-<p class="sub">不同价位的店，生意来源完全不同。想提价的店尤其要看这一节，因为高价的钱不在你现在做的地方。</p>
-
-<div class="chart">
-<div class="ct">不同客单价的店，生意来源结构</div>
-<div class="cd">近 30 天各场域成交占比</div>
+<div class="chart sm">
+<div class="ct">不同客单价的店，钱从哪来</div>
+<div class="cd">近 30 天各渠道成交占比</div>
 <div class="stack-lg">
 <em><i style="background:#FF2442"></i>商品笔记</em>
 <em><i style="background:#E2A867"></i>商品卡</em>
-<em><i style="background:#C8102E"></i>店播</em>
-<em><i style="background:#EFE6DA"></i>达播</em>
+<em><i style="background:#C8102E"></i>自己直播</em>
+<em><i style="background:#EFE6DA"></i>达人直播</em>
 </div>
 <div class="row"><div class="lb"><b>客单 20 元以下</b><span>几乎只靠笔记</span></div>
 <div class="stack">
-<i style="width:70%;background:#FF2442">约 70%</i>
-<i style="width:22%;background:#E2A867">约 20%</i>
-<i style="width:6%;background:#C8102E"></i>
-<i style="width:2%;background:#EFE6DA"></i>
+<i style="width:70%;background:#FF2442">约 70%</i><i style="width:22%;background:#E2A867">约 20%</i><i style="width:6%;background:#C8102E"></i><i style="width:2%;background:#EFE6DA"></i>
 </div></div>
 <div class="row"><div class="lb"><b>客单 20-40 元</b><span>四条腿均衡</span></div>
 <div class="stack">
-<i style="width:39%;background:#FF2442">约 40%</i>
-<i style="width:28%;background:#E2A867">约 30%</i>
-<i style="width:16%;background:#C8102E">约 15%</i>
-<i style="width:17%;background:#EFE6DA;color:#A66A28">约 15%</i>
+<i style="width:39%;background:#FF2442">约 40%</i><i style="width:28%;background:#E2A867">约 30%</i><i style="width:16%;background:#C8102E">约 15%</i><i style="width:17%;background:#EFE6DA;color:#A66A28">约 15%</i>
 </div></div>
-<div class="row"><div class="lb"><b>客单 40-80 元</b><span>店播占比最高</span></div>
+<div class="row"><div class="lb"><b>客单 40-80 元</b><span>直播占比最高</span></div>
 <div class="stack">
-<i style="width:24%;background:#FF2442">约 25%</i>
-<i style="width:30%;background:#E2A867">约 30%</i>
-<i style="width:38%;background:#C8102E">约 40%</i>
-<i style="width:8%;background:#EFE6DA"></i>
+<i style="width:24%;background:#FF2442">约 25%</i><i style="width:30%;background:#E2A867">约 30%</i><i style="width:38%;background:#C8102E">约 40%</i><i style="width:8%;background:#EFE6DA"></i>
 </div></div>
-<div class="row"><div class="lb"><b>客单 80 元以上</b><span>商品卡加达播</span></div>
+<div class="row"><div class="lb"><b>客单 80 元以上</b><span>商品卡加达人</span></div>
 <div class="stack">
-<i style="width:26%;background:#FF2442">约 25%</i>
-<i style="width:37%;background:#E2A867">约 35%</i>
-<i style="width:18%;background:#C8102E">约 20%</i>
-<i style="width:19%;background:#EFE6DA;color:#A66A28">约 20%</i>
+<i style="width:26%;background:#FF2442">约 25%</i><i style="width:37%;background:#E2A867">约 35%</i><i style="width:18%;background:#C8102E">约 20%</i><i style="width:19%;background:#EFE6DA;color:#A66A28">约 20%</i>
 </div></div>
 </div>
 
 <div class="insight">
-<div class="il">想提价的店，这是最重要的一条</div>
-<h4>要往上提价，就得同步把店播搭起来</h4>
-<p>客单 20 元以下的店，近七成生意来自商品笔记，店播占比不到一成。<mark>但客单 40 到 80 元这一档，店播占到约四成，是四组里最高的</mark>。</p>
-<p>这意味着：如果你现在只靠笔记做低价，直接把价格提上去，很可能卖不动——<mark>中高价的钱有近四成是从直播间出来的，货架和笔记撑不住高价</mark>。</p>
-<p>客单 80 元以上的店又不一样，最依赖商品卡（约三成半）和达播（约两成）。<mark>做高价要么把商品卡的详情和评价做扎实，要么找达人背书</mark>。</p>
-<p class="isrc">口径：站内近 30 天分场域成交，按店铺客单价分四组统计。达播含达人直播带货。</p>
+<div class="il">想提价的店，这条最重要</div>
+<h4>只靠笔记做低价的店直接提价，很可能卖不动</h4>
+<p>如果你现在客单二十几块、生意几乎全靠笔记，<mark>直接把价格提到 80 元，大概率是卖不动的</mark>。因为中高价的钱有近四成是从直播间出来的，笔记撑不住高价——用户看一篇笔记就下单八十块钱的东西，需要的信任比买二十块的高得多。</p>
+<p><mark>正确的顺序是：先开播，再提价</mark>。哪怕一周播两场、每场两小时，先把直播间这个承接做出来，再上高价规格。直播能当场讲清楚原料、工艺、分量，这些是笔记讲不透的。</p>
+<p>客单 80 元以上的店又不一样，最依赖商品卡（约三成半）和达人直播（约两成）。<mark>做高价要么把商品卡的详情和评价做扎实，要么找达人背书</mark>。</p>
 </div>
 
-<h3>按形态看，各自靠什么</h3>
-<div class="tw c6">
+<h3>按你做的形态，渠道该怎么配</h3>
+<div class="tx-ch">
+<div>
+<div class="samp">
+<div class="sl">对照你的形态，看该重点做哪个渠道</div>
+<div class="samp-i">
+<p class="samp-w"><b>短保肉类、即食虾零食</b> — 直播是主渠道，占到一半左右。这两类保质期短或客单高，必须靠直播的即时转化。<b>不开播等于放弃一半生意。</b></p>
+</div>
+<div class="samp-i">
+<p class="samp-w"><b>面筋制品、豆腐干、即食鱼零食</b> — 内容是主渠道，笔记占四成半到六成半。这几类没有原料故事可讲，用户也不太主动搜，<b>生意基本靠笔记推出来。</b></p>
+</div>
+<div class="samp-i">
+<p class="samp-w"><b>牛肉类</b> — 三条腿都要。笔记、商品卡、直播各占两三成。<b>商品卡不宜只挂着不管</b>，它是牛肉类的第二大来源。</p>
+</div>
+<div class="samp-i">
+<p class="samp-w"><b>鸡肉零食、鸭肉类</b> — 这两类的搜索场景占比是所有形态里最高的，说明用户会主动找。<b>建议在商品名和标题里把品类词写全</b>，让用户搜得到。</p>
+</div>
+</div>
+</div>
+<div class="tw c4">
 <table>
-<thead><tr><th>形态</th><th class="num">商品笔记</th><th class="num">商品卡</th><th class="num">店播</th><th class="num">达播</th><th class="num">搜索场景</th></tr></thead>
+<thead><tr><th>形态</th><th class="num">笔记</th><th class="num">商品卡</th><th class="num">自播</th></tr></thead>
 <tbody>
-<tr><td>牛肉类</td><td class="num">约 25%</td><td class="num">约 30%</td><td class="num">约 25%</td><td class="num">约 10%</td><td class="num">约 15%</td></tr>
-<tr><td>短保肉类</td><td class="num">约 15%</td><td class="num">约 25%</td><td class="num hi">约 45%</td><td class="num">约 10%</td><td class="num">约 15%</td></tr>
-<tr><td>猪肉类</td><td class="num hi">约 40%</td><td class="num">约 30%</td><td class="num">约 10%</td><td class="num">约 10%</td><td class="num">约 15%</td></tr>
-<tr><td>鸡肉零食</td><td class="num hi">约 40%</td><td class="num">约 35%</td><td class="num">约 5%</td><td class="num">约 10%</td><td class="num hi">约 20%</td></tr>
-<tr><td>鸭肉类</td><td class="num">约 30%</td><td class="num">约 35%</td><td class="num">约 10%</td><td class="num">约 15%</td><td class="num hi">约 20%</td></tr>
-<tr><td>即食鱼零食</td><td class="num hi">约 55%</td><td class="num">约 20%</td><td class="num">约 15%</td><td class="num">约 10%</td><td class="num">约 10%</td></tr>
-<tr><td>即食虾零食</td><td class="num">约 5%</td><td class="num">约 25%</td><td class="num hi">约 50%</td><td class="num">约 15%</td><td class="num">约 10%</td></tr>
-<tr><td>豆腐干</td><td class="num hi">约 45%</td><td class="num">约 25%</td><td class="num">约 20%</td><td class="num">约 5%</td><td class="num">约 10%</td></tr>
-<tr><td>面筋制品</td><td class="num hi">约 65%</td><td class="num">约 20%</td><td class="num">约 5%</td><td class="num">约 5%</td><td class="num">约 10%</td></tr>
+<tr><td>牛肉类</td><td class="num">约 25%</td><td class="num">约 30%</td><td class="num">约 25%</td></tr>
+<tr><td>短保肉类</td><td class="num">约 15%</td><td class="num">约 25%</td><td class="num hi">约 45%</td></tr>
+<tr><td>猪肉类</td><td class="num hi">约 40%</td><td class="num">约 30%</td><td class="num">约 10%</td></tr>
+<tr><td>鸡肉零食</td><td class="num hi">约 40%</td><td class="num">约 35%</td><td class="num">约 5%</td></tr>
+<tr><td>鸭肉类</td><td class="num">约 30%</td><td class="num">约 35%</td><td class="num">约 10%</td></tr>
+<tr><td>即食鱼零食</td><td class="num hi">约 55%</td><td class="num">约 20%</td><td class="num">约 15%</td></tr>
+<tr><td>即食虾零食</td><td class="num">约 5%</td><td class="num">约 25%</td><td class="num hi">约 50%</td></tr>
+<tr><td>豆腐干</td><td class="num hi">约 45%</td><td class="num">约 25%</td><td class="num">约 20%</td></tr>
+<tr><td>面筋制品</td><td class="num hi">约 65%</td><td class="num">约 20%</td><td class="num">约 5%</td></tr>
 </tbody>
 </table>
-<p class="tn">各场域占比独立计算，搜索场景与前四项存在重叠，不做加和。标红为该形态占比最高的一到两项。</p>
+<p class="tn">达人直播列未展示。标红为该形态占比最高的一项。</p>
+</div>
 </div>
 <p class="scroll-hint">左右滑动查看完整表格</p>
 
-<div class="read">
-<div class="rt">从这张表能读出三件事</div>
-<div class="read-list">
-<div class="read-item"><b>短保肉类和即食虾零食靠直播</b><p>这两类的店播占比接近或超过一半。<mark>做这两个形态不开播，等于放弃一半的生意</mark>。</p></div>
-<div class="read-item"><b>素卤类几乎全靠内容</b><p>面筋制品的商品笔记占约六成半，豆腐干约四成半。这两类没有原料故事可讲，用户也不太搜索，<mark>生意基本靠笔记推出来</mark>。</p></div>
-<div class="read-item"><b>鸡肉和鸭肉有主动搜索需求</b><p>这两类的搜索场景占比是所有形态里最高的，说明用户会主动找。<mark>做这两类的可以在标题和商品名里把品类词写清楚</mark>，让用户搜得到。</p></div>
+<div class="dothis">
+<div class="dl">这一步你该做什么</div>
+<ol>
+<li><b>如果你想提价到 40 元以上：先把直播搭起来。</b>不需要一开始就日播，一周两场、每场两小时，把主推款讲透。播满四周再上高价规格。</li>
+<li><b>如果你做短保或即食虾：直播是必选项。</b>建议固定时段开播，让老客知道什么时候来。</li>
+<li><b>如果你做豆干、面筋、即食鱼：把力气放在笔记上。</b>这几类直播的转化不高，内容才是主渠道。</li>
+<li><b>如果你做鸡肉、鸭肉：检查商品名有没有写全品类词。</b>这两类用户会主动搜，商品名里带上口味、规格、场景词，能接到搜索流量。</li>
+<li><b>不管做哪类，商品卡都要维护。</b>它在所有形态里都占两到三成半，是仅次于主渠道的第二来源。</li>
+</ol>
 </div>
 </div>
+</section>
+<section id="s5">
+<div class="wrap">
+<div class="sn">第四步</div>
+<h2>内容具体怎么写</h2>
+<p class="sub">这一节给到能直接照着写的程度：标题的结构、有效的词、商品名的写法，都有真实范例。</p>
+
+<h3>先把发文变成固定动作</h3>
+<div class="tx-ch">
+<div>
+<p>发文有一个很明确的门槛。<mark>三十天发十篇以内的店，只有约三成能靠笔记带来购买；发到五十篇以上，这个比例超过七成；发到两三百篇，接近九成</mark>。</p>
+<p>从几乎不发到稳定发，是收益最大的一步。<mark>建议把发文变成固定动作</mark>，结合自己的内容产能定一个能长期坚持的节奏，比一个月猛发一百篇然后停两个月有效得多。</p>
+<div class="insight" style="margin-top:18px">
+<div class="il">账号数也有帮助</div>
+<h4>多号能提效果，前提是内容产能跟得上</h4>
+<p>从单账号到三十个号以上，有笔记带来购买的店铺比例从约七成半升到约九成，<mark>千次曝光带来的购买数大约翻了一倍</mark>。</p>
+<p>但要注意前提：<mark>三十个号以上那组的发文量中位数超过一千篇</mark>。多号带来的提升，本质上是更多内容带来的。<mark>号开得多但内容跟不上，不如把内容集中在少数号上做好</mark>。</p>
+<p class="isrc">口径：站内卤味商家近 30 天商品笔记数据，效率指标为千次曝光带来的购买次数，指笔记直接带来的购买。</p>
+</div>
+</div>
+<div class="chart sm">
+<div class="ct">发文量与有笔记带来购买的店比例</div>
+<div class="cd">近 30 天发文篇数</div>
+<div class="row"><div class="lb"><b>10 篇以内</b><span>约三成</span></div><div class="bars"><div class="bar b1" style="width:32%"></div></div></div>
+<div class="row"><div class="lb"><b>11 到 50 篇</b><span>约五成</span></div><div class="bars"><div class="bar b3" style="width:56%"></div></div></div>
+<div class="row"><div class="lb"><b>51 到 200 篇</b><span>约七成</span></div><div class="bars"><div class="bar b3" style="width:78%"></div></div></div>
+<div class="row"><div class="lb"><b>200 篇以上</b><span>约九成</span></div><div class="bars"><div class="bar b2" style="width:100%"></div></div></div>
+<p class="tn">从不发到稳定发，是收益最大的一步。</p>
+</div>
+</div>
+
+<h3>标题怎么写：四个有效元素</h3>
+<p>基于全量笔记统计，以全场平均效率为 1 倍。<mark>带健身减脂词效率约 1.4 倍，带规格数字和场景词约 1.3 倍，写成疑问句只有约 0.8 倍</mark>。长度上，<mark>十个字以内效率最低（约 0.6 倍），22 字以上最高（约 1.3 倍）</mark>。</p>
+
+<div class="samp">
+<div class="sl">照着这四个元素写，具体的词都列在这里</div>
+<div class="samp-i">
+<p class="samp-w"><b>① 场景词（约 1.3 倍）——</b>告诉用户什么时候吃。可用词：<b>追剧、办公室、解馋、夜宵、磨牙、下酒、露营、上班、开车、加班、看剧、周末</b>。这类词让用户把你的货和一个具体时刻绑在一起。</p>
+</div>
+<div class="samp-i">
+<p class="samp-w"><b>② 规格数字（约 1.3 倍）——</b>把分量写清楚。写法：<b>500g、一斤装、独立包装、10 小包、试吃 3 包、300g×2</b>。数字消除了「买多少」的疑问，尤其是中高价款必须写。</p>
+</div>
+<div class="samp-i">
+<p class="samp-w"><b>③ 健身减脂词（约 1.4 倍，效率最高）——</b>可用词：<b>高蛋白、低脂、0 糖、低卡、健身、轻食、纯瘦</b>。这是效率最高的一类词。<b>注意只描述配料和成分事实，不宜写成减肥、瘦身等功效承诺。</b></p>
+</div>
+<div class="samp-i">
+<p class="samp-w"><b>④ 产地和工艺词 ——</b>可用词：<b>内蒙直供、原切、超薄、风干、八成干、碳烤、先卤后烤、冷链发货、工厂直发、手工</b>。这类词支撑你的价格，是从低价往中高价走的时候必须加的。</p>
+</div>
+</div>
+
+<div class="samp">
+<div class="sl">标题范例对照（结构参考站内真实高效笔记，已去掉品牌与专属标识）</div>
+<div class="samp-i">
+<div class="samp-q">不用奔赴川西！就可以吃到酸甜辣的牛爆脆啦</div>
+<p class="samp-w">好在哪：<b>前半句造了一个「原本很难得到」的感觉，后半句直接给结果</b>。20 字，带产地联想和口味描述。这是站内效率排前列的结构。</p>
+</div>
+<div class="samp-i">
+<div class="samp-q">追剧必备！一斤装独立包装的风干牛肉干，一小包一集</div>
+<p class="samp-w">好在哪：<b>场景词 + 规格数字 + 工艺词三个元素都在</b>，最后半句把「一小包一集」这个用法讲出来了。23 字，落在最优长度。</p>
+</div>
+<div class="samp-i">
+<div class="samp-q">办公室解馋不长肉的小零食，高蛋白纯瘦风干牛肉条</div>
+<p class="samp-w">好在哪：<b>场景 + 成分事实 + 工艺</b>。「不长肉」是描述吃的感受，比写「减肥」安全，也更像真人说话。</p>
+</div>
+<div class="samp-i samp-bad">
+<div class="samp-q">牛肉干</div>
+<p class="samp-w">问题在哪：<b>十个字以内的标题效率只有平均的六成左右</b>，是所有长度里最差的。只写品名浪费了标题这个最重要的位置。</p>
+</div>
+<div class="samp-i samp-bad">
+<div class="samp-q">你们都爱吃这个吗？</div>
+<p class="samp-w">问题在哪：<b>纯疑问句的效率只有约 0.8 倍</b>，而且没有任何商品信息。疑问句可以用，但要带上商品和卖点，不能只有一个问句。</p>
+</div>
+</div>
+
+<h3>商品名怎么写：结构决定能不能被搜到</h3>
+<p>商品名比标题更重要，因为它决定用户搜索时能不能找到你，也是商品卡转化的第一眼。<mark>站内卖得最好的那些款，商品名都是同一个结构</mark>。</p>
+
+<div class="samp">
+<div class="sl">卖得最好的商品名结构（结构参考站内真实头款，已去掉品牌与专属标识）</div>
+<div class="samp-i">
+<div class="samp-q">【产地直供】草原风味牛爆脆 原切超薄 麻辣小吃 酥脆爆香</div>
+<p class="samp-w">结构：<b>【卖点前缀】+ 产地风味 + 品名 + 工艺（原切超薄）+ 口味 + 口感</b>。这个结构里每一段都是用户可能搜的词，也把价格支撑写清楚了。这类款的成交价在 50 元以上。</p>
+</div>
+<div class="samp-i">
+<div class="samp-q">蒜香/柠檬/藤椒/川香味无骨鸡爪 500g/1000g 去骨凤爪 解馋零食小吃</div>
+<p class="samp-w">结构：<b>多口味并列 + 品名 + 双规格 + 别名（去骨凤爪）+ 场景词</b>。<b>把多个口味和多个规格写在一个商品名里</b>，能接到更多搜索词，别名「凤爪」覆盖了另一种叫法。</p>
+</div>
+<div class="samp-i">
+<div class="samp-q">工厂直发 五香卤烤鹅蛋 东北特色 先卤后烤 清黄入味 熟食零食</div>
+<p class="samp-w">结构：<b>供应链信任（工厂直发）+ 口味 + 品名 + 地域特色 + 工艺（先卤后烤）+ 口感 + 品类词</b>。工艺词「先卤后烤」把差异讲清楚了，这比写「好吃」有用得多。</p>
+</div>
+<div class="samp-i">
+<div class="samp-q">八成干碳烤风干牛肉干 一斤 独立包装 顺丰包邮</div>
+<p class="samp-w">结构：<b>干度 + 工艺 + 品名 + 规格 + 包装形式 + 物流承诺</b>。「八成干」这种精确的工艺描述，是中高价款区别于低价款的关键，也是懂行的用户会搜的词。</p>
+</div>
+<div class="samp-i samp-bad">
+<div class="samp-q">牛肉干 500g</div>
+<p class="samp-w">问题在哪：<b>只有品名和规格，没有产地、工艺、口味、场景</b>。用户搜「内蒙牛肉干」「原切牛肉干」「追剧零食」都搜不到你，商品卡也讲不出为什么值这个价。</p>
+</div>
+</div>
+
+<div class="dothis">
+<div class="dl">这一步你该做什么</div>
+<ol>
+<li><b>先改主推款的商品名。</b>按上面的结构补全：产地、工艺、口味、规格、场景词、别名。这件事改一次长期有效，是最划算的动作。</li>
+<li><b>标题写到 22 字以上</b>，至少带两个元素：场景词 + 规格数字，或者场景词 + 工艺词。不要只写品名。</li>
+<li><b>如果你做健身向的货</b>，标题里用高蛋白、低脂、纯瘦这类成分事实词，效率是全场平均的 1.4 倍左右。<b>只描述成分，不写功效承诺。</b></li>
+<li><b>发文节奏定一个能长期坚持的量</b>，比集中猛发再停更有效。</li>
+<li><b>多账号不是必需项。</b>如果内容产能有限，先把单号做稳，不要为了铺号把内容摊薄。</li>
+</ol>
+</div>
+<p class="tnote">口径：站内卤味商家近 30 天商品笔记全量统计，效率为千次曝光带来的购买次数。范例结构参考站内真实高效笔记与头款商品名，已去掉品牌名与专属标识。内容表述需遵守平台规范，成分与功效相关表述不宜超出实际。</p>
 </div>
 </section>
 <section id="s6">
 <div class="wrap">
-<div class="sn">PART 06</div>
-<h2>内容怎么发</h2>
-<p class="sub">发文量有门槛也有天花板，标题怎么写有明确的效率差。这一节讲的是笔记直接带来的购买，不是店铺总成交。</p>
+<div class="sn">对号入座</div>
+<h2>找到你的同类，照着做</h2>
+<p class="sub">三类商家的打法完全不同。找到自己那一类，看它的真实案例——每个案例都写清了头款卖多少钱、主推多集中、靠哪个渠道卖出去的。</p>
 
-<div class="split">
-<div class="chart">
-<div class="ct">发文量与有笔记带来购买的店铺比例</div>
-<div class="cd">近 30 天发文篇数分档</div>
-<div class="row"><div class="lb"><b>10 篇以内</b><span>约三成</span></div><div class="bars"><div class="bar b1" style="width:32%">约 30%</div></div></div>
-<div class="row"><div class="lb"><b>11 到 50 篇</b><span>约五成</span></div><div class="bars"><div class="bar b3" style="width:56%">约 50%</div></div></div>
-<div class="row"><div class="lb"><b>51 到 200 篇</b><span>约七成</span></div><div class="bars"><div class="bar b3" style="width:78%">约 70%</div></div></div>
-<div class="row"><div class="lb"><b>201 到 800 篇</b><span>约九成</span></div><div class="bars"><div class="bar b2" style="width:94%">约 90%</div></div></div>
-<div class="row"><div class="lb"><b>800 篇以上</b><span>约九成</span></div><div class="bars"><div class="bar b2" style="width:100%">约 90%</div></div></div>
+<div class="tabs">
+<button class="tab on" data-t="ta">A · 牛肉高价型</button>
+<button class="tab" data-t="tb">B · 短保鲜卤型</button>
+<button class="tab" data-t="tc">C · 素卤豆干型</button>
 </div>
-<div class="chart">
-<div class="ct">发文量与单篇效率</div>
-<div class="cd">千次曝光带来的购买次数，以 51-200 篇档为 1 倍</div>
-<div class="row"><div class="lb"><b>10 篇以内</b><span>基数太小</span></div><div class="bars"><div class="bar b1" style="width:30%">低</div></div></div>
-<div class="row"><div class="lb"><b>11 到 50 篇</b><span></span></div><div class="bars"><div class="bar b1" style="width:60%">0.7×</div></div></div>
-<div class="row"><div class="lb"><b>51 到 200 篇</b><span></span></div><div class="bars"><div class="bar b3" style="width:79%">1.0×</div></div></div>
-<div class="row"><div class="lb"><b>201 到 800 篇</b><span>效率见顶</span></div><div class="bars"><div class="bar b2" style="width:100%">1.3×</div></div></div>
-<div class="row"><div class="lb"><b>800 篇以上</b><span>开始回落</span></div><div class="bars"><div class="bar b3" style="width:96%">1.2×</div></div></div>
-<p class="tn" style="margin-top:14px">篇均曝光在 800 篇以上这一档下滑明显，发得越多，单篇能分到的曝光越少。</p>
+
+<div class="panel on" id="ta">
+<h3>A · 牛肉高价型</h3>
+<p><b>你的货是：</b>牛肉干、牛脆片、牛胸口脆、牛蹄筋。这一型占全盘成交约一半，是最大也最挤的一块。</p>
+<p><b>你该做的四件事：</b>价格做到 80 到 150 元；主推压在一款脆片形态上；笔记、商品卡、直播三条腿都要，商品卡别只挂着；标题带产地和工艺词支撑价格。</p>
+
+<div class="cs-grid">
+<div class="cs">
+<div class="cs-h"><b>案例 A1 · 川式牛脆片</b><span>主推极度集中</span></div>
+<div class="cs-g">
+<div><em>约 130 元</em><i>头款成交价</i></div>
+<div><em>约 90%</em><i>头款占全店</i></div>
+<div><em>9 款</em><i>卖动款数</i></div>
+<div><em>三条腿</em><i>渠道结构</i></div>
+</div>
+<p class="cs-t">这家店只卖动 9 款，<b>但头款一款就占了全店约九成</b>，价格顶到 130 元。渠道上笔记约 26%、商品卡约 30%、自播约 27%、达人约 17%，四条腿都在用，没有偏科。<b>它是「主推集中 + 高价 + 全渠道」的标准打法</b>，也是这一型里做得最大的一家。</p>
+</div>
+<div class="cs">
+<div class="cs-h"><b>案例 A2 · 内蒙牛爆脆</b><span>靠直播单点突破</span></div>
+<div class="cs-g">
+<div><em>约 56 元</em><i>头款成交价</i></div>
+<div><em>约 97%</em><i>头款占全店</i></div>
+<div><em>3 款</em><i>卖动款数</i></div>
+<div><em>约 93%</em><i>来自自播</i></div>
+</div>
+<p class="cs-t">这家店只卖动 3 款，<b>头款占了约九成七，而且约九成三的成交来自自己直播</b>。它几乎不靠笔记（约 1%），把全部力气放在直播间讲一款货。<b>如果你货盘很窄但能开播，这是可复制的路径</b>——不需要几十款，一款讲透就够。</p>
+</div>
+<div class="cs">
+<div class="cs-h"><b>案例 A3 · 牛胸口脆</b><span>笔记加商品卡双轮</span></div>
+<div class="cs-g">
+<div><em>约 75 元</em><i>头款成交价</i></div>
+<div><em>约 89%</em><i>头款占全店</i></div>
+<div><em>4 款</em><i>卖动款数</i></div>
+<div><em>约 63%</em><i>来自商品卡</i></div>
+</div>
+<p class="cs-t">这家店不开播，<b>靠笔记（约 36%）加商品卡（约 63%）做到了 75 元的客单</b>。它说明不开播也能做中高价，但前提是<b>商品卡要做得足够扎实</b>——详情、评价、规格说明都得到位，因为用户全靠商品卡做决定。</p>
+</div>
+<div class="cs">
+<div class="cs-h"><b>案例 A4 · 一斤装风干牛肉干</b><span>规格撑起高客单</span></div>
+<div class="cs-g">
+<div><em>约 97 元</em><i>头款成交价</i></div>
+<div><em>约 86%</em><i>头款占全店</i></div>
+<div><em>17 款</em><i>卖动款数</i></div>
+<div><em>笔记 + 卡</em><i>渠道结构</i></div>
+</div>
+<p class="cs-t">它的商品名是「八成干碳烤风干牛肉干 一斤 独立包装 顺丰包邮」这个结构。<b>用「一斤装」这个规格把客单做到近 100 元</b>，配方不用改，只是把分量做大、包装做成独立小包。<b>这是从低价往高价走最省事的一条路。</b></p>
 </div>
 </div>
 
 <div class="insight">
-<div class="il">发文这件事，有门槛也有天花板</div>
-<h4>从几乎不发到稳定发，是最大的一步；发过两三百篇之后，收益开始变薄</h4>
-<p>十篇以内的店只有约三成能靠笔记带来购买，到两三百篇这一档接近九成。<mark>这个门槛是真实存在的，从不发到发是收益最大的一步</mark>。</p>
-<p>但效率在两三百篇这一档就见顶了，再往上发，单篇效率和篇均曝光都在往下走。<mark>建议把发文变成固定动作，结合自身内容产能安排节奏</mark>，并遵守平台内容规范。</p>
-<p class="isrc">口径：站内卤味商家近 30 天商品笔记数据，效率指标为千次曝光带来的购买次数，指笔记直接带来的购买。</p>
-</div>
-
-<h3>账号数，多号确实有帮助</h3>
-<div class="split-32">
-<div class="chart">
-<div class="ct">账号数与内容效果</div>
-<div class="cd">以单账号为 1 倍基准</div>
-<div class="legend"><em><i style="background:linear-gradient(90deg,#FF5C74,#FF2442)"></i>有笔记带来购买的店铺比例</em><em><i style="background:#EFE6DA"></i>千次曝光购买数</em></div>
-<div class="row"><div class="lb"><b>1 个号</b><span></span></div><div class="bars"><div class="bar b2" style="width:84%">约 75%</div><div class="bar b1" style="width:50%">1.0×</div></div></div>
-<div class="row"><div class="lb"><b>2 到 5 个号</b><span></span></div><div class="bars"><div class="bar b2" style="width:90%">约 80%</div><div class="bar b1" style="width:62%">1.2×</div></div></div>
-<div class="row"><div class="lb"><b>6 到 30 个号</b><span></span></div><div class="bars"><div class="bar b2" style="width:96%">约 85%</div><div class="bar b1" style="width:80%">1.6×</div></div></div>
-<div class="row"><div class="lb"><b>30 个号以上</b><span>对产能要求高</span></div><div class="bars"><div class="bar b2" style="width:100%">约 90%</div><div class="bar b1" style="width:100%">2.0×</div></div></div>
-</div>
-<div class="insight" style="margin:0">
-<div class="il">多号是手段，不是目的</div>
-<h4>账号数提升效果的前提是内容产能跟得上</h4>
-<p>从单账号到三十个号以上，有笔记带来购买的店铺比例和千次曝光购买数都在往上走，<mark>后者大约翻了一倍</mark>。多号确实有帮助。</p>
-<p>但要注意前提：<mark>三十个号以上那组的发文量中位数超过一千篇</mark>。多号带来的提升，本质上是更多内容带来的。号开得多但内容跟不上，可能反而不如把内容集中在少数号上。</p>
-<p class="isrc">口径：站内卤味商家近 30 天关联专业号数与商品笔记效果，按账号数分档统计。</p>
+<div class="il">这四家有什么共同点</div>
+<h4>四家店的头款都占到全店八成半以上，卖动的款都不超过二十个</h4>
+<p>它们的价格从 56 元到 130 元，渠道结构差别很大——有全渠道的、有九成靠直播的、有不开播只靠商品卡的。<mark>但共同点只有一个：都有一个绝对的主推款</mark>。</p>
+<p>这说明<mark>渠道可以按自己的能力选，但主推必须集中</mark>。你可以不开播，可以不做达人，但不能十几款平摊。</p>
 </div>
 </div>
 
-<h3>标题怎么写</h3>
-<div class="split">
-<div class="tl">
-<div class="tli"><span>带健身减脂相关词</span><b>约 1.4 倍</b></div>
-<div class="tli"><span>带数字规格（多少克、几包）</span><b>约 1.3 倍</b></div>
-<div class="tli"><span>带场景词（追剧、办公室、解馋、夜宵、磨牙）</span><b>约 1.3 倍</b></div>
-<div class="tli"><span>带疑问句</span><b>约 0.8 倍</b></div>
+<div class="panel" id="tb">
+<h3>B · 短保鲜卤型</h3>
+<p><b>你的货是：</b>短保肉类（现炒、鲜卤、低温慢烤）、无骨鸡爪、鸭舌鸭掌、盐水鸭、卤味熟食。</p>
+<p><b>这一型的特点：</b>动销款数不到牛肉类的八分之一，成交做到了五分之一，<mark>单款产出是所有形态里最高的</mark>。而且<mark>复购比大盘高约四成</mark>，是所有形态里回头客最多的。</p>
+<p><b>你该做的四件事：</b>价格守在 20 到 80 元，不要往高价冲；必须开播，这一型店播占比接近一半；把老客的二次触达做成固定动作；主推做地域特色款。</p>
+
+<div class="cs-grid">
+<div class="cs">
+<div class="cs-h"><b>案例 B1 · 多口味无骨鸡爪</b><span>达人直播为主</span></div>
+<div class="cs-g">
+<div><em>约 31 元</em><i>头款成交价</i></div>
+<div><em>约 60%</em><i>头款占全店</i></div>
+<div><em>60 款</em><i>卖动款数</i></div>
+<div><em>约 59%</em><i>来自达人直播</i></div>
 </div>
-<div class="chart">
-<div class="ct">标题长度与效率</div>
-<div class="cd">以全场平均效率为 1 倍基准</div>
-<div class="row"><div class="lb"><b>22 字以上</b><span>最高</span></div><div class="bars"><div class="bar b2" style="width:100%">约 1.3×</div></div></div>
-<div class="row"><div class="lb"><b>16 到 21 字</b><span></span></div><div class="bars"><div class="bar b3" style="width:77%">约 1.0×</div></div></div>
-<div class="row"><div class="lb"><b>11 到 15 字</b><span></span></div><div class="bars"><div class="bar b3" style="width:75%">约 1.0×</div></div></div>
-<div class="row"><div class="lb"><b>10 字以内</b><span>最低</span></div><div class="bars"><div class="bar b1" style="width:46%">约 0.6×</div></div></div>
-<p class="tn" style="margin-top:14px"><b>十个字以内的短标题效率最低</b>，建议把卖点写满，不要只写品名。</p>
+<p class="cs-t">商品名是「蒜香/柠檬/藤椒/川香味无骨鸡爪 500g/1000g 去骨凤爪 解馋零食小吃」——<b>四个口味、两个规格写在一个商品名里</b>。渠道上约 59% 来自达人直播、约 20% 自播。<b>短保货找达人带是有效的，因为达人能当场吃、当场讲口感。</b></p>
+</div>
+<div class="cs">
+<div class="cs-h"><b>案例 B2 · 盐水猪肝熏卤猪心</b><span>笔记做冷链短保</span></div>
+<div class="cs-g">
+<div><em>约 11 元</em><i>头款成交价</i></div>
+<div><em>约 59%</em><i>头款占全店</i></div>
+<div><em>5 款</em><i>卖动款数</i></div>
+<div><em>约 69%</em><i>来自笔记</i></div>
+</div>
+<p class="cs-t">商品名带「【冷链发货】」和「开袋即食」「真空包装」。<b>它靠笔记（约 69%）做起来的，把冷链和即食这两个点讲清楚</b>。短保货最大的顾虑是新鲜度和安全，<b>把冷链、真空、日期这些信息写进商品名，是打消顾虑最直接的做法。</b></p>
+</div>
+<div class="cs">
+<div class="cs-h"><b>案例 B3 · 冷吃香辣鸡丁</b><span>地域特色定位</span></div>
+<div class="cs-g">
+<div><em>约 29 元</em><i>头款成交价</i></div>
+<div><em>约 57%</em><i>头款占全店</i></div>
+<div><em>8 款</em><i>卖动款数</i></div>
+<div><em>约 67%</em><i>来自达人直播</i></div>
+</div>
+<p class="cs-t">商品名是「重庆特产冷吃香辣鸡丁 追剧休闲 麻辣味 即食解馋零食」——<b>地域（重庆特产）+ 工艺（冷吃）+ 场景（追剧）三个元素齐全</b>。价格 29 元落在这一型的最优档。<b>地域标签是这一型最好用的差异点。</b></p>
+</div>
+<div class="cs">
+<div class="cs-h"><b>案例 B4 · 卤烤鹅蛋</b><span>工艺词讲差异</span></div>
+<div class="cs-g">
+<div><em>约 11 元</em><i>头款成交价</i></div>
+<div><em>约 100%</em><i>头款占全店</i></div>
+<div><em>5 款</em><i>卖动款数</i></div>
+<div><em>约 89%</em><i>来自笔记</i></div>
+</div>
+<p class="cs-t">商品名里有「先卤后烤」「清黄入味」这样的工艺描述。<b>头款几乎占了全店 100%</b>，约 89% 的成交来自笔记。<b>「先卤后烤」这四个字就是它的差异点</b>——比写「好吃」「入味」有说服力得多，因为它讲的是做法。</p>
 </div>
 </div>
-<p class="tnote">口径：站内卤味商家近 30 天曝光达到基础量级的商品笔记，效率指标为千次曝光带来的购买次数。功效相关表述需遵守平台规范，不宜写成医疗保健功效。</p>
+
+<div class="insight">
+<div class="il">这一型最值得做的一件事</div>
+<h4>复购比大盘高约四成，把老客二次触达做成固定动作</h4>
+<p>短保肉类是所有形态里回头客最多的，<mark>三十天内每个买家的购买次数比大盘高约四成</mark>。这意味着你花力气拉来的客人，比别的形态更容易再买一次。</p>
+<p>建议做法：<mark>固定时段开播让老客知道什么时候来</mark>，新口味优先通知买过的人，把复购当成主要增长来源而不是只盯拉新。这一型的客单不高，靠的就是买得勤。</p>
+</div>
+</div>
+
+<div class="panel" id="tc">
+<h3>C · 素卤豆干型</h3>
+<p><b>你的货是：</b>豆腐干、面筋制品、素肉、蔬菜干、千张、其它豆制品。这几个形态合起来占全盘成交不到一成。</p>
+<p><b>你该做的四件事：</b>价格守在 40 元以下，面筋守在 20 元以下；<mark>靠内容，这一型笔记占四成半到六成半</mark>；用组合装提客单；主推做地域怀旧款。</p>
+
+<div class="cs-grid">
+<div class="cs">
+<div class="cs-h"><b>案例 C1 · 麻辣拌豆腐干</b><span>直播做素卤</span></div>
+<div class="cs-g">
+<div><em>约 22 元</em><i>头款成交价</i></div>
+<div><em>约 66%</em><i>头款占全店</i></div>
+<div><em>12 款</em><i>卖动款数</i></div>
+<div><em>约 83%</em><i>来自自播</i></div>
+</div>
+<p class="cs-t">商品名是「四川叙永麻辣拌豆腐干 手工凉拌脆香豆干 四川特产 凉拌菜 豆制品零食」——<b>精确到县的地域（叙永）+ 工艺（手工凉拌）+ 口感（脆香）</b>。约 83% 靠自播。<b>它证明素卤类也能靠直播做，前提是有地域故事可讲。</b></p>
+</div>
+<div class="cs">
+<div class="cs-h"><b>案例 C2 · 手撕豆干</b><span>笔记为主</span></div>
+<div class="cs-g">
+<div><em>约 22 元</em><i>头款成交价</i></div>
+<div><em>约 53%</em><i>头款占全店</i></div>
+<div><em>10 款</em><i>卖动款数</i></div>
+<div><em>约 73%</em><i>来自笔记</i></div>
+</div>
+<p class="cs-t">商品名带「新疆特产」「200g 大份量」「网红」「阿勒泰美食特产」。<b>地域 + 规格 + 特产定位</b>，价格 22 元正好在豆干的最优档。约 73% 靠笔记。<b>「大份量」这个词对这一型有用</b>，因为单价低，用户在意划不划算。</p>
+</div>
+<div class="cs">
+<div class="cs-h"><b>案例 C3 · 麻辣面筋</b><span>纯内容驱动</span></div>
+<div class="cs-g">
+<div><em>约 11 元</em><i>头款成交价</i></div>
+<div><em>约 100%</em><i>头款占全店</i></div>
+<div><em>6 款</em><i>卖动款数</i></div>
+<div><em>约 92%</em><i>来自笔记</i></div>
+</div>
+<p class="cs-t">商品名是「麻辣面筋 休闲零食 清真 开袋即食 麻辣孜然口味 追剧必备」。<b>头款占全店 100%，约 92% 来自笔记</b>，价格 11 元。<b>面筋类就是这个打法</b>：单价压到十几块、主推一款、全靠内容推。「清真」这个资质词也是有效的搜索词。</p>
+</div>
+<div class="cs">
+<div class="cs-h"><b>案例 C4 · 五香熏豆卷</b><span>地域熟食做直播</span></div>
+<div class="cs-g">
+<div><em>约 24 元</em><i>头款成交价</i></div>
+<div><em>约 52%</em><i>头款占全店</i></div>
+<div><em>3 款</em><i>卖动款数</i></div>
+<div><em>约 90%</em><i>来自自播</i></div>
+</div>
+<p class="cs-t">商品名是「【升级顺丰】五香熏豆卷 东北特产 锦州熏干豆腐卷 鸡汁豆皮千张 熟食」——<b>物流升级 + 口味 + 地域（锦州）+ 多个别名（豆腐卷、豆皮、千张）</b>。多写别名能接到更多搜索词。约 90% 靠自播。</p>
+</div>
+</div>
+
+<div class="insight">
+<div class="il">这一型怎么提客单</div>
+<h4>往高价走不通，但把小包装做成组合装可行</h4>
+<p>豆干类<mark>20 到 40 元这一档的单款产出是 20 元以下档的约 4 倍</mark>。做法不是把单包涨价，而是<mark>把几个小包装打包成一个二三十元的组合装</mark>，可以是多口味组合，也可以是大份量装。</p>
+<p>另外要接受一个事实：<mark>这一型单个买家带来的成交额只有十几二十块</mark>，是所有形态里最低的，这是品类决定的。所以这一型必须靠量和复购频次，不能指望单笔做大。</p>
+</div>
+</div>
 </div>
 </section>
+
+</div>
+<div class="zone-p" id="znew">
 
 <section id="s7">
 <div class="wrap">
-<div class="sn">PART 07</div>
-<h2>先对号入座，你是哪一类</h2>
-<p class="sub">三类商家的机会点和动作完全不同。找到自己那一类，只看对应的部分。案例以代号呈现，做法均为站内公开可见。</p>
-
-<div class="types">
-<div class="type" data-exp>
-<div class="tg">TYPE A</div>
-<h4>牛肉高价型</h4>
-<p><b>你的货是：</b>牛肉干、牛脆片、牛胸口脆、牛蹄筋。这一型占全盘成交约一半，也是最挤的一块。</p>
-<div class="st">往上补两档，不要往下卷</div>
-<button class="exp-btn">看完整行动方案 <span class="arw">›</span></button>
-<div class="exp">
-<div class="ai"><b>货盘</b>主推款做到 40 到 150 元。这两档的单款产出是最低档的四到六倍。150 元以上先不急，那一档产出会回落。如果现在只有低价款，建议先做一个 40-80 元的规格测起来。</div>
-<div class="ai"><b>形态</b>脆片是这一型唯一在涨的方向，半年成交占比涨约七成。平台商机数据里，猪肉脆片和牛胸口脆片的需求热度都在高位，供给还没跟上。近 30 天成交前十里六款是脆片形态。</div>
-<div class="ai"><b>场域</b>牛肉类的商品笔记和商品卡占比接近，店播约四分之一。商品卡不宜只挂着不管，它是这一型的第二大来源。</div>
-<div class="ai"><b>内容</b>带健身减脂或场景词的标题效率是全场平均的 1.4 倍和 1.3 倍，比写疑问句好。标题建议写到 22 字以上。</div>
-<div class="ai"><b>案例 A</b>一家做内蒙牛胸口脆的店，同时占住近 30 天成交榜的四个位置，四款分别落在约 84 元、36 元、60 元、44 元四个价位。做法是同一个产品线拆成不同规格和组合，覆盖多个价位带，不是靠一款打天下。</div>
-<div class="ai"><b>怎么验证</b>新上的中高价款 30 天有没有成交，动销率能不能保持在六成以上。</div>
-</div>
-</div>
-
-<div class="type" data-exp>
-<div class="tg">TYPE B</div>
-<h4>短保鲜卤型</h4>
-<p><b>你的货是：</b>短保肉类（现炒、鲜卤、低温慢烤）、无骨鸡爪、鸭舌鸭掌、盐水鸭。用最少的款做最多的钱。</p>
-<div class="st">守住中价段，把直播搭起来</div>
-<button class="exp-btn">看完整行动方案 <span class="arw">›</span></button>
-<div class="exp">
-<div class="ai"><b>这一型的特点</b>动销款数不到牛肉类的八分之一，成交做到了五分之一。20-40 元这一档的单款产出是所有形态所有价位里最高的。三十天内每个购买用户的购买次数比大盘高约四成，是所有形态里复购最好的。</div>
-<div class="ai"><b>货盘</b>集中在 20 到 80 元。这一型 80 元以上的单款产出明显回落，不适合往高价走。</div>
-<div class="ai"><b>场域</b>必须做直播。短保肉类的店播占比接近一半，是所有形态里最高的。保质期短需要靠直播的即时转化消化库存，挂在货架上等自然流量不合适。</div>
-<div class="ai"><b>复购</b>这一型是所有形态里复购最好的，适合做会员和复购运营。建议把老客的二次触达做成固定动作，而不是只盯拉新。</div>
-<div class="ai"><b>机会点</b>地域鲜卤是最明确的空位。平台商机数据里，盐水鸭腿、酱板鸭、甜辣鸭舌这几个带地域标签的方向，需求热度都在中高位，供给不足。</div>
-<div class="ai"><b>案例 B</b>一家做短保肉类的店，近 30 天成交榜上有三款，价格从约 21 元到 115 元，跨度很大但形态统一，都是短保低温工艺。它的做法是用工艺做区隔，不是用价格。</div>
-<div class="ai"><b>怎么验证</b>单场直播的成交，以及短保商品的售罄率。</div>
-</div>
-</div>
-
-<div class="type" data-exp>
-<div class="tg">TYPE C</div>
-<h4>素卤豆干型</h4>
-<p><b>你的货是：</b>豆腐干、面筋制品、素肉、蔬菜干、其它豆制品。这几个形态合起来占全盘成交不到一成。</p>
-<div class="st">价位不宜往上走，靠内容和组合</div>
-<button class="exp-btn">看完整行动方案 <span class="arw">›</span></button>
-<div class="exp">
-<div class="ai"><b>货盘</b>豆腐干 20-40 元档的单款产出是 40-80 元档的数倍。面筋制品成交几乎全在 20 元以下。这一型的生意在 40 元以下，往上是空的。</div>
-<div class="ai"><b>必须靠内容</b>面筋制品的商品笔记占约六成半，豆腐干约四成半，都是所有形态里最靠内容的。这一型没有原料故事可讲，用户也不太搜索，生意基本靠笔记推出来。</div>
-<div class="ai"><b>怎么提客单</b>做组合。这一型单价低，往高价走不通，能做的是把小包装打包。豆干类 20-40 元档比 20 元以下档的单款产出高数倍，把几个小包装做成一个二三十元的组合装，是这一型可行的提客单方式。</div>
-<div class="ai"><b>单人产出低是结构性的</b>面筋和豆干的单个购买用户带来的成交额只有十几二十块，是所有形态里最低的一档。这决定了这一型必须靠量和复购频次，不能指望单笔。</div>
-<div class="ai"><b>机会点</b>怀旧和地域标签。平台商机数据里，四川麻辣灯影豆干、湖南岳阳牙签豆干、湖南平江牛筋辣条这几个方向的需求热度在中位，都是带地域标签的怀旧品。</div>
-<div class="ai"><b>怎么验证</b>组合装的成交占比能不能过半，笔记的千次曝光购买数能不能追上全场平均。</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-
-</div>
-<div class="zone-p" id="zout">
-
-<section id="s8">
-<div class="wrap">
-<div class="sn">PART 08</div>
-<h2>站外在卖什么形态</h2>
-<p class="sub">以下为同期第三方平台真实经营数据，覆盖抖音、淘宝、京东三个平台。口径与站内不同，只看结构不比绝对规模。</p>
-
-<div class="split">
-<div class="chart">
-<div class="ct">站外与站内的形态结构对比</div>
-<div class="cd">各形态成交占比，左侧站外三平台合计，右侧站内</div>
-<div class="vs-h"><span>站外</span><span></span><span>站内</span></div>
-<div class="vs"><div class="vs-l"><div class="vs-b" style="width:50%">约 25%</div></div><div class="vs-c">牛肉类</div><div class="vs-r"><div class="vs-b" style="width:100%">约 50%</div></div></div>
-<div class="vs"><div class="vs-l"><div class="vs-b" style="width:32%">约 15%</div></div><div class="vs-c">鸭肉零食</div><div class="vs-r"><div class="vs-b" style="width:10%">约 5%</div></div></div>
-<div class="vs"><div class="vs-l"><div class="vs-b" style="width:31%">约 15%</div></div><div class="vs-c">鸡肉零食</div><div class="vs-r"><div class="vs-b" style="width:14%">约 5%</div></div></div>
-<div class="vs"><div class="vs-l"><div class="vs-b" style="width:19%">约 10%</div></div><div class="vs-c">猪肉类</div><div class="vs-r"><div class="vs-b" style="width:18%">约 10%</div></div></div>
-<div class="vs"><div class="vs-l"><div class="vs-b" style="width:10%">约 5%</div></div><div class="vs-c">面筋制品</div><div class="vs-r"><div class="vs-b" style="width:4%"></div></div></div>
-<div class="vs"><div class="vs-l"><div class="vs-b" style="width:7%"></div></div><div class="vs-c">即食鱼零食</div><div class="vs-r"><div class="vs-b" style="width:9%">约 5%</div></div></div>
-<p class="tn" style="margin-top:16px">站外为三平台合计，站内为同期同类目口径。两侧统计方式不同，仅作结构参照。</p>
-</div>
-<div class="insight" style="margin:0">
-<div class="il">这张图里唯一重要的一处</div>
-<h4>鸭肉和鸡肉，站外的盘子比站内大得多</h4>
-<p>站外的鸭肉零食和鸡肉零食各占约一成半，两者合起来跟牛肉类接近。<mark>而站内这两个形态各只占约半成</mark>，差了三倍。</p>
-<p>牛肉类的情况正好相反，站内占约一半，站外只有约四分之一。<mark>站内的牛肉赛道比站外挤得多</mark>。</p>
-<p>这说明鸭肉和鸡肉的需求是存在的，只是站内还没接住。做这两个形态的商家，站内的竞争压力比牛肉小，而且站内用户的价格接受度更高。</p>
-<p class="isrc">口径：第三方平台店铺月度经营数据，时点 2026 年 8 月；站内为同期近 30 天成交。</p>
-</div>
-</div>
-
-<div class="read">
-<div class="rt">站外的价格梯度</div>
-<div class="read-list">
-<div class="read-item"><b>形态之间的价格梯度，站内站外是一致的</b><p>站外牛肉类的平均成交价最高，鸭肉和豆腐干明显更低。<mark>这个梯度跟站内的形态价位规律完全一致</mark>，说明是品类本身的属性，不是某个平台的特殊现象。</p></div>
-<div class="read-item"><b>三个平台里，京东的客单最高</b><p>京东的平均成交价高于抖音和淘宝，也是三个平台里 80 到 150 元档占比最高的。<mark>京东的用户结构最接近站内</mark>。</p></div>
-</div>
-</div>
-</div>
-</section>
-
-<section id="s9">
-<div class="wrap">
-<div class="sn">PART 09</div>
-<h2>站内站外的价格带落差</h2>
-<p class="sub">这是站外数据里最值得看的一处。它直接回答一个问题：站内该不该打低价。</p>
-
-<div class="chart">
-<div class="ct">40 元以上的成交占比</div>
-<div class="cd">站内明显比三个站外平台更集中在中高价段</div>
-<div class="row"><div class="lb"><b>站内</b><span>约七成</span></div><div class="bars"><div class="bar b2" style="width:100%">约 70%</div></div></div>
-<div class="row"><div class="lb"><b>京东</b><span>约五成</span></div><div class="bars"><div class="bar b3" style="width:74%">约 50%</div></div></div>
-<div class="row"><div class="lb"><b>抖音</b><span>约五成</span></div><div class="bars"><div class="bar b3" style="width:71%">约 50%</div></div></div>
-<div class="row"><div class="lb"><b>淘宝</b><span>约四成半</span></div><div class="bars"><div class="bar b1" style="width:66%">约 45%</div></div></div>
-</div>
-
-<div class="tw c5">
-<table>
-<thead><tr><th>价格带</th><th class="num">站内</th><th class="num">抖音</th><th class="num">淘宝</th><th class="num">京东</th></tr></thead>
-<tbody>
-<tr><td>20 元以下</td><td class="num">约 10%</td><td class="num">约 20%</td><td class="num">约 20%</td><td class="num">约 20%</td></tr>
-<tr><td>20-40 元</td><td class="num">约 20%</td><td class="num hi">约 30%</td><td class="num hi">约 35%</td><td class="num">约 30%</td></tr>
-<tr><td>40-80 元</td><td class="num hi">约 35%</td><td class="num">约 30%</td><td class="num hi">约 30%</td><td class="num">约 25%</td></tr>
-<tr><td>80-150 元</td><td class="num hi">约 30%</td><td class="num">约 20%</td><td class="num">约 15%</td><td class="num hi">约 25%</td></tr>
-<tr><td>150 元以上</td><td class="num">约 5%</td><td class="num"></td><td class="num"></td><td class="num"></td></tr>
-</tbody>
-</table>
-<p class="tn">标红为各列占比最高的一到两档。站外 150 元以上占比均在个位数以下，未单独标注。</p>
-</div>
-<p class="scroll-hint">左右滑动查看完整表格</p>
-
-<div class="insight">
-<div class="il">这条落差的意思</div>
-<h4>站内用户在这个品类上本来就出手更高，把站外的低价打法搬过来，等于主动放弃最厚的那一段</h4>
-<p>站外三个平台的主力都在 20 到 40 元，<mark>站内的主力在 40 到 150 元</mark>。站内 40 元以上占约七成，站外五成上下。</p>
-<p>这不是说站内可以随便提价——前面的转化数据说明提价会掉转化。<mark>但它说明站内有一个站外没有的中高价空间</mark>，而且这个空间是最厚的。</p>
-<p>如果你同时在站内站外经营，这一条尤其重要：<mark>同一款货在站内可以定得比站外高，用户是接受的</mark>。反过来把站外的低价策略照搬到站内，会落在站内最薄的那一段。</p>
-<p class="isrc">口径：第三方平台店铺月度经营数据按店铺平均成交价分档，时点 2026 年 8 月；站内为同期肉干类近 30 天成交按商品成交均价分档。两侧统计方式不同，仅作结构参照。</p>
-</div>
-</div>
-</section>
-
-</div>
-
-<div class="zone-p" id="znew">
-
-<section id="s10">
-<div class="wrap">
-<div class="sn">PART 10</div>
-<h2>下一步可以开什么品</h2>
-<p class="sub">以下方向来自平台商机数据，筛的是需求端有热度、站内供给不足的品，按四条线归纳。每条都标注了适用型和需要注意的地方。</p>
+<div class="sn">下一步</div>
+<h2>下一款开什么品</h2>
+<p class="sub">这四条线是需求端有热度、站内还没做透的方向。每条都写了适用哪一型、为什么值得做、以及要注意什么。</p>
 
 <div class="scale">
 <b>需求热度：</b>
 <em><span class="lv"><i class="on"></i><i class="on"></i><i class="on"></i></span> 高</em>
 <em><span class="lv"><i class="on a"></i><i class="on a"></i><i></i></span> 中高</em>
-<em><span class="lv"><i class="on a"></i><i></i><i></i></span> 中</em>
 </div>
 
 <div class="out-grid">
 <div class="out">
-<h4>脆片化　<span class="badge bg-hi">适用 TYPE A</span>　<span class="lv"><i class="on"></i><i class="on"></i><i class="on"></i></span></h4>
-<p>需求端热度最高的一条线。牛胸口脆片、猪肉脆片、雪花牛排脆、和牛脆片几个方向，需求热度多在中高位到高位，站内供给还没跟上。</p>
-<p>站内脆片成交占比半年涨了约七成，站外牛肉类平均成交价也是所有形态里最高的，<mark>两边都支持这个方向往中高价做</mark>。</p>
-<p class="src">⚠ 这条线站内已经有一批店在做，进场要有工艺或原料上的区隔，单纯跟做会直接撞进价格战。</p>
+<h4>脆片化　<span class="badge bg-hi">适用 A 型</span>　<span class="lv"><i class="on"></i><i class="on"></i><i class="on"></i></span></h4>
+<p><b>为什么值得做：</b>这是站内唯一还在涨的方向。<mark>脆片类成交占比半年涨了约七成</mark>，同期礼盒组合装大幅下滑、健身概念款也在降。近 30 天成交前十里六款是脆片形态。</p>
+<p><b>具体开什么：</b>牛胸口脆片、猪肉脆片、雪花牛排脆、和牛脆片，这几个方向的需求热度都在高位，站内供给还没跟上。</p>
+<p><b>价格定多少：</b>做到 50 到 130 元。成交榜上的脆片款价格集中在这一段，站外牛肉类的平均成交价也是所有形态里最高的。</p>
+<p><b>商品名怎么写：</b>参考「【产地直供】草原风味牛爆脆 原切超薄 麻辣小吃 酥脆爆香」这个结构，把产地、原切、超薄、酥脆这几个词写进去，它们既支撑价格也是搜索词。</p>
+<p class="src">⚠ 这条线已经有一批店在做，进场要有工艺或原料上的区隔（比如口味、干度、部位），单纯跟做会直接撞进价格战。</p>
 </div>
 
 <div class="out">
-<h4>高蛋白即食禽肉　<span class="badge bg-hi">适用 TYPE B</span>　<span class="lv"><i class="on"></i><i class="on"></i><i class="on"></i></span></h4>
-<p>烟熏低脂即食鸡胸肉、无抗即食鸡排、水煮鸡胸肉、盐焗鸡腿几个方向，需求热度多在高位，站内供给不足。</p>
-<p>站内标题带健身减脂词的内容效率是全场平均的 1.4 倍，<mark>需求侧和内容侧对得上</mark>。站外鸡肉零食占约一成半，站内只有约半成，盘子还有空间。</p>
-<p class="src">⚠ 功效表述要克制，不宜写成医疗保健类功效，需遵守平台内容规范。</p>
+<h4>高蛋白即食禽肉　<span class="badge bg-hi">适用 B 型</span>　<span class="lv"><i class="on"></i><i class="on"></i><i class="on"></i></span></h4>
+<p><b>为什么值得做：</b>需求端热度在高位、站内供给不足。而且<mark>站内带健身减脂词的标题效率是全场平均的约 1.4 倍</mark>，是所有词类里最高的——需求侧和内容侧对得上。</p>
+<p><b>具体开什么：</b>烟熏低脂即食鸡胸肉、无抗即食鸡排、水煮鸡胸肉、盐焗鸡腿。站外鸡肉零食占约一成半，站内只有约半成，盘子还有空间。</p>
+<p><b>价格定多少：</b>鸡肉零食的最优档是 40 到 80 元，建议做多包装或大份量把客单顶到这一档。</p>
+<p><b>商品名怎么写：</b>把成分事实写清楚，比如高蛋白、低脂、纯瘦、0 糖，再加上规格数字和场景词。</p>
+<p class="src">⚠ 成分表述要克制，只写配料和营养成分事实，不宜写成减肥、瘦身、保健类功效承诺，需遵守平台内容规范。</p>
 </div>
 
 <div class="out">
-<h4>地域鲜卤　<span class="badge bg-md">适用 TYPE B</span>　<span class="lv"><i class="on a"></i><i class="on a"></i><i></i></span></h4>
-<p>南京盐水鸭腿、湖南醴陵酱板鸭、甜辣鸭舌几个方向，需求热度在中高位。</p>
-<p>站外鸭肉零食占约一成半，站内不到半成。<mark>这是站外大、站内小的一个形态</mark>，说明需求存在但站内没接住。短保肉类本身也是复购最好的形态。</p>
-<p class="src">⚠ 短保商品要配直播和履约能力，没有直播的店建议先不要碰这条线。</p>
+<h4>地域鲜卤　<span class="badge bg-md">适用 B 型</span>　<span class="lv"><i class="on a"></i><i class="on a"></i><i></i></span></h4>
+<p><b>为什么值得做：</b><mark>站外鸭肉零食占约一成半，站内不到半成</mark>——这是站外大、站内小的形态，说明需求存在但站内没接住。而且短保肉类是复购最好的形态。</p>
+<p><b>具体开什么：</b>南京盐水鸭腿、湖南醴陵酱板鸭、甜辣鸭舌，这几个带地域标签的方向需求热度在中高位、供给不足。</p>
+<p><b>价格定多少：</b>短保肉类守在 20 到 80 元，鸭肉类如果能做出规格可以顶到 80 到 150 元（鸭肉类这一档的产出是最低档的约 4 倍）。</p>
+<p><b>商品名怎么写：</b>地域要写具体，参考案例里「重庆特产冷吃香辣鸡丁」「四川叙永麻辣拌豆腐干」这种写到市县的写法，比只写「四川特产」更有说服力。</p>
+<p class="src">⚠ 短保商品要配直播和履约能力。这一型店播占比接近一半，<b>没有直播的店建议先不要碰这条线</b>，货会压在手里。</p>
 </div>
 
 <div class="out">
 <h4>即食鱼片与海味　<span class="badge bg-md">海味商家优先</span>　<span class="lv"><i class="on a"></i><i class="on a"></i><i></i></span></h4>
-<p>即食鱼饼、烤鲹鱼片、明太鱼丝几个方向，需求热度在中高位到高位。</p>
-<p>站内即食虾零食 80-150 元档的单款产出是它最低档的二十多倍，<mark>海味这个品类的高价段是通的</mark>。单个购买用户带来的成交额也是所有形态里最高的一档。</p>
-<p class="src">⚠ 海味在三个站外平台占比都只有一成上下，盘子小，适合作为第二条线不适合作为主业。</p>
+<p><b>为什么值得做：</b><mark>即食虾零食 80 到 150 元这一档的单款产出，是它最低档的二十多倍</mark>，海味的高价段是通的。单个买家带来的成交额也是所有形态里最高的一档。</p>
+<p><b>具体开什么：</b>即食鱼饼、烤鲹鱼片、明太鱼丝，需求热度在中高位到高位。</p>
+<p><b>价格定多少：</b>直接做 80 元以上。海味做低价基本没有生意，低价档的款不少但成交贴着地板。</p>
+<p><b>渠道怎么配：</b>即食虾零食的店播占比约五成，是所有形态里最高的之一。<mark>这条线必须配直播</mark>。</p>
+<p class="src">⚠ 海味在站外三个平台占比都只有一成上下，盘子小。适合作为第二条线，不适合作为主业。</p>
 </div>
 </div>
 
 <div class="insight">
 <div class="il">怎么用这一节</div>
 <h4>不要同时开三个方向，选一条离你现有供应链最近的</h4>
-<p>从上面选一条跟你现有供应链最近的，<mark>先做一个小批量测试款</mark>，跟一个完整的内容周期再决定放不放大。</p>
-<p>判断放不放大的标准，看前面几节给的验证指标：新款 30 天有没有成交、动销率有没有掉、笔记的千次曝光购买数能不能追上全场平均。</p>
+<p>从上面选一条<mark>跟你现有供应链最近的</mark>——能用现有原料、现有代工、现有仓储做出来的那一条。先做一个小批量测试款，跟一个完整的内容周期再决定放不放大。</p>
+<p>判断放不放大的标准：<mark>新款 30 天有没有成交、动销率有没有掉、笔记的千次曝光购买数能不能追上你店里现有的款</mark>。三个都过了再加量。</p>
 <p class="isrc">口径：需求热度分级来自平台商机数据，为相对口径，不构成市场规模预测。所列方向需在具体品类、渠道、供应能力下进一步验证。</p>
 </div>
 </div>
 </section>
 
-<section id="s11">
+<section id="s8">
 <div class="wrap">
-<div class="sn">PART 11</div>
+<div class="sn">最后</div>
 <h2>这周先做什么</h2>
 <div class="end">
 <div class="end-grid">
 <div>
 <h3>三件事，按顺序做</h3>
-<p>先动第一件，其余两件跟着排。不要同时开三个方向。</p>
+<p>不要同时动三件。先把第一件做完，第二件才有意义。</p>
 </div>
 <div class="steps">
-<div class="step"><b>本周：</b>把你现在卖得动的款按成交价列出来，对照形态价位表，看你所在形态最赚钱的那一档在哪、你的主推款在哪。如果不在同一档，这是今年最值得做的一件事。</div>
-<div class="step"><b>30 天内：</b>按你的类型选一个动作测。TYPE A 测一个 40-80 元的脆片形态款；TYPE B 排一场直播专门推短保款；TYPE C 把小包装做成二三十元组合装。同时把资源集中到一到两个主推款上。</div>
-<div class="step"><b>30 天后看数：</b>新款 30 天有没有成交、动销率有没有掉。有成交就加量；没成交先别再上新，回头看内容。三十天发文不到五十篇的话，先补内容再补款。</div>
+<div class="step"><b>本周：</b>把近 30 天有成交的款按成交价列出来，对照第一步那张表，看你所在形态该定的价位在哪、你的主推款在哪。同时算一下头款占全店多少。</div>
+<div class="step"><b>接下来 30 天：</b>如果价格不在最优档，做一个新规格顶上去（加量装、组合装、升级原料，配方不用改）。如果头款不到全店五成，选一款当主推，把内容和直播排期全压在它身上。想做 40 元以上，先开播四周。</div>
+<div class="step"><b>30 天后看数：</b>新规格有没有成交、动销率有没有掉、头款占比有没有升上去。三个都往好的方向走就加量；如果没成交，先别再上新，回头改商品名和标题——按第四步的结构补全产地、工艺、规格、场景词。</div>
 </div>
 </div>
-<p class="fin">如果只能做一件事，那就是把主推款挪到你所在形态最赚钱的那一档。</p>
+<p class="fin">如果只能做一件事：把主推款的价格挪到你所在形态最赚钱的那一档。</p>
 </div>
 </div>
 </section>
@@ -1280,8 +1365,8 @@ font-size:11.5px;letter-spacing:.1em;font-weight:800;color:var(--ink3)}
 
 <footer>
 <div class="wrap">
-<p class="fsum">统计范围：食品 &gt; 零食/坚果/特产 &gt; 牛肉干/猪肉脯/卤味零食、鱿鱼丝/鱼干/海味即食、豆干制品/蔬菜干。站内数据周期 2026 年 2 月至 8 月，成交为近 30 天站内实付；站外为同期第三方平台（抖音、淘宝、京东）店铺月度经营数据，时点 2026 年 8 月，与站内统计方式不同，仅作结构参照。单款产出为相对值，各形态以自身最低价位档为 1 倍基准，跨形态不可比。内容效率为千次曝光带来的购买次数，指笔记直接带来的购买，不等于店铺总成交。需求热度分级为相对口径，不构成市场规模预测。</p>
-<div class="disc">本页内容仅供商家经营参考，不构成经营承诺。图表中的比例与分级为相对口径，具体决策请结合自身供应链与货盘实际情况判断。</div>
+<p class="fsum">统计范围：食品 &gt; 零食/坚果/特产 &gt; 牛肉干/猪肉脯/卤味零食、鱿鱼丝/鱼干/海味即食、豆干制品/蔬菜干。站内数据周期 2026 年 2 月至 8 月，成交为近 30 天站内实付；站外为同期第三方平台（抖音、淘宝、京东）店铺月度经营数据，时点 2026 年 8 月，与站内统计方式不同，仅作结构参照。单款产出为相对值，各形态以自身最低价位档为 1 倍基准，跨形态不可比。内容效率为千次曝光带来的购买次数，指笔记直接带来的购买，不等于店铺总成交。案例数据为站内公开可见的经营结果，商家名称与品牌标识已去除。标题与商品名范例参考站内真实高效内容的结构，已去掉品牌名与专属标识。需求热度分级为相对口径，不构成市场规模预测。</p>
+<div class="disc">本页内容仅供商家经营参考，不构成经营承诺。图表中的比例与分级为相对口径，具体决策请结合自身供应链与货盘实际情况判断。内容发布与商品表述需遵守平台相关规范。</div>
 <p class="brand">小红书休食　卤味洞察 VOL.01</p>
 </div>
 </footer>
@@ -1307,7 +1392,7 @@ document.querySelectorAll('.type[data-exp] .exp-btn, .gap[data-exp] .exp-btn').f
     b.childNodes[0].nodeValue = open ? '收起' : t;
   });
 });
-var FIRST={zin:'s1',zout:'s8',znew:'s10'};
+var FIRST={zin:'s1',znew:'s7'};
 document.querySelectorAll('.zb').forEach(function(b){
   b.addEventListener('click',function(){
     var z=b.dataset.z;
@@ -1324,7 +1409,7 @@ document.querySelectorAll('.zb').forEach(function(b){
     }
   });
 });
-document.querySelectorAll('nav a[data-nz="zout"],nav a[data-nz="znew"]').forEach(function(a){a.style.display='none'});
+document.querySelectorAll('nav a[data-nz="znew"]').forEach(function(a){a.style.display='none'});
 </script>
 </body>
 </html>
