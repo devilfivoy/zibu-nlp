@@ -62,9 +62,11 @@ padding:30px 32px;margin-bottom:36px;box-shadow:0 1px 3px rgba(31,27,24,.04)}
 .verdict p:last-of-type{margin-bottom:0}
 .bignum{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
 gap:22px;margin-top:26px;padding-top:24px;border-top:1px dashed var(--line2)}
-.bignum b{display:block;font-size:32px;color:var(--red);font-weight:800;
-line-height:1.15;letter-spacing:-1px}
-.bignum b.w{font-size:23px;letter-spacing:0}
+.bignum>div{display:flex;flex-direction:column;justify-content:flex-end}
+.bignum b{display:flex;align-items:flex-end;min-height:37px;font-size:32px;color:var(--red);
+font-weight:800;line-height:1.15;letter-spacing:-1px}
+.bignum b.w{font-size:23px;letter-spacing:0;padding-bottom:3px}
+.bignum span{min-height:32px}
 .bignum b i{font-style:normal;font-size:15px;margin-left:2px}
 .bignum span{font-size:12.5px;color:var(--ink3);display:block;margin-top:4px}
 
@@ -93,7 +95,8 @@ vertical-align:0;border-radius:5px}
 .row:last-child{margin-bottom:0}
 .row .lb{display:flex;justify-content:space-between;font-size:13.5px;margin-bottom:8px;gap:12px}
 .row .lb b{font-weight:600}
-.row .lb span{color:var(--ink3);font-size:12px;white-space:nowrap}
+.row .lb span{color:var(--ink3);font-size:12px;white-space:nowrap;text-align:right;font-variant-numeric:tabular-nums}
+.row .lb b{flex:1 1 auto;min-width:0}
 .bars{display:flex;flex-direction:column;gap:5px}
 .bar{height:19px;border-radius:11px;display:flex;align-items:center;
 justify-content:flex-end;padding-right:10px;font-size:11.5px;font-weight:700;
@@ -546,9 +549,28 @@ font-size:11.5px;letter-spacing:.1em;font-weight:800;color:var(--ink3)}
 .chart.sm .stack{height:24px;margin:8px 0 6px}
 .chart.sm .stack i{font-size:10.5px}
 /* 图文并排：左文右图，文字为主 */
-.tx-ch{display:grid;grid-template-columns:1.25fr .75fr;gap:24px;align-items:start;margin:20px 0}
+.tx-ch{display:grid;grid-template-columns:1.25fr .75fr;gap:24px;align-items:stretch;margin:20px 0}
 .tx-ch>.chart{margin:0}
 .tx-ch>.tw{margin:0}
+.tx-ch>*{min-width:0;display:flex;flex-direction:column}
+.tx-ch>*>.tw,.tx-ch>*>.insight,.tx-ch>*>.chart{flex:1;margin:0}
+.tx-ch>.chart,.tx-ch>.insight,.tx-ch>.tw{flex:1}
+.tx-ch>.chart,.tx-ch>*>.chart{display:flex;flex-direction:column}
+.tx-ch>.chart>.tn:last-child,.tx-ch>*>.chart>.tn:last-child{margin-top:auto;padding-top:12px}
+.tx-ch>.tw,.tx-ch>*>.tw{display:flex;flex-direction:column}
+.tx-ch>.tw>.tn:last-child,.tx-ch>*>.tw>.tn:last-child{margin-top:auto}
+.tx-ch>*>*:last-child{flex:1 1 auto}
+.tx-ch>*>.dothis,.tx-ch>*>.samp,.tx-ch>*>.insight{display:flex;flex-direction:column}
+.tx-ch>*>.dothis>ol,.tx-ch>*>.samp>.samp-w:last-child{margin-bottom:0}
+.tx-ch>*>.insight>p:last-child{margin-top:auto}
+.tx-ch>*>.samp>*:last-child{margin-bottom:0}
+.tx-ch>*>.dothis:only-child,.tx-ch>*>.samp:only-child,
+.tx-ch>*>.insight:only-child,.tx-ch>*>.chart:only-child{margin:0!important}
+.tx-ch .tw.ptbl{display:flex;flex-direction:column}
+.tx-ch .tw.ptbl>table{flex:0 0 auto}
+.tx-ch .tw.ptbl>.tn{margin-top:auto}
+.tx-ch>*>.insight{display:flex;flex-direction:column}
+.tx-ch>*>.insight .isrc{margin-top:auto}
 @media(max-width:900px){.tx-ch{grid-template-columns:1fr;gap:16px}}
 /* 行动步骤块 */
 .dothis{background:#FFF9F5;border:1px solid #F5E3D8;border-left:3px solid var(--red);
@@ -606,7 +628,7 @@ line-height:1.3;letter-spacing:-.3px}
 <h1>卤味还有的做，<br>但不在<em>「再堆一款便宜的」</em>上</h1>
 </div>
 <div class="hero-r">
-<p class="lead">过去半年，站内卤味生意整体走平。<mark>堆款的阶段已经结束</mark>，接下来分胜负的是价格带、主推集中度、渠道配比、内容打法。本期按你该动手的顺序排：先定价格，再定主推，再定渠道，最后是内容怎么写。</p>
+<p class="lead">过去半年，站内卤味生意整体走平。<mark>堆款的阶段已经结束</mark>，接下来分胜负的是价格带、主推集中度、渠道配比、内容打法。本期按经营决策的先后顺序展开：先定价格，再定主推，再定渠道，最后是内容怎么写。</p>
 <p class="meta">统计范围：食品 &gt; 零食/坚果/特产 &gt; 牛肉干/猪肉脯/卤味零食、鱿鱼丝/鱼干/海味即食、豆干制品/蔬菜干<br>站内数据周期 2026 年 2 月至 8 月　·　站外为同期第三方平台经营数据　·　页面更新 2026.08</p>
 </div>
 </div>
@@ -624,7 +646,7 @@ line-height:1.3;letter-spacing:-.3px}
 <div class="kp-i"><b>03</b><span>货盘二三十款，半年上新六到二十款。一次上几十个反而不如。</span></div>
 <div class="kp-i"><b>04</b><span>想卖 40 元以上先开播。中高价的钱有近四成从直播间出来。</span></div>
 <div class="kp-i"><b>05</b><span>标题写满 22 字，带场景词和规格数字。只写品名等于放弃这个位置。</span></div>
-<div class="kp-i"><b>06</b><span>下一款从脆片、高蛋白禽肉、地域鲜卤、即食鱼片里挑一个。只挑一个。</span></div>
+<div class="kp-i"><b>06</b><span>开品方向从脆片、高蛋白禽肉、地域鲜卤、即食鱼片四条线中选定一条，集中资源做透。</span></div>
 </div>
 </div>
 </div>
@@ -787,11 +809,11 @@ line-height:1.3;letter-spacing:-.3px}
 </div>
 
 <h3>站内用户比站外更愿意出高价</h3>
-<div class="tx-ch">
-<div>
 <p>同时在别的平台经营的，这条对定价有直接帮助。同类目成交里，<mark>站内 40 元以上占约七成，站外三个平台都只有五成上下</mark>。</p>
 <p>站外主力在 20 到 40 元，<mark>站内主力在 40 到 150 元</mark>。同一款货，站内可以定得比站外高，用户接受。</p>
 <p>反过来，<mark>把别的平台的低价策略照搬进来，正好落在站内最薄的那一段</mark>。这是很多多平台商家在站内做不起来的原因。</p>
+<div class="tx-ch">
+<div>
 <div class="insight" style="margin-top:18px">
 <div class="il">怎么用这条</div>
 <h4>同一款货，站内定价可以比站外高一档</h4>
@@ -988,10 +1010,10 @@ line-height:1.3;letter-spacing:-.3px}
 <p class="sub">这一节能直接照着抄：有效的词、标题结构、商品名写法，都给了范例和反例。</p>
 
 <h3>先把发文变成固定动作</h3>
-<div class="tx-ch">
-<div>
 <p>发文有一个很硬的门槛。<mark>三十天发十篇以内的店，只有约三成能靠笔记带来购买；发到五十篇以上超过七成；发到两三百篇，接近九成</mark>。</p>
 <p>从几乎不发到稳定发，是收益最大的一步。<mark>定一个能长期坚持的节奏</mark>，比一个月猛发一百篇然后停两个月有效得多。</p>
+<div class="tx-ch">
+<div>
 <div class="insight" style="margin-top:18px">
 <div class="il">账号数也有帮助</div>
 <h4>多号是手段，内容产能是前提</h4>
